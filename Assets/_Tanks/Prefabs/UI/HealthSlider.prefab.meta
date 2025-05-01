@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d30ac653c80f4afeba76b72f7111a7f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/UI/HealthSlider.prefab
+  uploadId: 747463

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 537afde59eeba4c82897def1dccfba0a
+timeCreated: 1432715951
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/Explosives/CompleteShellExplosion.prefab
+  uploadId: 747463

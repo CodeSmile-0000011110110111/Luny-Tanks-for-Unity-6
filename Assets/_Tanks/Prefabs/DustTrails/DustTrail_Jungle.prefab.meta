@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 38afd255d6ed746388b2f406bf3402a1
+timeCreated: 1432223465
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/DustTrails/DustTrail_Jungle.prefab
+  uploadId: 747463

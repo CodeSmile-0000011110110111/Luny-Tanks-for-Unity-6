@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce03a0c48ed615c4e8dee57929d00d10
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Settings/Profiles/PPVolume.asset
+  uploadId: 747463

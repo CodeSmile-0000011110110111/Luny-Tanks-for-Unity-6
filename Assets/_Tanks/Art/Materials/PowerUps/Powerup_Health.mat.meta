@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a41530febc8760f43a58d0f2b2ad45a5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/PowerUps/Powerup_Health.mat
+  uploadId: 747463

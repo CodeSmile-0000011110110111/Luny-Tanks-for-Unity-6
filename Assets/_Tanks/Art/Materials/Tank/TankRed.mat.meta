@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0a1b8e17e23f649d6bfcd1c7f989149d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Tank/TankRed.mat
+  uploadId: 747463

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b418e22f7c2bb4b4aa7b65fce4a25be2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/Environment/Jungle/DirectionalLightJungle.prefab
+  uploadId: 747463

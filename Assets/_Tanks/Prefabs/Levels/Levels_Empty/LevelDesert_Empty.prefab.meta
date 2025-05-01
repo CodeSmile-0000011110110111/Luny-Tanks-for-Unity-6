@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab1c9d0032e4b43cc8f8cd756eaacfba
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/Levels/Levels_Empty/LevelDesert_Empty.prefab
+  uploadId: 747463

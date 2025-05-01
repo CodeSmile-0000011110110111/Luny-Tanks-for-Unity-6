@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a9dfdfe14a49d774c9ee0ecfe99a96d9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/Indicators/EnhancedSpeedIndicator.prefab
+  uploadId: 747463

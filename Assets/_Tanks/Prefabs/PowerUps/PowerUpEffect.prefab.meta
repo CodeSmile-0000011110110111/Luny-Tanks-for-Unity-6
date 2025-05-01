@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: da1c8b323de15f84da1462d4bab0c020
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/PowerUpEffect.prefab
+  uploadId: 747463

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d48af2f9c7c14840abfc5e21827efaa
+timeCreated: 1475837436
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Tutorial_Demo/Demo_Scenes/Demo_Game_Moon.unity
+  uploadId: 747463

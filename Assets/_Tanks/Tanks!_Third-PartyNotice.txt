@@ -1,0 +1,64 @@
+This asset is governed by the Asset Store EULA; however, the following components are governed by the licenses indicated below:
+
+A. Blue Noise
+
+Creative Commons CC0 Public Domain Dedication.
+https://creativecommons.org/publicdomain/zero/1.0/
+
+
+
+B. Bowlby One Font 
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright (c) 2011 by vernon adams (vern@newtypography.co.uk),
+with Reserved Font Names "Bowlby" "Bowlby One" and "Bowlby One SC"
+http://scripts.sil.org/OFL
+
+C. Big Shoulders Stencil Font
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright 2019 The Big Shoulders Project Authors (https://github.com/xotypeco/big_shoulders)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+D. Exo 2 Font
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright 2013 The Exo 2 Project Authors (https://github.com/googlefonts/Exo-2.0)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+E. IBM Plex Mono Font
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+F. Inter Font
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+G. Lora Font
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora".
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+H. Ubuntu Font
+
+UBUNTU FONT LICENCE Version 1.0

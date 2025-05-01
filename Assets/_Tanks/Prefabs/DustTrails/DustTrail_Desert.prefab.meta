@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6d0c90890506b4eb5b5d26e8c5e339be
+timeCreated: 1432223465
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/DustTrails/DustTrail_Desert.prefab
+  uploadId: 747463

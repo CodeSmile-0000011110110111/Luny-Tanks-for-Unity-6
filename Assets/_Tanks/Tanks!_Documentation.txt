@@ -1,0 +1,9 @@
+This project contains all the resources needed to follow the tutorial at
+
+https://learn.unity.com/course/tanks-make-a-battle-game-for-web-and-mobile
+
+
+
+The Tutorial_Demo folder contains all the assets used to build the web demo version that can be found at 
+
+https://play.unity.com/en/games/3772f049-9025-4536-8ede-d93718dace14/tanks

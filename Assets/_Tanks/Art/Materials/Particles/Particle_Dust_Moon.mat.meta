@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bd4fda2c2ab864c06b192b42a9994301
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Particles/Particle_Dust_Moon.mat
+  uploadId: 747463

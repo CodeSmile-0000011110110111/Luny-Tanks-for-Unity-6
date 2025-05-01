@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 613fdb3d456dfe940b92c5fe402374b4
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Scripts/Tank/PowerUpDetector.cs
+  uploadId: 747463

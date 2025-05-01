@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7471dc33846f1ba4796a5df18ee898bd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Environment/MoonGround.mat
+  uploadId: 747463

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b8f111eb792c24410a6becacd4763b6f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/UI/MobileControlCanvas.prefab
+  uploadId: 747463

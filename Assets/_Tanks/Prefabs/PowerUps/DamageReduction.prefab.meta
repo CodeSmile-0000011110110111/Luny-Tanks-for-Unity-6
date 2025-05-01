@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ad06fe863d692e4a969198bd2130e8c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/DamageReduction.prefab
+  uploadId: 747463

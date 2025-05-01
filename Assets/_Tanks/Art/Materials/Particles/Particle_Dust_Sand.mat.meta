@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 424be3af6ad117140887d3e652a89d24
+timeCreated: 1431360962
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Particles/Particle_Dust_Sand.mat
+  uploadId: 747463

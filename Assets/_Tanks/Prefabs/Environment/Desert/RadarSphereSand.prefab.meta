@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6ee8222d8c17bcd40a51bcd8f0c0cb4a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/Environment/Desert/RadarSphereSand.prefab
+  uploadId: 747463

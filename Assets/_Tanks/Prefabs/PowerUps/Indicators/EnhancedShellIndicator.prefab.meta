@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7be7fa772e491c5498361d62e8af3942
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/Indicators/EnhancedShellIndicator.prefab
+  uploadId: 747463

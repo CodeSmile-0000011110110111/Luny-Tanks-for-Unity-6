@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f05276190cf498a8153f6cbe761d4e6
+timeCreated: 1480316860
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Settings/TextMesh Pro/Sprites/EmojiOne.json
+  uploadId: 747463

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b268cad32d016747980e87b864177bf
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/PowerUpSpawner.prefab
+  uploadId: 747463

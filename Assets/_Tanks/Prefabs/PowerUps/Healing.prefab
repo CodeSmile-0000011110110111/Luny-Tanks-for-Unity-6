@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &909495296848105430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8965230302916952766, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3876838058376706766, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a41530febc8760f43a58d0f2b2ad45a5, type: 2}
+    - target: {fileID: -3477821731311062464, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e6fcd78a5baa42645b9b3db729a6058d, type: 2}
+    - target: {fileID: 52361805505633545, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_Name
+      value: Healing
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603246306389932429, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f6c3c5b79d282714582494657d648dfc, type: 2}
+    - target: {fileID: 5279095331347438348, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a41530febc8760f43a58d0f2b2ad45a5, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 936796638822841677}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8015a8eac3af7e94aa51752c84491c9a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3310508087208768428}
+  m_SourcePrefab: {fileID: 100100000, guid: 8015a8eac3af7e94aa51752c84491c9a, type: 3}
+--- !u!1 &26534474276156039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8015a8eac3af7e94aa51752c84491c9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 909495296848105430}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &936796638822841677
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26534474276156039}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.09
+  m_Center: {x: 0, y: 0.12, z: 0}
+--- !u!114 &3310508087208768428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26534474276156039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e2506db19762a4bb229b6473091302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PowerUpType: 3
+  m_CollectFX: {fileID: 8822060725471291870, guid: da1c8b323de15f84da1462d4bab0c020,
+    type: 3}
+  m_DurationTime: 5
+  m_DamageReduction: 0.5
+  m_SpeedBonus: 5
+  m_TurnSpeedBonus: 0
+  m_CooldownReduction: 0.5
+  m_HealingAmount: 50
+  m_DamageMultiplier: 2

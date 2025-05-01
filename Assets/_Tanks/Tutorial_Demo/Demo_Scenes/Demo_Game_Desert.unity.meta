@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 37c9d2c08de91d04183fed69ef45a7bc
+timeCreated: 1475837436
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Tutorial_Demo/Demo_Scenes/Demo_Game_Desert.unity
+  uploadId: 747463

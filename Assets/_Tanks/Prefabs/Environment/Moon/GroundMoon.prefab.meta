@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d90ea149be1e49d49bdb723591b075d0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/Environment/Moon/GroundMoon.prefab
+  uploadId: 747463

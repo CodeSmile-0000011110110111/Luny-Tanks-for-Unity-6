@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: cc25b6c35f0ec7f43ad6f047f3623ad3
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Scripts/Tank/TankAI.cs
+  uploadId: 747463

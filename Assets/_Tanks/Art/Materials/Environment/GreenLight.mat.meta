@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e22bbd9cf37a50548aef63a735c4bbc9
+timeCreated: 1427798810
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Environment/GreenLight.mat
+  uploadId: 747463

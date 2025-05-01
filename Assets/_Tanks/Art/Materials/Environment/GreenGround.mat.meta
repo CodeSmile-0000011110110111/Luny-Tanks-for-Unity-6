@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 16ad2a62332d71e4faf6973d9f3daed4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Environment/GreenGround.mat
+  uploadId: 747463

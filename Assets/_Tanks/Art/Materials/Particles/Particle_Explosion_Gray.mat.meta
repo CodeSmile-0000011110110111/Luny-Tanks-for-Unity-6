@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: af6af579f3fe54a8eb34489684d90b6a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Particles/Particle_Explosion_Gray.mat
+  uploadId: 747463

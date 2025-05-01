@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 327f44d86230f28468dc6a953ee98fa5
+timeCreated: 1432116479
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Fonts/Bowlby_One/FontLicense.txt
+  uploadId: 747463

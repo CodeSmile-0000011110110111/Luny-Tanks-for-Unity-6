@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 26b33e4012b40491b9f8fae3e5fdbb21
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Tutorial_Demo/Demo_Scenes/Demo_Scene_Data/Demo_LightingData/Demo_Lighting_Settings.lighting
+  uploadId: 747463

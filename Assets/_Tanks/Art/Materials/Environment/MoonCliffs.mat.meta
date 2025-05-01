@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6fc29d379b32be418c1261b64f8b47e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Environment/MoonCliffs.mat
+  uploadId: 747463

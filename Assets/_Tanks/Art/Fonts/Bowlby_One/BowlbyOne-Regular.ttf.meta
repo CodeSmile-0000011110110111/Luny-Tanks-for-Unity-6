@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 3d7fe0a26ba72d949874021dc3d6995e
+timeCreated: 1432116480
+licenseType: Store
+TrueTypeFontImporter:
+  serializedVersion: 2
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames: []
+  customCharacters: 
+  fontRenderingMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Fonts/Bowlby_One/BowlbyOne-Regular.ttf
+  uploadId: 747463

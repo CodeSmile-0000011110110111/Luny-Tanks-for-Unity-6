@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ba72b58ab141e8499abe6e2cd8a7f9e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/UI/TankSection.prefab
+  uploadId: 747463

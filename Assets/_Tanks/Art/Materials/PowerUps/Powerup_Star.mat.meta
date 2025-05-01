@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 341c69e56be29f044bb4378ed0e44ffd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/PowerUps/Powerup_Star.mat
+  uploadId: 747463

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43d1a72c058e8429a9256583c99b6d47
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Tutorial_Demo/Demo_Prefabs/Demo_Explosions/Demo_CompleteShellExplosion
+    - Large.prefab
+  uploadId: 747463

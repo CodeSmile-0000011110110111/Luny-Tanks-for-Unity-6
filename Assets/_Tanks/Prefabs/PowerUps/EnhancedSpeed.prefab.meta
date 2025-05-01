@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1fb16119711fde644ab3c13dea73a863
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/EnhancedSpeed.prefab
+  uploadId: 747463

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fc7b7f2ea1b8e2949a71217d6d42bbfb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/EnhancedShooting.prefab
+  uploadId: 747463

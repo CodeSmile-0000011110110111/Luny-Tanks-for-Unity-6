@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e7df269b1d6121e4787b2f27aab18dbe
+timeCreated: 1431084896
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Environment/BuildingMetal.mat
+  uploadId: 747463

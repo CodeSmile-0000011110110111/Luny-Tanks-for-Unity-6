@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e8cc447101589584aa7d29b50ce63acc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Prefabs/PowerUps/Indicators/DamageReductionIndicator.prefab
+  uploadId: 747463

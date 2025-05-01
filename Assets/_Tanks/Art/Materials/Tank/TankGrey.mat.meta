@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4c5f95d06932564c8672b4bafeb1b28
+timeCreated: 1426767120
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Materials/Tank/TankGrey.mat
+  uploadId: 747463
