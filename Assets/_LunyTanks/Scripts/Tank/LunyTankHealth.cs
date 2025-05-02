@@ -38,5 +38,10 @@ namespace CodeSmile.Luny.Tanks
 			SetObject(nameof(m_ZeroHealthColor).Substring(2), new LunyColor(m_ZeroHealthColor));
 			SetObject(nameof(m_ExplosionPrefab).Substring(2), new LunyGameObject(m_ExplosionPrefab));
 		}
+
+		public void TakeDamage(Single damage)
+		{
+			Debug.LogWarning("TakeDamage - REPLACE ME");
+		}
 	}
 }
