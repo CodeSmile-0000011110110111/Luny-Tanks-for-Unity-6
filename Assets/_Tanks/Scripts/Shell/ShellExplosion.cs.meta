@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: af9894b7bced3a04c870ade3c621f94e
+timeCreated: 1432719204
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Scripts/Shell/ShellExplosion.cs
+  uploadId: 747463

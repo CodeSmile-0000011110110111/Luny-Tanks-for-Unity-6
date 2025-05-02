@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: e3fbe4e5309cbf643bdf95d525fb14f1
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Scripts/PowerUp/PowerUpSpawner.cs
+  uploadId: 747463
