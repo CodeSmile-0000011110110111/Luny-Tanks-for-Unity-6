@@ -1,6 +1,6 @@
 # Luny Tanks! for Unity 6 (Remastered)
 
-Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/tree/main/Assets/_Tanks/Scripts/Lua). Powered by [Luny](https://lunyscript.com), the Lua solution for Unity. 
+Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/tree/main/Assets/_LunyTanks/Scripts). Powered by [Luny](https://lunyscript.com), the Lua solution for Unity. 
 
 [![Unity Learn Tanks!](LunyTanks.jpg)](https://discussions.unity.com/t/official-unity-learn-event-learn-along-featuring-tanks-remastered-for-unity-6-on-unity-learn/1633869)
 
