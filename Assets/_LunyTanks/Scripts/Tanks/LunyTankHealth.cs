@@ -1,6 +1,7 @@
 // Copyright (C) 2021-2025 Steffen Itterheim
 // Refer to included LICENSE file for terms and conditions.
 
+using CodeSmile.Luny.Api;
 using System;
 using UnityEditor;
 using UnityEngine;
@@ -10,144 +11,32 @@ namespace CodeSmile.Luny.Tanks
 {
 	public sealed class LunyTankHealth : LunyScript
 	{
-		public Single m_StartingHealth = 100f; // The amount of health each tank starts with.
-		public Slider m_Slider; // The slider to represent how much health the tank currently has.
-		public Image m_FillImage; // The image component of the slider.
-		public Color m_FullHealthColor = Color.green; // The color the health bar will be when on full health.
-		public Color m_ZeroHealthColor = Color.red; // The color the health bar will be when on no health.
-		public GameObject m_ExplosionPrefab; // A prefab that will be instantiated in Awake, then used whenever the tank dies.
-		[HideInInspector] public Boolean m_HasShield; // Has the tank picked up a shield power up?
+		[Tooltip("The amount of health each tank starts with.")]
+		[SerializeField] private Single m_StartingHealth = 100f;
 
-		private AudioSource m_ExplosionAudio; // The audio source to play when the tank explodes.
-		private ParticleSystem m_ExplosionParticles; // The particle system the will play when the tank is destroyed.
-		private Single m_CurrentHealth; // How much health the tank currently has.
-		private Boolean m_Dead; // Has the tank been reduced beyond zero health yet?
-		private Single m_ShieldValue; // Percentage of reduced damage when the tank has a shield.
-		private Boolean m_IsInvincible; // Is the tank invincible in this moment?
+		[Tooltip("The slider to represent how much health the tank currently has.")]
+		[SerializeField] private Slider m_Slider;
 
-		private void Awake()
-		{
-			// Instantiate the explosion prefab and get a reference to the particle system on it.
-			m_ExplosionParticles = Instantiate(m_ExplosionPrefab).GetComponent<ParticleSystem>();
+		[Tooltip("The image component of the slider.")]
+		[SerializeField] private Image m_FillImage;
 
-			// Get a reference to the audio source on the instantiated prefab.
-			m_ExplosionAudio = m_ExplosionParticles.GetComponent<AudioSource>();
+		[Tooltip("The color the health bar will be when on full health.")]
+		[SerializeField] private Color m_FullHealthColor = Color.green;
 
-			// Disable the prefab so it can be activated when it's required.
-			m_ExplosionParticles.gameObject.SetActive(false);
+		[Tooltip("The color the health bar will be when on no health.")]
+		[SerializeField] private Color m_ZeroHealthColor = Color.red;
 
-			// Set the slider max value to the max health the tank can have
-			m_Slider.maxValue = m_StartingHealth;
-		}
+		[Tooltip("A prefab that will be instantiated in Awake, then used whenever the tank dies.")]
+		[SerializeField] private GameObject m_ExplosionPrefab;
 
-		private void OnDestroy()
-		{
-			if (m_ExplosionParticles != null)
-				Destroy(m_ExplosionParticles.gameObject);
-		}
-
-		private void OnEnable()
-		{
-			// When the tank is enabled, reset the tank's health and whether or not it's dead.
-			m_CurrentHealth = m_StartingHealth;
-			m_Dead = false;
-			m_HasShield = false;
-			m_ShieldValue = 0;
-			m_IsInvincible = false;
-
-			// Update the health slider's value and color.
-			SetHealthUI();
-		}
-
-		public void TakeDamage(Single amount)
-		{
-			// Check if the tank is not invincible
-			if (!m_IsInvincible)
-			{
-				// Reduce current health by the amount of damage done.
-				m_CurrentHealth -= amount * (1 - m_ShieldValue);
-
-				// Change the UI elements appropriately.
-				SetHealthUI();
-
-				// If the current health is at or below zero and it has not yet been registered, call OnDeath.
-				if (m_CurrentHealth <= 0f && !m_Dead)
-					OnDeath();
-			}
-		}
-
-		public void IncreaseHealth(Single amount)
-		{
-			// Check if adding the amount would keep the health within the maximum limit
-			if (m_CurrentHealth + amount <= m_StartingHealth)
-			{
-				// If the new health value is within the limit, add the amount
-				m_CurrentHealth += amount;
-			}
-			else
-			{
-				// If the new health exceeds the starting health, set it at the maximum
-				m_CurrentHealth = m_StartingHealth;
-			}
-
-			// Change the UI elements appropriately.
-			SetHealthUI();
-		}
-
-		public void ToggleShield(Single shieldAmount)
-		{
-			// Inverts the value of has shield.
-			m_HasShield = !m_HasShield;
-
-			// Stablish the amount of damage that will be reduced by the shield
-			if (m_HasShield)
-				m_ShieldValue = shieldAmount;
-			else
-				m_ShieldValue = 0;
-		}
-
-		public void ToggleInvincibility() => m_IsInvincible = !m_IsInvincible;
-
-		private void SetHealthUI()
-		{
-			// Set the slider's value appropriately.
-			m_Slider.value = m_CurrentHealth;
-
-			// Interpolate the color of the bar between the choosen colours based on the current percentage of the starting health.
-			m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
-		}
-
-		private void OnDeath()
-		{
-			// Set the flag so that this function is only called once.
-			m_Dead = true;
-
-			// Move the instantiated explosion prefab to the tank's position and turn it on.
-			m_ExplosionParticles.transform.position = transform.position;
-			m_ExplosionParticles.gameObject.SetActive(true);
-
-			// Play the particle system of the tank exploding.
-			m_ExplosionParticles.Play();
-
-			// Play the tank explosion sound effect.
-			m_ExplosionAudio.Play();
-
-			// Turn the tank off.
-			gameObject.SetActive(false);
-		}
-
-		// Awake cannot be overridden, use OnAwake instead. The script has not been loaded at this point!
-		protected override void OnAwake() {}
-
-		// Script was run and returned a LuaTable. Script's Awake() function has not been called yet.
-		// You may want to get/set initial script variables before script's Awake():
 		protected override void OnBeforeScriptAwake()
 		{
-			// Variables are set to the script table (commonly named 'script'): 'print(script.ImportantMessage)'
-			SetString("ImportantMessage", "Testing One-Two-Three ..");
-
-			// If you need the value of 'script.OhWowThatsCoolBool' assigned by the Lua script:
-			var datBool = GetBool("OhWowThatsCoolBool");
+			SetFloat(nameof(m_StartingHealth).Substring(2), m_StartingHealth);
+			SetObject(nameof(m_Slider).Substring(2), new LunyUISlider(m_Slider));
+			SetObject(nameof(m_FillImage).Substring(2), new LunyUIImage(m_FillImage));
+			SetObject(nameof(m_FullHealthColor).Substring(2), new LunyColor(m_FullHealthColor));
+			SetObject(nameof(m_ZeroHealthColor).Substring(2), new LunyColor(m_ZeroHealthColor));
+			SetObject(nameof(m_ExplosionPrefab).Substring(2), new LunyGameObject(m_ExplosionPrefab));
 		}
 	}
 }

@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 1304999366}
   - component: {fileID: 1304999365}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: LunyGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2956,7 +2956,7 @@ GameObject:
   - component: {fileID: 1771596987}
   - component: {fileID: 1771596988}
   m_Layer: 0
-  m_Name: CameraRig
+  m_Name: LunyCameraRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
