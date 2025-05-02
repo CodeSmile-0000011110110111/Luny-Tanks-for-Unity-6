@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_NumRoundsToWin: 3
   m_StartDelay: 3
   m_EndDelay: 3
-  m_CameraControl: {fileID: 1771596988}
+  m_CameraControl: {fileID: 0}
   m_Tank1Prefab: {fileID: 7273797243869566079, guid: f08bfd4e3c306cc40a86d4d073428a5f,
     type: 3}
   m_Tank2Prefab: {fileID: 2259141219951711155, guid: 4217d760ad313be42ade760d9767054d,
@@ -2987,9 +2987,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771596986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9e26b621854da943aeca10c9a73880c, type: 3}
+  m_Script: {fileID: 11500000, guid: 37869d56df4387d4583268706b6df433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DebugLogScriptExecution: 0
+  m_ScriptAsset: {fileID: -6979533126094156877, guid: 25284e7754397384088f1e31691e1cef,
+    type: 3}
   m_DampTime: 0.2
   m_ScreenEdgeBuffer: 4
   m_MinSize: 6.5

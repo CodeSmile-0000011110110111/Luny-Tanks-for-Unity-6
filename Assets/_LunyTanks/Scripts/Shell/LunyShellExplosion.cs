@@ -97,12 +97,6 @@ namespace CodeSmile.Luny.Tanks
 
         protected override void OnBeforeScriptAwake()
 	    {
-		    // Variables are set to the script table (commonly named 'script'): 'print(script.ImportantMessage)'
-		    SetString("ImportantMessage", "Testing One-Two-Three ..");
-
-		    // If you need the value of 'script.OhWowThatsCoolBool' assigned by the Lua script:
-		    var datBool = GetBool("OhWowThatsCoolBool");
 	    }
     }
-
 }

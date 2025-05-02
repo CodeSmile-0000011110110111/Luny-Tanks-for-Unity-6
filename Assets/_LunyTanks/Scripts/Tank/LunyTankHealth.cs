@@ -6,6 +6,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = System.Object;
 
 namespace CodeSmile.Luny.Tanks
 {
@@ -39,9 +40,42 @@ namespace CodeSmile.Luny.Tanks
 			SetObject(nameof(m_ExplosionPrefab).Substring(2), new LunyGameObject(m_ExplosionPrefab));
 		}
 
+		// FIXME: remove
 		public void TakeDamage(Single damage)
 		{
 			Debug.LogWarning("TakeDamage - REPLACE ME");
+		}
+
+		// FIXME: remove
+		public Single StartingHealth
+		{
+			get
+			{
+				Debug.LogWarning("StartingHealth - REPLACE ME");
+				return GetFloat(nameof(StartingHealth));
+			}
+		}
+		public void ToggleShield(Single shieldAmount)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void IncreaseHealth(Single healAmount)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void ToggleInvincibility()
+		{
+			throw new NotImplementedException();
+		}
+
+		public Boolean HasShield
+		{
+			get
+			{
+				throw new NotImplementedException();
+			}
 		}
 	}
 }
