@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 13693818}
   - component: {fileID: 5409530}
   - component: {fileID: 10833074}
-  - component: {fileID: 11426614}
+  - component: {fileID: 5168414541099612003}
   - component: {fileID: -927890215427519120}
   m_Layer: 0
   m_Name: LunyCompleteShell
@@ -207,7 +207,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &11426614
+--- !u!114 &5168414541099612003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,9 +216,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 192454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9894b7bced3a04c870ade3c621f94e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a4a6e430fdfb744880345e44f5b5229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DebugLogScriptExecution: 0
+  m_ScriptAsset: {fileID: -6979533126094156877, guid: ad1ed9b2078e162499f4723926e24101,
+    type: 3}
   m_TankMask:
     serializedVersion: 2
     m_Bits: 512
