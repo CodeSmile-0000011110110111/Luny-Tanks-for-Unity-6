@@ -2140,13 +2140,13 @@ MonoBehaviour:
   m_StartDelay: 3
   m_EndDelay: 3
   m_CameraControl: {fileID: 1771596988}
-  m_Tank1Prefab: {fileID: 7273797243869566079, guid: e8a208e9857544b0292cc3d24b0106b6,
+  m_Tank1Prefab: {fileID: 7273797243869566079, guid: f08bfd4e3c306cc40a86d4d073428a5f,
     type: 3}
-  m_Tank2Prefab: {fileID: 2259141219951711155, guid: 1e8ed6dfd612e4b4d9c8b4459c750afa,
+  m_Tank2Prefab: {fileID: 2259141219951711155, guid: 4217d760ad313be42ade760d9767054d,
     type: 3}
-  m_Tank3Prefab: {fileID: 2204552607319198144, guid: 7fdbd076ee75a4b21ae778c47c39db3e,
+  m_Tank3Prefab: {fileID: 2204552607319198144, guid: 2a12601c07939df459739c2abe587c52,
     type: 3}
-  m_Tank4Prefab: {fileID: 2229267103195021085, guid: f7304e3e69d7944849cbc911fbf4a3a2,
+  m_Tank4Prefab: {fileID: 2229267103195021085, guid: 5effe9cf533a8ff42ac447ed42d33fe2,
     type: 3}
   m_SpawnPoints:
   - m_PlayerColor: {r: 0.16470589, g: 0.39215687, b: 0.69803923, a: 0}
