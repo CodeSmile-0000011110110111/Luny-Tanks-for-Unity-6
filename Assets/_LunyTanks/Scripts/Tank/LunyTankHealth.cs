@@ -44,6 +44,7 @@ namespace CodeSmile.Luny.Tanks
 		public void TakeDamage(Single damage)
 		{
 			Debug.LogWarning("TakeDamage - REPLACE ME");
+			Script.Invoke(nameof(TakeDamage), damage);
 		}
 
 		// FIXME: remove

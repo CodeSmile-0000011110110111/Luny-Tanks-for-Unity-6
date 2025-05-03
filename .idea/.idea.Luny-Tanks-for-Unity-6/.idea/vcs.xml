@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="P:/de.codesmile.core" vcs="Git" />
+    <mapping directory="P:/de.codesmile.luny" vcs="Git" />
   </component>
 </project>

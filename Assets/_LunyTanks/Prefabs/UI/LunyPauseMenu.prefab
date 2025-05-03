@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 6955593030032132401}
   - component: {fileID: 7756146646032390763}
   m_Layer: 5
-  m_Name: PauseMenu
+  m_Name: LunyPauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
