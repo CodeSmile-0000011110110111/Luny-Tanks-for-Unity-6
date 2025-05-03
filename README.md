@@ -16,4 +16,3 @@ Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://githu
 
 - **Unity Tanks!** is under [Unity Companion License](https://unity.com/legal/licenses/unity-companion-license)
 - Lua scripts are under [MIT License](https://opensource.org/license/mit)
-- [LuaCSharp](https://github.com/CodeSmile-0000011110110111/Lua-CSmile) is under [MIT License](https://opensource.org/license/mit)
