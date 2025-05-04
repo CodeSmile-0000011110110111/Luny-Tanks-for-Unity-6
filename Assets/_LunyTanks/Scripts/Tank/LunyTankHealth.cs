@@ -6,7 +6,6 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using Object = System.Object;
 
 namespace CodeSmile.Luny.Tanks
 {
@@ -30,23 +29,6 @@ namespace CodeSmile.Luny.Tanks
 		[Tooltip("A prefab that will be instantiated in Awake, then used whenever the tank dies.")]
 		[SerializeField] private GameObject m_ExplosionPrefab;
 
-		protected override void OnBeforeScriptAwake()
-		{
-			SetFloat(nameof(m_StartingHealth).Substring(2), m_StartingHealth);
-			SetObject(nameof(m_Slider).Substring(2), new LunyUISlider(m_Slider));
-			SetObject(nameof(m_FillImage).Substring(2), new LunyUIImage(m_FillImage));
-			SetObject(nameof(m_FullHealthColor).Substring(2), new LunyColor(m_FullHealthColor));
-			SetObject(nameof(m_ZeroHealthColor).Substring(2), new LunyColor(m_ZeroHealthColor));
-			SetObject(nameof(m_ExplosionPrefab).Substring(2), new LunyGameObject(m_ExplosionPrefab));
-		}
-
-		// FIXME: remove
-		public void TakeDamage(Single damage)
-		{
-			Debug.LogWarning("TakeDamage - REPLACE ME");
-			Script.Invoke(nameof(TakeDamage), damage);
-		}
-
 		// FIXME: remove
 		public Single StartingHealth
 		{
@@ -56,27 +38,30 @@ namespace CodeSmile.Luny.Tanks
 				return GetFloat(nameof(StartingHealth));
 			}
 		}
-		public void ToggleShield(Single shieldAmount)
+
+		public Boolean HasShield => throw new NotImplementedException();
+
+		protected override void OnBeforeScriptAwake()
 		{
-			throw new NotImplementedException();
+			SetFloat(nameof(m_StartingHealth).Substring(2), m_StartingHealth);
+			SetUserData(nameof(m_Slider).Substring(2), new LunyUISlider(m_Slider));
+			SetUserData(nameof(m_FillImage).Substring(2), new LunyUIImage(m_FillImage));
+			SetUserData(nameof(m_FullHealthColor).Substring(2), new LunyColor(m_FullHealthColor));
+			SetUserData(nameof(m_ZeroHealthColor).Substring(2), new LunyColor(m_ZeroHealthColor));
+			SetObject(nameof(m_ExplosionPrefab).Substring(2), m_ExplosionPrefab);
 		}
 
-		public void IncreaseHealth(Single healAmount)
+		// FIXME: remove
+		public void TakeDamage(Single damage)
 		{
-			throw new NotImplementedException();
+			Debug.LogWarning("TakeDamage - REPLACE ME");
+			Script.Invoke(nameof(TakeDamage), damage);
 		}
 
-		public void ToggleInvincibility()
-		{
-			throw new NotImplementedException();
-		}
+		public void ToggleShield(Single shieldAmount) => throw new NotImplementedException();
 
-		public Boolean HasShield
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-		}
+		public void IncreaseHealth(Single healAmount) => throw new NotImplementedException();
+
+		public void ToggleInvincibility() => throw new NotImplementedException();
 	}
 }

@@ -1,13 +1,11 @@
--- 'script' can be renamed, but it must be a table
--- the three dots (...) represent variable arguments passed in (reserved for future use)
-local script = {...}
--- you are free to add custom variables to script, these are read/writeable in C#
-script.OhWowThatsCoolBool = true
+-- This is used to quickly find the GameObject it is added to by using FindObjectOfType.
+-- Used by the GameManager to find the text used to display game informations
 
--- any Unity event can be a Lua function defined in the 'script' table
-function script.Start()
-	print("Hello, " .. script.name .. ".lua on " .. tostring(script.gameObject))
+local script = {...}
+
+-- renamed to clarify that this gets the component, not the component's text!
+function script.GetTextComponent()
+    return script.gameObject:GetComponent(textmeshprougui)
 end
 
--- scripts must return a table containing zero or more Unity event functions
 return script

@@ -2123,7 +2123,7 @@ MonoBehaviour:
   m_LunyScriptTypesAreLowercase: 1
   m_StartupScripts:
   - {fileID: -6979533126094156877, guid: 6c5b2baf53917f4458e56bb515399d0c, type: 3}
-  m_LogLunyScriptTypes: 0
+  m_LogLunyScriptTypes: 1
 --- !u!4 &1205041295
 Transform:
   m_ObjectHideFlags: 0
