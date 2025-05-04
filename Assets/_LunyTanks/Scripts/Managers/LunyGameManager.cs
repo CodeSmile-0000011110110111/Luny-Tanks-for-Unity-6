@@ -1,6 +1,8 @@
 // Copyright (C) 2021-2025 Steffen Itterheim
 // Refer to included LICENSE file for terms and conditions.
 
+using CodeSmile.Luny.Api;
+using Lua;
 using System;
 using UnityEditor;
 using UnityEngine;
@@ -22,7 +24,21 @@ namespace CodeSmile.Luny.Tanks
 
 		public LunyTankManager[] m_SpawnPoints; // A collection of managers for enabling and disabling different aspects of the tanks.
 
-		public void StartGame(PlayerData[] playerData) => Debug.LogWarning("Start Game not implemented");
+		public void StartGame(PlayerData[] playerData)
+		{
+			Debug.LogWarning("FIXME: Start Game called from C#");
+			var playerDataTable = new LuaTable();
+			for (var i = 0; i < playerData.Length; i++)
+			{
+				var data = new LuaTable();
+				data[nameof(PlayerData.IsComputer)] = playerData[i].IsComputer;
+				data[nameof(PlayerData.TankColor)] = LunyColor.Bind(playerData[i].TankColor);
+				data[nameof(PlayerData.UsedPrefab)] = LunyGameObject.Bind(playerData[i].UsedPrefab);
+				data[nameof(PlayerData.ControlIndex)] = playerData[i].ControlIndex;
+				playerDataTable[i + 1] = data;
+			}
+			Script.Invoke("StartGame", playerDataTable);
+		}
 
 		protected override void OnBeforeScriptAwake()
 		{
@@ -34,6 +50,15 @@ namespace CodeSmile.Luny.Tanks
 			SetObject(nameof(m_Tank2Prefab).Substring(2), m_Tank2Prefab);
 			SetObject(nameof(m_Tank3Prefab).Substring(2), m_Tank3Prefab);
 			SetObject(nameof(m_Tank4Prefab).Substring(2), m_Tank4Prefab);
+
+			// TankManager is a standard C# class thus simply serialize its fields to a LuaTable
+			var tanksTable = new LuaTable();
+			for (var i = 0; i < m_SpawnPoints.Length; i++)
+			{
+				tanksTable[i + 1] = m_SpawnPoints[i].ToLua();
+				Debug.Log($"tank #{i+1} = {tanksTable[i+1]}");
+			}
+			SetTable(nameof(m_SpawnPoints).Substring(2), tanksTable);
 		}
 
 		// Data about the selected tanks passed from the menu to the GameManager

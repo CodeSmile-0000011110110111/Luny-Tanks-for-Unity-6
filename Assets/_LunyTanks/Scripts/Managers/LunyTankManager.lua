@@ -23,6 +23,8 @@ function LunyTankManager.CreateTank()
 end
 
 function LunyTankManager.Setup(tank, gameManager)
+    print("LunyTankManager.Setup", tank, gameManager)
+
     -- Get references to the components.
     tank.Movement = tank.Instance:GetComponent(lunytankmovement)
     tank.Shooting = tank.Instance:GetComponent(lunytankshooting)
@@ -32,7 +34,9 @@ function LunyTankManager.Setup(tank, gameManager)
     -- Assign the Input User of that Tank to the script controlling input system binding, so the move/fire actions
     -- get only triggered by the right input for that users (e.g. arrow doesn't trigger move if that input user use WASD)
     local inputUser = tank.Instance:GetComponent(lunytankinputuser)
-    inputUser:SetNewInputUser(tank.InputUser)
+    print("got inputUser component", inputUser)
+    print(" its script is", inputUser.script)
+    inputUser.script.SetNewInputUser(tank.InputUser)
 
     -- Toggle computer controlled on the movement/firing if this tank was tagged as being computer controlled
     tank.Movement.IsComputerControlled = tank.ComputerControlled
@@ -55,15 +59,16 @@ function LunyTankManager.Setup(tank, gameManager)
 
     -- Get all of the renderers of the tank.
     local renderers = tank.Instance:GetComponentsInChildren(meshrenderer)
+    print("renderers", renderers, #renderers)
 
     -- Go through all the renderers...
-    for i = 1, i <= renderers.Length do
-        local renderer = renderers[i]
-        for j = 1, j <= renderer.materials.Length do
+    for _, renderer in ipairs(renderers) do
+        print("renderer.materials", renderer, #renderer.materials)
+        for _, material in ipairs(renderer.materials) do
             -- If the material is the tank color one...
-            if string.find(renderer.materials[j].name, "TankColor") then
+            if string.find(material.name, "TankColor") then
                 -- change its color to the player color
-                renderer.materials[j].color = tank.PlayerColor
+                material.color = tank.PlayerColor
             end
         end
     end

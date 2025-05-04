@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 7411702420874962393}
   - component: {fileID: 4113843720096069289}
   - component: {fileID: 6853756927771888416}
+  - component: {fileID: 6620054121791110093}
   m_Layer: 9
   m_Name: LunyDemo_Tank
   m_TagString: Tank
@@ -1163,6 +1164,23 @@ MonoBehaviour:
   m_ScriptAsset_Obsolete: {fileID: -6979533126094156877, guid: de558d6930c11be458aea859c781489e,
     type: 3}
   m_HasActivePowerUp: 0
+--- !u!114 &6620054121791110093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783cdca61be330342a452b42b00c7d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LunyScriptSettings:
+    ScriptAsset: {fileID: -6979533126094156877, guid: 1aaf2c2815859954e9d8c1f7735bc82d,
+      type: 3}
+    DebugLogScriptExecution: 0
+  m_ScriptAsset_Obsolete: {fileID: 0}
 --- !u!1 &173936
 GameObject:
   m_ObjectHideFlags: 0

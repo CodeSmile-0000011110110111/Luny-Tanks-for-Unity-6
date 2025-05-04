@@ -1,4 +1,5 @@
 using CodeSmile.Luny;
+using Lua;
 using System;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -11,6 +12,13 @@ namespace CodeSmile.Luny.Tanks
     [Serializable]
     public class LunyTankManager
     {
+        public LuaValue ToLua()
+        {
+            var table = new LuaTable();
+            table.SetObject(nameof(m_SpawnPoint).Substring(2), m_SpawnPoint);
+            return table;
+        }
+
         // This class is to manage various settings on a tank.
         // It works with the GameManager class to control how the tanks behave
         // and whether or not players have control of their tank in the

@@ -24,7 +24,7 @@ local m_RoundNumber = 0                 -- Which round the game is currently on.
 local m_RoundWinner = nil               -- Reference to the winner of the current round.  Used to make an announcement of who won.
 local m_GameWinner = nil                -- Reference to the winner of the game.  Used to make an announcement of who won.
 
-local m_TankData = nil                  -- Data passed from the menu about each selected tank (at least 2, max 4)
+local m_PlayerData = nil                  -- Data passed from the menu about each selected tank (at least 2, max 4)
 local m_PlayerCount = 0                 -- The number of players (2 to 4), decided from the number of PlayerData passed by the menu
 local m_TitleText = nil                 -- The text used to display game message. Automatically found as part of the Menu prefab
 
@@ -50,6 +50,21 @@ function script.Start()
     end
 end
 
+function script.ChangeGameState(newState)
+    m_CurrentState = newState
+
+    -- emulate the use of a 'switch/case' by simply calling the function defined in GameState
+    m_CurrentState()
+end
+
+-- Called by the menu, passing along the data from the selection made by the player in the menu
+function script.StartGame(playerData)
+    m_PlayerData = playerData
+    m_PlayerCount = #m_PlayerData
+    script.ChangeGameState(GameState.Game)
+end
+
+-- FIXME: it's super confusing to have both StartGame() and GameStart() ..
 function script.GameStart()
     script.SpawnAllTanks()
     script.SetCameraTargets()
@@ -58,24 +73,12 @@ function script.GameStart()
     script.component:StartCoroutine(script.GameLoop)
 end
 
-function script.ChangeGameState(newState)
-    m_CurrentState = newState
-
-    -- emulate the use of a 'switch/case' by simply calling the state's function defined in GameState
-    m_CurrentState()
-end
-
--- Called by the menu, passing along the data from the selection made by the player in the menu
-function script.StartGame(playerData)
-    m_TankData = playerData
-    m_PlayerCount = m_TankData.Length
-    script.ChangeGameState(GameState.Game)
-end
-
 function script.SpawnAllTanks()
     -- For all the tanks...
-    for i, playerData in ipairs(m_TankData) do
+    for i, playerData in ipairs(m_PlayerData) do
+        print("data", i, playerData)
         local spawnPoint = script.SpawnPoints[i];
+        print("spawnpoint", i, spawnPoint.SpawnPoint)
 
         -- ... create them, set their player number and references needed for control.
         local pos = spawnPoint.SpawnPoint.position
@@ -86,7 +89,7 @@ function script.SpawnAllTanks()
         --then all of those prefab would be bots. So we ensure it's to false (the IsComputer from player data
         --will re-enable this if needed when the game start)
         local mov = spawnPoint.Instance:GetComponent(lunytankmovement)
-        mov.IsComputerControlled = false
+        mov.script.IsComputerControlled = false
 
         spawnPoint.PlayerNumber = i
         spawnPoint.ControlIndex = playerData.ControlIndex
@@ -95,13 +98,12 @@ function script.SpawnAllTanks()
     end
 
     --we delayed setup after all tanks are created as they expect to have access to all other tanks in the manager
-    for _, tank in script.SpawnPoints do
+    for _, tank in ipairs(script.SpawnPoints) do
         if tank.Instance then
             LunyTankManager.Setup(tank, script)
         end
     end
 end
-
 
 function script.SetCameraTargets()
     -- Create a collection of transforms the same size as the number of tanks.
