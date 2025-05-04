@@ -16,8 +16,9 @@ namespace CodeSmile.Luny.Tanks
         // and whether or not players have control of their tank in the
         // different phases of the game.
 
-        [HideInInspector] public Color m_PlayerColor;           // This is the color this tank will be tinted.
         public Transform m_SpawnPoint;                          // The position and direction the tank will have when it spawns.
+
+        [HideInInspector] public Color m_PlayerColor;           // This is the color this tank will be tinted.
         [HideInInspector] public int m_PlayerNumber;            // This specifies which player this the manager for.
         [HideInInspector] public string m_ColoredPlayerText;    // A string that represents the player with their number colored to match their tank.
         [HideInInspector] public GameObject m_Instance;         // A reference to the instance of the tank when it is created.
@@ -130,11 +131,8 @@ namespace CodeSmile.Luny.Tanks
     [CustomPropertyDrawer(typeof(LunyTankManager))]
     public class TankManagerDrawer : PropertyDrawer
     {
-        public override VisualElement CreatePropertyGUI(SerializedProperty property)
-        {
-            var itemSlot = new PropertyField(property.FindPropertyRelative(nameof(LunyTankManager.m_SpawnPoint)));
-            return itemSlot;
-        }
+        public override VisualElement CreatePropertyGUI(SerializedProperty property) =>
+            new PropertyField(property.FindPropertyRelative(nameof(LunyTankManager.m_SpawnPoint)));
     }
     #endif
 }

@@ -2121,7 +2121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LunyScriptTypesAreLowercase: 1
-  m_StartupScripts: []
+  m_StartupScripts:
+  - {fileID: -6979533126094156877, guid: 6c5b2baf53917f4458e56bb515399d0c, type: 3}
   m_LogLunyScriptTypes: 0
 --- !u!4 &1205041295
 Transform:
@@ -2365,29 +2366,29 @@ MonoBehaviour:
   m_Tank4Prefab: {fileID: 6438186235213555811, guid: e0d92977a44d69e489503b89287db251,
     type: 3}
   m_SpawnPoints:
-  - m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_SpawnPoint: {fileID: 194018016}
+  - m_SpawnPoint: {fileID: 194018016}
+    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
     m_PlayerNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
     m_Wins: 0
     m_ComputerControlled: 0
-  - m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_SpawnPoint: {fileID: 2083660209}
+  - m_SpawnPoint: {fileID: 2083660209}
+    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
     m_PlayerNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
     m_Wins: 0
     m_ComputerControlled: 0
-  - m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_SpawnPoint: {fileID: 185897748}
+  - m_SpawnPoint: {fileID: 185897748}
+    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
     m_PlayerNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
     m_Wins: 0
     m_ComputerControlled: 0
-  - m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_SpawnPoint: {fileID: 1979544988}
+  - m_SpawnPoint: {fileID: 1979544988}
+    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
     m_PlayerNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
@@ -2703,8 +2704,7 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras:
-  - {fileID: 0}
+  m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
