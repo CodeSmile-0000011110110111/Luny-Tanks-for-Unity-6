@@ -22,7 +22,8 @@ namespace CodeSmile.Luny.Tanks
 		public GameObject m_Tank3Prefab; // The Prefab used by the tank in Slot 3 of the Menu
 		public GameObject m_Tank4Prefab; // The Prefab used by the tank in Slot 4 of the Menu
 
-		public LunyTankManager[] m_SpawnPoints; // A collection of managers for enabling and disabling different aspects of the tanks.
+		public LunyTankManager[]
+			m_SpawnPoints; // A collection of managers for enabling and disabling different aspects of the tanks.
 
 		public void StartGame(PlayerData[] playerData)
 		{
@@ -54,10 +55,8 @@ namespace CodeSmile.Luny.Tanks
 			// TankManager is a standard C# class thus simply serialize its fields to a LuaTable
 			var tanksTable = new LuaTable();
 			for (var i = 0; i < m_SpawnPoints.Length; i++)
-			{
 				tanksTable[i + 1] = m_SpawnPoints[i].ToLua();
-				Debug.Log($"tank #{i+1} = {tanksTable[i+1]}");
-			}
+
 			SetTable(nameof(m_SpawnPoints).Substring(2), tanksTable);
 		}
 

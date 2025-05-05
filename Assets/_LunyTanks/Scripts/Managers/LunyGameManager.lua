@@ -79,7 +79,6 @@ end
 function script.SpawnAllTanks()
     -- For all the tanks...
     for i, playerData in ipairs(m_PlayerData) do
-        print("data", i, playerData)
         local spawnPoint = script.SpawnPoints[i];
 
         -- ... create them, set their player number and references needed for control.
@@ -102,7 +101,6 @@ function script.SpawnAllTanks()
     --we delayed setup after all tanks are created as they expect to have access to all other tanks in the manager
     for _, tank in ipairs(script.SpawnPoints) do
         if tank.Instance then
-            print("SpawnAllTanks", "Setup()", tank, script)
             LunyTankManager.Setup(tank, script)
         end
     end
@@ -113,13 +111,17 @@ function script.SetCameraTargets()
     local targets = {}
 
     -- For each of these transforms...
-    for i = 1, i < script.PlayerCount do
+    for i = 1, m_PlayerCount do
         -- ... set it to the appropriate tank transform.
         targets[i] = script.SpawnPoints[i].Instance.transform
     end
 
     -- These are the targets the camera should follow.
-    script.CameraControl.Targets = targets
+    print(" ... setting targets ...")
+    print(" ... cameracontrol ...", script.CameraControl)
+    print(" ... script ...", script.CameraControl.script)
+    script.CameraControl.script.Targets = targets
+    print(" ... targets set ...")
 end
 
 -- This is called from start and will run each phase of the game one after another.
