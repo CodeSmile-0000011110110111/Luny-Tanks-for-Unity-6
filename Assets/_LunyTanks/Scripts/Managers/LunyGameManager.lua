@@ -66,9 +66,12 @@ end
 
 -- FIXME: it's super confusing to have both StartGame() and GameStart() ..
 function script.GameStart()
+    print("GameStart", "SpawnAllTanks")
     script.SpawnAllTanks()
+    print("GameStart", "SetCameraTargets")
     script.SetCameraTargets()
 
+    print("GameStart", "StartCoroutine(GameLoop)")
     -- Once the tanks have been created and the camera is using them as targets, start the game.
     script.component:StartCoroutine(script.GameLoop)
 end
@@ -78,7 +81,6 @@ function script.SpawnAllTanks()
     for i, playerData in ipairs(m_PlayerData) do
         print("data", i, playerData)
         local spawnPoint = script.SpawnPoints[i];
-        print("spawnpoint", i, spawnPoint.SpawnPoint)
 
         -- ... create them, set their player number and references needed for control.
         local pos = spawnPoint.SpawnPoint.position
@@ -100,6 +102,7 @@ function script.SpawnAllTanks()
     --we delayed setup after all tanks are created as they expect to have access to all other tanks in the manager
     for _, tank in ipairs(script.SpawnPoints) do
         if tank.Instance then
+            print("SpawnAllTanks", "Setup()", tank, script)
             LunyTankManager.Setup(tank, script)
         end
     end

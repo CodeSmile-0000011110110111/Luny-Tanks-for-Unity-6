@@ -2120,9 +2120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b221aacb13e14ed2b2493464749d17f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LunyScriptTypesAreLowercase: 1
+  m_LuaAssetRegistry: {fileID: 11400000, guid: bbe45ef4bb75fc042aeb4d1711cb4efe, type: 2}
   m_StartupScripts:
   - {fileID: -6979533126094156877, guid: 6c5b2baf53917f4458e56bb515399d0c, type: 3}
+  m_LunyScriptTypesAreLowercase: 1
   m_LogLunyScriptTypes: 1
 --- !u!4 &1205041295
 Transform:
@@ -2351,8 +2352,6 @@ MonoBehaviour:
     ScriptAsset: {fileID: -6979533126094156877, guid: a69b1abb666506541bfa50b8416b08e5,
       type: 3}
     DebugLogScriptExecution: 0
-  m_ScriptAsset_Obsolete: {fileID: -6979533126094156877, guid: a69b1abb666506541bfa50b8416b08e5,
-    type: 3}
   m_NumRoundsToWin: 3
   m_StartDelay: 3
   m_EndDelay: 3
@@ -2929,8 +2928,6 @@ MonoBehaviour:
     ScriptAsset: {fileID: -6979533126094156877, guid: 25284e7754397384088f1e31691e1cef,
       type: 3}
     DebugLogScriptExecution: 0
-  m_ScriptAsset_Obsolete: {fileID: -6979533126094156877, guid: 25284e7754397384088f1e31691e1cef,
-    type: 3}
   m_DampTime: 0.2
   m_ScreenEdgeBuffer: 4
   m_MinSize: 6.5

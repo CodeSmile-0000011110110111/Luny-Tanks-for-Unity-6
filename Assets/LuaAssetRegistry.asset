@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3a4810f168411aa3df345fcd897ca2, type: 3}
+  m_Name: LuaAssetRegistry
+  m_EditorClassIdentifier: 
+  m_LuaAssets:
+  - {fileID: -6979533126094156877, guid: 25284e7754397384088f1e31691e1cef, type: 3}
+  - {fileID: -6979533126094156877, guid: a69b1abb666506541bfa50b8416b08e5, type: 3}
+  - {fileID: -6979533126094156877, guid: 6c5b2baf53917f4458e56bb515399d0c, type: 3}
+  - {fileID: -6979533126094156877, guid: ecf8badd9af8f2841901f290d727c19f, type: 3}
+  - {fileID: -6979533126094156877, guid: e128f96960fdc954ea183c3d40a6658c, type: 3}
+  - {fileID: -6979533126094156877, guid: 9f9bdddbb20b6d44ca701f1f35b61816, type: 3}
+  - {fileID: -6979533126094156877, guid: 8b56aa05393020144b71b0e8ac7a4a4c, type: 3}
+  - {fileID: -6979533126094156877, guid: ad1ed9b2078e162499f4723926e24101, type: 3}
+  - {fileID: -6979533126094156877, guid: de558d6930c11be458aea859c781489e, type: 3}
+  - {fileID: -6979533126094156877, guid: bc3821a7ad7407348911ad3fcabd9635, type: 3}
+  - {fileID: -6979533126094156877, guid: d8d8a800021830846b2e83292eb12055, type: 3}
+  - {fileID: -6979533126094156877, guid: 1aaf2c2815859954e9d8c1f7735bc82d, type: 3}
+  - {fileID: -6979533126094156877, guid: 13a2e0b080a5047439073f7d5fa86f9e, type: 3}
+  - {fileID: -6979533126094156877, guid: c2f56851008d0e948b3c3c3455be0ec0, type: 3}
+  - {fileID: -6979533126094156877, guid: 1271d4fff50a2d945a2d794f66b9dd81, type: 3}
+  - {fileID: -6979533126094156877, guid: 08bea84c8bcf1d24d8f493e2abefd7f3, type: 3}
+  - {fileID: -6979533126094156877, guid: e269bfabbe575654ebd028c1a7b37bde, type: 3}
+  - {fileID: -6979533126094156877, guid: 01505922d88788d4094c2acb7b4f405f, type: 3}
+  - {fileID: -6979533126094156877, guid: cc0a02da017331b4f94f71cbecbab63f, type: 3}
+  - {fileID: -6979533126094156877, guid: 5ee560ad10891d34f811c59a1869409d, type: 3}
+  - {fileID: -6979533126094156877, guid: 3ed496e423786564d890e109d9aecd4f, type: 3}
+  - {fileID: -6979533126094156877, guid: ac3c31e7a72a4900920b47d4c01103c2, type: 3}
+  - {fileID: -6979533126094156877, guid: f15d74223dbd426ca390a2d78b6dc492, type: 3}
+  - {fileID: -6979533126094156877, guid: 71d4c9aa4ae646418bdc76d9684e72da, type: 3}
+  - {fileID: -6979533126094156877, guid: 387a99dc60382e7488c7249570af53ae, type: 3}
+  - {fileID: -6979533126094156877, guid: b14dad538f4e42c596ffed0047d61cb6, type: 3}
+  - {fileID: -6979533126094156877, guid: cc41a34cb4a245ab8027438bec1cf965, type: 3}
+  - {fileID: -6979533126094156877, guid: 3ce20c15ca7e40f6ac6463c7a526f14c, type: 3}
+  - {fileID: -6979533126094156877, guid: d903b07e7fae4bcaab58760d87241b31, type: 3}
+  - {fileID: -6979533126094156877, guid: 19a711a0473f4e899dfaa84a5df4e554, type: 3}
+  - {fileID: -6979533126094156877, guid: 83b78857426f48d4a83898a6c960cdbf, type: 3}
+  - {fileID: -6979533126094156877, guid: b1a96b798f84498b81f7784a386c4a00, type: 3}
+  - {fileID: -6979533126094156877, guid: 75a96fc0e612b0145a087aa6467dbf01, type: 3}
+  - {fileID: -6979533126094156877, guid: 3cd3ae464bf04f14b61e102c2273fbf4, type: 3}
+  m_LuaAssetNames:
+  - LunyCameraControl
+  - LunyGameManager
+  - LunyTankManager
+  - LunyPowerUp
+  - LunyPowerUpFX
+  - LunyPowerUpHUD
+  - LunyPowerUpSpawner
+  - LunyShellExplosion
+  - LunyPowerUpDetector
+  - LunyTankAI
+  - LunyTankHealth
+  - LunyTankInputUser
+  - LunyTankMovement
+  - LunyTankShooting
+  - LunyGameUIHandler
+  - LunyMessageTextReference
+  - LunyPauseMenu
+  - LunyStartMenuSlot
+  - LunyMobileUIControl
+  - LunyUIVirtualJoystick
+  - New Luny Script
+  - LunyApiCompatibility
+  - ParseError
+  - ReturnEmptyTable
+  - ReturnEmptyTable
+  - TestCoroutine
+  - TestCustomLunyScript_Coroutine
+  - TestCustomLunyScript_GetSetProperties
+  - TestCustomLunyScript_InvokeFunction
+  - TestCustomLunyScript_Minimal
+  - TestCustomLunyScript_NoReturnValue
+  - TestCustomLunyScript_SendMessage
+  - TestObjectScript
+  - TestObjectScriptWithParseError
+  m_LuaAssetNamesLowercase:
+  - lunycameracontrol
+  - lunygamemanager
+  - lunytankmanager
+  - lunypowerup
+  - lunypowerupfx
+  - lunypoweruphud
+  - lunypowerupspawner
+  - lunyshellexplosion
+  - lunypowerupdetector
+  - lunytankai
+  - lunytankhealth
+  - lunytankinputuser
+  - lunytankmovement
+  - lunytankshooting
+  - lunygameuihandler
+  - lunymessagetextreference
+  - lunypausemenu
+  - lunystartmenuslot
+  - lunymobileuicontrol
+  - lunyuivirtualjoystick
+  - new luny script
+  - lunyapicompatibility
+  - parseerror
+  - returnemptytable
+  - returnemptytable
+  - testcoroutine
+  - testcustomlunyscript_coroutine
+  - testcustomlunyscript_getsetproperties
+  - testcustomlunyscript_invokefunction
+  - testcustomlunyscript_minimal
+  - testcustomlunyscript_noreturnvalue
+  - testcustomlunyscript_sendmessage
+  - testobjectscript
+  - testobjectscriptwithparseerror
+  m_LuaAssetPaths:
+  - Assets/_LunyTanks/Scripts/Camera/LunyCameraControl.lua
+  - Assets/_LunyTanks/Scripts/Managers/LunyGameManager.lua
+  - Assets/_LunyTanks/Scripts/Managers/LunyTankManager.lua
+  - Assets/_LunyTanks/Scripts/PowerUp/LunyPowerUp.lua
+  - Assets/_LunyTanks/Scripts/PowerUp/LunyPowerUpFX.lua
+  - Assets/_LunyTanks/Scripts/PowerUp/LunyPowerUpHUD.lua
+  - Assets/_LunyTanks/Scripts/PowerUp/LunyPowerUpSpawner.lua
+  - Assets/_LunyTanks/Scripts/Shell/LunyShellExplosion.lua
+  - Assets/_LunyTanks/Scripts/Tank/LunyPowerUpDetector.lua
+  - Assets/_LunyTanks/Scripts/Tank/LunyTankAI.lua
+  - Assets/_LunyTanks/Scripts/Tank/LunyTankHealth.lua
+  - Assets/_LunyTanks/Scripts/Tank/LunyTankInputUser.lua
+  - Assets/_LunyTanks/Scripts/Tank/LunyTankMovement.lua
+  - Assets/_LunyTanks/Scripts/Tank/LunyTankShooting.lua
+  - Assets/_LunyTanks/Scripts/UI/LunyGameUIHandler.lua
+  - Assets/_LunyTanks/Scripts/UI/LunyMessageTextReference.lua
+  - Assets/_LunyTanks/Scripts/UI/LunyPauseMenu.lua
+  - Assets/_LunyTanks/Scripts/UI/LunyStartMenuSlot.lua
+  - Assets/_LunyTanks/Scripts/UI/MobileControl/LunyMobileUIControl.lua
+  - Assets/_LunyTanks/Scripts/UI/MobileControl/VirtualInputs/LunyUIVirtualJoystick.lua
+  - Packages/de.codesmile.luny/Runtime/Luny/Extensions/New Luny Script.lua
+  - Packages/de.codesmile.luny/Runtime/Luny/Resources/LunyApiCompatibility.lua
+  - Packages/de.codesmile.luny/Tests/Assets/ParseError.lua
+  - Packages/de.codesmile.luny/Tests/Assets/ReturnEmptyTable.lua
+  - Packages/de.codesmile.luny/Tests/Assets/Subfolder/ReturnEmptyTable.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCoroutine.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_Coroutine.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_GetSetProperties.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_InvokeFunction.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_Minimal.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_NoReturnValue.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_SendMessage.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestObjectScript.lua
+  - Packages/de.codesmile.luny/Tests/Assets/TestObjectScriptWithParseError.lua
