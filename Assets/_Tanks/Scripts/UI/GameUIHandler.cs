@@ -78,10 +78,10 @@ namespace Tanks.Complete
             // We use an array because the code was originally written to have any number of prefabs and player, but
             // this was fixed to always 4 tanks during development, so to avoid rewriting the code for static number,
             // we simply transform our 4 static tank prefab into an array
-            var tanksPrefabs =
-                new[]
-                {
-                    m_GameManager.m_Tank1Prefab, m_GameManager.m_Tank2Prefab, m_GameManager.m_Tank3Prefab,
+            var tanksPrefabs = new[] {
+                    m_GameManager.m_Tank1Prefab,
+                    m_GameManager.m_Tank2Prefab,
+                    m_GameManager.m_Tank3Prefab,
                     m_GameManager.m_Tank4Prefab
                 };
 

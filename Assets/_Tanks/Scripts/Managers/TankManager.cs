@@ -33,7 +33,7 @@ namespace Tanks.Complete
         private GameObject m_CanvasGameObject;                  // Used to disable the world space UI during the Starting and Ending phases of each round.
         
         private TankAI m_AI;                                    // The Tank AI script that let a tank be a bot controlled by the computer
-        private InputUser m_InputUser;                          // The Input user link to that tank. Input user identify a single player in the Input system
+//        private InputUser m_InputUser;                          // The Input user link to that tank. Input user identify a single player in the Input system
         
         public void Setup (GameManager manager)
         {
@@ -45,8 +45,8 @@ namespace Tanks.Complete
 
             // Assign the Input User of that Tank to the script controlling input system binding, so the move/fire actions
             // get only triggered by the right input for that users (e.g. arrow doesn't trigger move if that input user use WASD)
-            var inputUser = m_Instance.GetComponent<TankInputUser>();
-            inputUser.SetNewInputUser(m_InputUser);
+            // var inputUser = m_Instance.GetComponent<TankInputUser>();
+            // inputUser.SetNewInputUser(m_InputUser);
 
             // Toggle computer controlled on the movement/firing if this tank was tagged as being computer controlled
             m_Movement.m_IsComputerControlled = m_ComputerControlled;
