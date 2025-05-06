@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d3a4810f168411aa3df345fcd897ca2, type: 3}
-  m_Name: LuaAssetRegistry
+  m_Name: LunyLuaAssetRegistry
   m_EditorClassIdentifier: 
   m_LuaAssets:
   - {fileID: -6979533126094156877, guid: 25284e7754397384088f1e31691e1cef, type: 3}
