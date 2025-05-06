@@ -18,6 +18,13 @@ namespace CodeSmile.Luny.Tanks
         private InputUser m_InputUser;
         private InputActionAsset m_LocalActionAsset;
 
+        protected override void OnBeforeScriptAwake()
+        {
+	        // SetObject(nameof(InputUser), m_InputUser);
+	        // SetObject(nameof(ActionAsset), m_LocalActionAsset);
+        }
+
+
         private void Awake()
         {
             // Clone the Action Map so the actions can be paired with a specific device (otherwise the default actions
@@ -57,19 +64,5 @@ namespace CodeSmile.Luny.Tanks
                 m_InputUser.ActivateControlScheme(m_InputUser.controlScheme.Value);
         }
 
-
-		// Awake cannot be overridden, use OnAwake instead. The script has not been loaded at this point!
-		protected override void OnAwake() {}
-
-		// Script was run and returned a LuaTable. Script's Awake() function has not been called yet.
-		// You may want to get/set initial script variables before script's Awake():
-		protected override void OnBeforeScriptAwake()
-		{
-			// Variables are set to the script table (commonly named 'script'): 'print(script.ImportantMessage)'
-			SetString("ImportantMessage", "Testing One-Two-Three ..");
-
-			// If you need the value of 'script.OhWowThatsCoolBool' assigned by the Lua script:
-			var datBool = GetBool("OhWowThatsCoolBool");
-		}
 	}
 }

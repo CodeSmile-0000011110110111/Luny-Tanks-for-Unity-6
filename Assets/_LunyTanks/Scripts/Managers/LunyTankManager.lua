@@ -14,7 +14,7 @@ LunyTankManager =
     Shooting = nil,             -- Reference to tank's shooting script, used to disable and enable control.
     CanvasGameObject = nil,     -- Used to disable the world space UI during the Starting and Ending phases of each round.
     AI = nil,                   -- The Tank AI script that let a tank be a bot controlled by the computer
-    InputUser = nil,            -- The Input user link to that tank. Input user identify a single player in the Input system
+    --InputUser = nil,            -- The Input user link to that tank. Input user identify a single player in the Input system
 }
 
 function LunyTankManager.CreateTank()
@@ -24,15 +24,17 @@ end
 
 function LunyTankManager.Setup(tank, gameManager)
     -- Get references to the components.
-    tank.Movement = tank.Instance:GetComponent(lunytankmovement)
-    tank.Shooting = tank.Instance:GetComponent(lunytankshooting)
+    tank.Movement = tank.Instance:GetComponent(lunytankmovement).script
+    tank.Shooting = tank.Instance:GetComponent(lunytankshooting).script
     tank.AI = tank.Instance:GetComponent(lunytankai)
     tank.CanvasGameObject = tank.Instance:GetComponentInChildren(canvas).gameObject
 
     -- Assign the Input User of that Tank to the script controlling input system binding, so the move/fire actions
     -- get only triggered by the right input for that users (e.g. arrow doesn't trigger move if that input user use WASD)
-    local inputUser = tank.Instance:GetComponent(lunytankinputuser)
-    inputUser.script.SetNewInputUser(tank.InputUser)
+    -- CS: The two lines below have no effect and thus are commented.
+    -- See: https://discussions.unity.com/t/official-unity-learn-event-learn-along-featuring-tanks-remastered-for-unity-6-on-unity-learn/1633869/23
+    --local inputUser = tank.Instance:GetComponent(lunytankinputuser)
+    --inputUser.script.SetNewInputUser(tank.InputUser)
 
     -- Toggle computer controlled on the movement/firing if this tank was tagged as being computer controlled
     tank.Movement.IsComputerControlled = tank.ComputerControlled
@@ -45,8 +47,8 @@ function LunyTankManager.Setup(tank, gameManager)
 
     -- If this tank is computer controlled, add a TankAI component that take care of controlling the behavior
     if tank.ComputerControlled then
-        tank.AI = tank.Instance:AddComponent(lunytankai)
-        tank.AI.script.Setup(tank, gameManager)
+        tank.AI = tank.Instance:AddComponent(lunytankai).script
+        tank.AI.Setup(tank, gameManager)
     end
 
     -- Create a string using the correct color that says 'PLAYER 1' etc based on the tank's color and the player's number.

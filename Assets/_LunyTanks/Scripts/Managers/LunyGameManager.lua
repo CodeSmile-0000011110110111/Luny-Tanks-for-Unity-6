@@ -6,7 +6,7 @@ local script = {...}
 local GameState =
 {
     MainMenu = function() end, -- does nothing, ensures a call is legal
-    Game = function() script.GameStart() end,
+    Game = function() script.GameStart() end, -- wrapped in function because GameStart() is not yet declared here
 }
 
 -- Data about the selected tanks passed from the menu to the GameManager
@@ -76,23 +76,23 @@ end
 function script.SpawnAllTanks()
     -- For all the tanks...
     for i, playerData in ipairs(m_PlayerData) do
-        local spawnPoint = script.SpawnPoints[i];
+        local tank = script.SpawnPoints[i];
 
         -- ... create them, set their player number and references needed for control.
-        local pos = spawnPoint.SpawnPoint.position
-        local rot = spawnPoint.SpawnPoint.rotation
-        spawnPoint.Instance = gameobject.Instantiate(playerData.UsedPrefab, pos, rot)
+        local pos = tank.SpawnPoint.position
+        local rot = tank.SpawnPoint.rotation
+        tank.Instance = gameobject.Instantiate(playerData.UsedPrefab, pos, rot)
 
         --this guard against possible user error : if they created a prefab with Is Computer Control set to true
         --then all of those prefab would be bots. So we ensure it's to false (the IsComputer from player data
         --will re-enable this if needed when the game start)
-        local mov = spawnPoint.Instance:GetComponent(lunytankmovement)
-        mov.script.IsComputerControlled = false
+        local movement = tank.Instance:GetComponent(lunytankmovement).script
+        movement.IsComputerControlled = false
 
-        spawnPoint.PlayerNumber = i
-        spawnPoint.ControlIndex = playerData.ControlIndex
-        spawnPoint.PlayerColor = playerData.TankColor
-        spawnPoint.ComputerControlled = playerData.IsComputer
+        tank.PlayerNumber = i
+        tank.ControlIndex = playerData.ControlIndex
+        tank.PlayerColor = playerData.TankColor
+        tank.ComputerControlled = playerData.IsComputer
     end
 
     --we delayed setup after all tanks are created as they expect to have access to all other tanks in the manager
