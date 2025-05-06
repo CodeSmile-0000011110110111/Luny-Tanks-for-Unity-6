@@ -24,7 +24,6 @@ function script.Awake()
     m_AimToRig = script.transform.position - aimTArget
 end
 
-
 function script.FixedUpdate()
     if not once then
         once = true
@@ -38,15 +37,14 @@ function script.FixedUpdate()
     --script.Zoom()
 end
 
-
 function script.Move()
     -- Find the average position of the targets.
     script.FindAveragePosition()
 
     -- Smoothly transition to that position.
-    transform.position = vector3.SmoothDamp(script.transform.position, m_DesiredPosition + m_AimToRig, m_MoveVelocity, m_DampTime)
+    local targetPos = m_DesiredPosition + m_AimToRig
+    transform.position = vector3.SmoothDamp(script.transform.position, targetPos, m_MoveVelocity, script.DampTime)
 end
-
 
 function script.FindAveragePosition()
     local averagePos = vector3.New()
@@ -77,13 +75,11 @@ function script.FindAveragePosition()
     m_DesiredPosition = averagePos
 end
 
-
 function script.Zoom()
     -- Find the required size based on the desired position and smoothly transition to that size.
     local requiredSize = script.FindRequiredSize()
     m_Camera.orthographicSize = mathf.SmoothDamp(m_Camera.orthographicSize, requiredSize, m_ZoomSpeed, m_DampTime)
 end
-
 
 function script.FindRequiredSize()
     -- Find the position the camera rig is moving towards in its local space.
@@ -115,21 +111,20 @@ function script.FindRequiredSize()
     end
 
     -- Add the edge buffer to the size.
-    size = size + m_ScreenEdgeBuffer
+    size = size + script.ScreenEdgeBuffer
 
     -- Make sure the camera's size isn't below the minimum.
-    size = Mathf.Max(size, m_MinSize)
+    size = mathf.Max(size, script.MinSize)
 
     return size
 end
-
 
 function script.SetStartPositionAndSize()
     -- Find the desired position.
     script.FindAveragePosition()
 
     -- Set the camera's position to the desired position without damping.
-    transform.position = m_DesiredPosition
+    script.transform.position = m_DesiredPosition
 
     -- Find and set the required size of the camera.
     m_Camera.orthographicSize = script.FindRequiredSize()

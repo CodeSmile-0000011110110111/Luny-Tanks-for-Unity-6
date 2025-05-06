@@ -18,6 +18,13 @@ namespace CodeSmile.Luny.Tanks
 
         private Vector3 m_AimToRig;                     // The offset to apply to the position so the child camera aim at the desired point
 
+        protected override void OnBeforeScriptAwake()
+        {
+	        SetFloat(nameof(m_DampTime).Substring(2), m_DampTime);
+	        SetFloat(nameof(m_ScreenEdgeBuffer).Substring(2), m_ScreenEdgeBuffer);
+	        SetFloat(nameof(m_MinSize).Substring(2), m_MinSize);
+        }
+
         // private void Awake ()
         // {
         //     m_Camera = GetComponentInChildren<Camera> ();
@@ -146,13 +153,5 @@ namespace CodeSmile.Luny.Tanks
 
 		// Script was run and returned a LuaTable. Script's Awake() function has not been called yet.
 		// You may want to get/set initial script variables before script's Awake():
-		protected override void OnBeforeScriptAwake()
-		{
-			// Variables are set to the script table (commonly named 'script'): 'print(script.ImportantMessage)'
-			SetString("ImportantMessage", "Testing One-Two-Three ..");
-
-			// If you need the value of 'script.OhWowThatsCoolBool' assigned by the Lua script:
-			var datBool = GetBool("OhWowThatsCoolBool");
-		}
 	}
 }

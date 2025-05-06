@@ -66,12 +66,9 @@ end
 
 -- FIXME: it's super confusing to have both StartGame() and GameStart() ..
 function script.GameStart()
-    print("GameStart", "SpawnAllTanks")
     script.SpawnAllTanks()
-    print("GameStart", "SetCameraTargets")
     script.SetCameraTargets()
 
-    print("GameStart", "StartCoroutine(GameLoop)")
     -- Once the tanks have been created and the camera is using them as targets, start the game.
     script.component:StartCoroutine(script.GameLoop)
 end
@@ -117,54 +114,59 @@ function script.SetCameraTargets()
     end
 
     -- These are the targets the camera should follow.
-    print(" ... setting targets ...")
-    print(" ... cameracontrol ...", script.CameraControl)
-    print(" ... script ...", script.CameraControl.script)
     script.CameraControl.script.Targets = targets
-    print(" ... targets set ...")
 end
 
 -- This is called from start and will run each phase of the game one after another.
 function script.GameLoop() -- coroutine
+    print("GameLoop - before starting")
     -- Start off by running the 'RoundStarting' coroutine but don't return until it's finished.
-    yield.StartCoroutine(RoundStarting)
+    yield.StartCoroutine(script.RoundStarting)
 
     -- Once the 'RoundStarting' coroutine is finished, run the 'RoundPlaying' coroutine but don't return until it's finished.
-    yield.StartCoroutine(RoundPlaying)
+    print("GameLoop - before playing")
+    yield.StartCoroutine(script.RoundPlaying)
 
     -- Once execution has returned here, run the 'RoundEnding' coroutine, again don't return until it's finished.
-    yield.StartCoroutine(RoundEnding)
+    print("GameLoop - before ending")
+    yield.StartCoroutine(script.RoundEnding)
 
     -- This code is not run until 'RoundEnding' has finished.  At which point, check if a game winner has been found.
     if m_GameWinner then
         -- If there is a game winner, restart the level.
+        print("GameLoop - before loadscene")
         scenemanager.LoadScene(0)
     else
         -- If there isn't a winner yet, restart this coroutine so the loop continues.
         -- Note that this coroutine doesn't yield.  This means that the current version of the GameLoop will end.
-        script.component:StartCoroutine(GameLoop)
+        print("GameLoop - before restart GameLoop")
+        script.component:StartCoroutine(script.GameLoop)
     end
 end
 
 function script.RoundStarting() -- coroutine
+    print("RoundStarting")
     -- As soon as the round starts reset the tanks and make sure they can't move.
     script.ResetAllTanks()
-    script.DisableTankControl()
+    script.EnableTankControl(false)
 
     -- Snap the camera's zoom and position to something appropriate for the reset tanks.
-    script.CameraControl:SetStartPositionAndSize()
+    script.CameraControl.script.SetStartPositionAndSize()
 
     -- Increment the round number and display text showing the players what round it is.
     m_RoundNumber = m_RoundNumber + 1
-    m_TitleText.text = "ROUND " + m_RoundNumber
+    m_TitleText.text = "ROUND " .. m_RoundNumber
 
     -- Wait for the specified length of time until yielding control back to the game loop.
+    print("RoundStarting yields seconds",script.StartDelay)
     yield.WaitForSeconds(script.StartDelay)
+    print("RoundStarting ends")
 end
 
 function script.RoundPlaying() -- coroutine
+    print("RoundPlaying")
     -- As soon as the round begins playing let the players control the tanks.
-    script.EnableTankControl()
+    script.EnableTankControl(true)
 
     -- Clear the text from the screen.
     m_TitleText.text = ""
@@ -174,9 +176,11 @@ function script.RoundPlaying() -- coroutine
         -- ... return on the next frame.
         yield.null()
     end
+    print("RoundPlaying ends")
 end
 
 function script.RoundEnding() -- coroutine
+    print("RoundEnding")
     -- Stop tanks from moving.
     script.DisableTankControl ()
 
@@ -196,56 +200,71 @@ function script.RoundEnding() -- coroutine
 
     -- Wait for the specified length of time until yielding control back to the game loop.
     yield.WaitForSeconds(EndDelay)
+    print("RoundEnding ends")
 end
 
 -- This is used to check if there is one or fewer tanks remaining and thus the round should end.
 function script.OneTankLeft()
+    print("OneTankLeft")
     -- Start the count of tanks left at zero.
     local numTanksLeft = 0
 
     -- Go through all the tanks...
-    for i = 1, i < m_PlayerCount do
+    for i = 1, m_PlayerCount do
+        local tank = script.SpawnPoints[i];
+
         -- ... and if they are active, increment the counter.
-        if m_SpawnPoints[i].m_Instance.activeSelf then
+        if tank.Instance.activeSelf then
             numTanksLeft = numTanksLeft + 1
         end
     end
 
     -- If there are one or fewer tanks remaining return true, otherwise return false.
+    print("OneTankLeft returns ", numTanksLeft <= 1)
     return numTanksLeft <= 1
 end
 
 -- This function is to find out if there is a winner of the round.
 -- This function is called with the assumption that 1 or fewer tanks are currently active.
 function script.GetRoundWinner()
+    print("GetRoundWinner")
     -- Go through all the tanks...
-    for i = 1, i < m_PlayerCount do
+    for i = 1, m_PlayerCount do
+        local tank = script.SpawnPoints[i];
+
         -- ... and if one of them is active, it is the winner so return it.
-        if m_SpawnPoints[i].m_Instance.activeSelf then
-            return m_SpawnPoints[i]
+        if tank.Instance.activeSelf then
+            print("GetRoundWinner returns", tank)
+            return tank
         end
     end
 
     -- If none of the tanks are active it is a draw so return null.
+    print("GetRoundWinner returns nil")
     return nil
 end
 
 -- This function is to find out if there is a winner of the game.
 function script.GetGameWinner()
+    print("GetGameWinner")
     -- Go through all the tanks...
-    for i = 1, i < m_PlayerCount do
+    for i = 1, m_PlayerCount do
         -- ... and if one of them has enough rounds to win the game, return it.
-        if m_SpawnPoints[i].m_Wins == m_NumRoundsToWin then
-            return m_SpawnPoints[i]
+        local tank = script.SpawnPoints[i];
+        if tank.m_Wins == m_NumRoundsToWin then
+            print("GetGameWinner returns", tank)
+            return tank
         end
     end
 
     -- If no tanks have enough rounds to win, return null.
+    print("GetGameWinner returns nil")
     return nil
 end
 
 -- Returns a string message to display at the end of each round.
 function script.EndMessage()
+    print("EndMessage")
     -- By default when a round ends there are no winners so the default end message is a draw.
     local message = "DRAW!"
 
@@ -258,9 +277,10 @@ function script.EndMessage()
     message = message .. "\n\n\n\n"
 
     -- Go through all the tanks and add each of their scores to the message.
-    for i = 1, i < m_PlayerCount do
-        local playerText = m_SpawnPoints[i].m_ColoredPlayerText
-        message = message .. playerText .. ": " .. m_SpawnPoints[i].m_Wins .. " WINS\n"
+    for i = 1, m_PlayerCount do
+        local tank = script.SpawnPoints[i];
+        local playerText = tank.m_ColoredPlayerText
+        message = message .. playerText .. ": " .. tank.m_Wins .. " WINS\n"
     end
 
     -- If there is a game winner, change the entire message to reflect that.
@@ -268,19 +288,20 @@ function script.EndMessage()
         message = m_GameWinner.m_ColoredPlayerText .. " WINS THE GAME!"
     end
 
+    print("EndMessage returns", message)
     return message
 end
 
 -- This function is used to turn all the tanks back on and reset their positions and properties.
 function script.ResetAllTanks()
-    for i = 1, i < m_PlayerCount do
-        m_SpawnPoints[i].Reset()
+    for i = 1, m_PlayerCount do
+        LunyTankManager.Reset(script.SpawnPoints[i])
     end
 end
 
-function script.EnableTankControl(enabled)
-    for i = 1, i < m_PlayerCount do
-        m_SpawnPoints[i].EnableControl(enabled)
+function script.EnableTankControl(enable)
+    for i = 1, m_PlayerCount do
+        LunyTankManager.EnableControl(script.SpawnPoints[i], enable)
     end
 end
 

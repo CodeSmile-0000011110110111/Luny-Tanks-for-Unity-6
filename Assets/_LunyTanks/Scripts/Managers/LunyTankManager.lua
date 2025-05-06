@@ -69,14 +69,14 @@ function LunyTankManager.Setup(tank, gameManager)
 end
 
 -- Used during the phases of the game where the player should (not) be able to control their tank.
-function LunyTankManager.EnableControl(tank, enabled)
-    tank.Movement.enabled = enabled
-    tank.Shooting.enabled = enabled
+function LunyTankManager.EnableControl(tank, enable)
+    tank.Movement.enabled = enable
+    tank.Shooting.enabled = enable
     if tank.ComputerControlled then
-        tank.AI.enabled = enabled
+        tank.AI.enabled = enable
     end
 
-    tank.CanvasGameObject:SetActive(enabled)
+    tank.CanvasGameObject:SetActive(enable)
 end
 
 -- Used at the start of each round to put the tank into it's default state.
