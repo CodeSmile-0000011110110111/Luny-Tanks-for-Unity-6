@@ -9,7 +9,7 @@ script.ActionAsset = nil    -- The local Input Action Asset copy only binded to 
 function script.Awake()
     -- Clone the Action Map so the actions can be paired with a specific device (otherwise the default actions
     -- would be claimed by one device then ben unavailable for any other player)
-    m_LocalActionAsset = inputactionasset.FromJson(inputsystem.actions:ToJson())
+    script.ActionAsset = inputactionasset.FromJson(inputsystem.actions:ToJson())
 
     -- By default, pair to the keyboard, as this is the default input method. This allow this to work even without
     -- a menu to assign any other input mode.
@@ -18,7 +18,7 @@ end
 
 -- Activate the given control scheme on the Input User
 function script.ActivateScheme(name)
-    m_InputUser:ActivateControlScheme(name)
+    script.InputUser:ActivateControlScheme(name)
 end
 
 -- Replace the input user contained in this component by the given one
@@ -27,14 +27,14 @@ function script.SetNewInputUser(user)
         return
     end
 
-    m_InputUser = user
-    m_InputUser:AssociateActionsWithUser(m_LocalActionAsset)
+    script.InputUser = user
+    script.InputUser:AssociateActionsWithUser(script.ActionAsset)
 
     -- If this user have an associated controlScheme (e.g. in this project KeyboardRight or KeyboardLeft) we
     -- re-activate this scheme on the input user. This is necessary as we changed the associated actions in the above
     -- line, so those new action haven't had their control scheme set, and this will set it.
-    if m_InputUser.controlScheme.HasValue then
-        m_InputUser:ActivateControlScheme(m_InputUser.controlScheme.Value)
+    if script.InputUser.controlScheme.HasValue then
+        script.InputUser:ActivateControlScheme(script.InputUser.controlScheme)
     end
 end
         

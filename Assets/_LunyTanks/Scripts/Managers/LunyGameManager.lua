@@ -119,7 +119,6 @@ end
 
 -- This is called from start and will run each phase of the game one after another.
 function script.GameLoop() -- coroutine
-    print("GameLoop - before starting")
     -- Start off by running the 'RoundStarting' coroutine but don't return until it's finished.
     yield.StartCoroutine(script.RoundStarting)
 
@@ -145,7 +144,6 @@ function script.GameLoop() -- coroutine
 end
 
 function script.RoundStarting() -- coroutine
-    print("RoundStarting")
     -- As soon as the round starts reset the tanks and make sure they can't move.
     script.ResetAllTanks()
     script.EnableTankControl(false)
@@ -158,9 +156,7 @@ function script.RoundStarting() -- coroutine
     m_TitleText.text = "ROUND " .. m_RoundNumber
 
     -- Wait for the specified length of time until yielding control back to the game loop.
-    print("RoundStarting yields seconds",script.StartDelay)
     yield.WaitForSeconds(script.StartDelay)
-    print("RoundStarting ends")
 end
 
 function script.RoundPlaying() -- coroutine
@@ -205,7 +201,6 @@ end
 
 -- This is used to check if there is one or fewer tanks remaining and thus the round should end.
 function script.OneTankLeft()
-    print("OneTankLeft")
     -- Start the count of tanks left at zero.
     local numTanksLeft = 0
 
@@ -220,7 +215,6 @@ function script.OneTankLeft()
     end
 
     -- If there are one or fewer tanks remaining return true, otherwise return false.
-    print("OneTankLeft returns ", numTanksLeft <= 1)
     return numTanksLeft <= 1
 end
 

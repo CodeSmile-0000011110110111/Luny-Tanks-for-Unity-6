@@ -1,4 +1,3 @@
-print("RUNNING LunyCameraControl")
 local script = {...}
 
 local m_Camera = nil                        -- Used for referencing the camera.

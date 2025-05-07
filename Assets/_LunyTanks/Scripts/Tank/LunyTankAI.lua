@@ -34,7 +34,6 @@ local gameObject = nil
 local transform = nil
 
 function script.Awake()
-    print("AI Awake")
     -- Awake is still called on disabled component. So that the user can test disabling AI on a single tank
     -- we ensure that the component wasn't disabled before initializing everything
     if not script.component.isActiveAndEnabled then
@@ -46,7 +45,6 @@ function script.Awake()
 
     m_Movement = gameObject:GetComponent(lunytankmovement).script
     m_Shooting = gameObject:GetComponent(lunytankshooting).script
-    print("AI components", m_Movement, m_Shooting)
 
     -- ensure that both movement and shooting script are set in "computer controlled" mode
     m_Movement.IsComputerControlled = true

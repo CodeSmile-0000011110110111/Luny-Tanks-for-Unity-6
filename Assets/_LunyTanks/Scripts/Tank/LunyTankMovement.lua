@@ -13,7 +13,7 @@ local m_TurnAction = nil             -- The InputAction used to shot, retrieved 
 
 local m_RequestedDirection = nil       -- In Direct Control mode, store the direction the user *wants* to go toward
 
-local m_InputUser = nil
+local m_InputUser = nil             -- The Input User component for that tanks. Contains the Input Actions.
 
 local gameObject = nil
 local transform = nil
@@ -29,7 +29,7 @@ function script.Awake()
         m_InputUser = gameObject:AddComponent(lunytankinputuser)
     end
 
-    -- prefer to use Lua script rather than C# component which remains accessible: m_InputUser.component
+    -- redirect reference to Lua script rather than C# component, which remains accessible as: m_InputUser.component
     m_InputUser = m_InputUser.script
 end
 
@@ -103,40 +103,44 @@ function script.Start()
     m_TurnAction = m_InputUser.ActionAsset:FindAction(m_TurnAxisName)
 
     -- actions need to be enabled before they can react to input
-    m_MoveAction.Enable()
-    m_TurnAction.Enable()
+    m_MoveAction:Enable()
+    m_TurnAction:Enable()
 
     -- Store the original pitch of the audio source.
-    m_OriginalPitch = m_MovementAudio.pitch
+    m_OriginalPitch = script.MovementAudio.pitch
 end
 
 function script.Update()
     -- Computer controlled tank will be moved by the TankAI component, so only read input for player controlled tanks
     if not m_IsComputerControlled then
-        m_MovementInputValue = m_MoveAction:ReadFloat(float)
-        m_TurnInputValue = m_TurnAction:ReadFloat(float)
+        m_MovementInputValue = m_MoveAction:ReadFloat()
+        m_TurnInputValue = m_TurnAction:ReadFloat()
     end
 
     script.EngineAudio()
 end
 
 function script.EngineAudio()
+    local moveAudio = script.MovementAudio
+    local minPitch = m_OriginalPitch - script.PitchRange
+    local maxPitch = m_OriginalPitch + script.PitchRange
+
     -- If there is no input (the tank is stationary)...
     if mathf.Abs(m_MovementInputValue) < 0.1 and mathf.Abs(m_TurnInputValue) < 0.1 then
         -- ... and if the audio source is currently playing the driving clip...
-        if m_MovementAudio.clip == m_EngineDriving then
+        if moveAudio.clip == script.EngineDriving then
             -- ... change the clip to idling and play it.
-            m_MovementAudio.clip = m_EngineIdling
-            m_MovementAudio.pitch = random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange)
-            m_MovementAudio.Play()
+            moveAudio.clip = script.EngineIdling
+            moveAudio.pitch = random.Range(minPitch, maxPitch)
+            moveAudio:Play()
         end
     else
         -- Otherwise if the tank is moving and if the idling clip is currently playing...
-        if m_MovementAudio.clip == m_EngineIdling then
+        if moveAudio.clip == script.EngineIdling then
             -- ... change the clip to driving and play.
-            m_MovementAudio.clip = m_EngineDriving
-            m_MovementAudio.pitch = random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange)
-            m_MovementAudio.Play()
+            moveAudio.clip = script.EngineDriving
+            moveAudio.pitch = random.Range(minPitch, maxPitch)
+            moveAudio:Play()
         end
     end
 end
@@ -145,7 +149,7 @@ function script.FixedUpdate()
     -- If this is using a gamepad or have direct control enabled, this used a different movement method : instead of
     -- "up" behind moving forward for the tank, it instead takes the gamepad move direction as the desired forward for the tank
     -- and will compute the speed and rotation needed to move the tank toward that direction.
-    if m_InputUser.InputUser.controlScheme.Value.name == "Gamepad" or  m_IsDirectControl then
+    if m_InputUser.InputUser.controlScheme.Value.name == "Gamepad" or script.IsDirectControl then
         local camForward = camera.main.transform.forward
         camForward.y = 0
         camForward.Normalize()
@@ -165,41 +169,45 @@ function script.Move()
     local speedInput = 0
 
     -- In direct control mode, the speed will depend on how far from the desired direction we are
-    if m_InputUser.InputUser.controlScheme.Value.name == "Gamepad" or m_IsDirectControl then
+    if m_InputUser.InputUser.controlScheme.Value.name == "Gamepad" or script.IsDirectControl then
         speedInput = m_RequestedDirection.magnitude
         --if we are direct control, the speed of the move is based angle between current direction and the wanted
         --direction. If under 90, full speed, then speed reduced between 90 and 180
-        speedInput = speedInput * (1 - mathf.Clamp01((vector3.Angle(m_RequestedDirection, transform.forward) - 90) / 90))
+        print("angle")
+        local wantedAngle = vector3.Angle(m_RequestedDirection, transform.forward) - 90
+        print("angle", wantedAngle)
+        speedInput = speedInput * (1 - mathf.Clamp01(wantedAngle / 90))
     else
         -- in normal "tank control" the speed value is how much we press "up/forward"
         speedInput = m_MovementInputValue
     end
 
     -- Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
-    local movement = transform.forward * speedInput * m_Speed * time.deltaTime
+    local movement = transform.forward * speedInput * script.Speed * time.deltaTime
 
     -- Apply this movement to the rigidbody's position.
-    m_Rigidbody.MovePosition(m_Rigidbody.position + movement)
+    m_Rigidbody:MovePosition(m_Rigidbody.position + movement)
 end
 
 function script.Turn()
     local turnRotation = nil
+    local turnSpeed = script.TurnSpeed * time.deltaTime
 
     -- If in direct control...
-    if m_InputUser.InputUser.controlScheme.Value.name == "Gamepad" or m_IsDirectControl then
+    if m_InputUser.InputUser.controlScheme.Value.name == "Gamepad" or script.IsDirectControl then
         -- Compute the rotation needed to reach the desired direction
-        local angleTowardTarget = vector3.SignedAngle(m_RequestedDirection, transform.forward, transform.up)
-        local rotatingAngle = mathf.Sign(angleTowardTarget) * mathf.Min(mathf.Abs(angleTowardTarget), m_TurnSpeed * time.deltaTime)
+        local angleToTarget = vector3.SignedAngle(m_RequestedDirection, transform.forward, transform.up)
+        local rotatingAngle = mathf.Sign(angleToTarget) * mathf.Min(mathf.Abs(angleToTarget), turnSpeed)
         turnRotation = quaternion.AngleAxis(-rotatingAngle, vector3.up)
     else
-        local turn = m_TurnInputValue * m_TurnSpeed * time.deltaTime
+        local turn = m_TurnInputValue * turnSpeed
 
         -- Make this into a rotation in the y axis.
         turnRotation = quaternion.Euler(0, turn, 0)
     end
 
     -- Apply this rotation to the rigidbody's rotation.
-    m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation)
+    m_Rigidbody:MoveRotation(m_Rigidbody.rotation * turnRotation)
 end
 
 return script

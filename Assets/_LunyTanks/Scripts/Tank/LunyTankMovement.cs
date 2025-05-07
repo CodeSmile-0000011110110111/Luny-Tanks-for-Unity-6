@@ -24,25 +24,6 @@ namespace CodeSmile.Luny.Tanks
 		public float m_PitchRange = 0.2f;           // The amount by which the pitch of the engine noises can vary.
         [Tooltip("Is set to true this will be controlled by the computer and not a player")]
         public bool m_IsComputerControlled = false; // Is this tank player or computer controlled
-        [HideInInspector]
-        public LunyTankInputUser m_InputUser;            // The Input User component for that tanks. Contains the Input Actions.
-
-        public Rigidbody Rigidbody => m_Rigidbody;
-
-        public int ControlIndex { get; set; } = -1; //this define the index of the control 1 = left keyboard or pad, 2 = right keyboard, -1 = no control
-
-        private string m_MovementAxisName;          // The name of the input axis for moving forward and back.
-        private string m_TurnAxisName;              // The name of the input axis for turning.
-        private Rigidbody m_Rigidbody;              // Reference used to move the tank.
-        private float m_MovementInputValue;         // The current value of the movement input.
-        private float m_TurnInputValue;             // The current value of the turn input.
-        private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
-        private ParticleSystem[] m_particleSystems; // References to all the particles systems used by the Tanks
-
-        private InputAction m_MoveAction;             // The InputAction used to move, retrieved from TankInputUser
-        private InputAction m_TurnAction;             // The InputAction used to shot, retrieved from TankInputUser
-
-        private Vector3 m_RequestedDirection;       // In Direct Control mode, store the direction the user *wants* to go toward
 
         protected override void OnBeforeScriptAwake()
         {
@@ -55,8 +36,6 @@ namespace CodeSmile.Luny.Tanks
 	        SetObject(nameof(m_EngineDriving).Substring(2), m_EngineDriving);
 	        SetFloat(nameof(m_PitchRange).Substring(2), m_PitchRange);
 	        SetBool(nameof(m_IsComputerControlled).Substring(2), m_IsComputerControlled);
-	        SetObject(nameof(m_InputUser).Substring(2), m_InputUser);
-	        SetObject(nameof(m_Rigidbody), m_Rigidbody);
         }
 	}
 }
