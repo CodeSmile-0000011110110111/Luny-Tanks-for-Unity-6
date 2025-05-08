@@ -2120,7 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b221aacb13e14ed2b2493464749d17f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LuaAssetRegistry: {fileID: 11400000, guid: bbe45ef4bb75fc042aeb4d1711cb4efe, type: 2}
+  m_LuaAssetRegistry: {fileID: 11400000, guid: 4ce34d7fefb93ed4c9a71755bef7c0fa, type: 2}
   m_StartupScripts:
   - {fileID: -6979533126094156877, guid: 6c5b2baf53917f4458e56bb515399d0c, type: 3}
   m_LunyScriptTypesAreLowercase: 1
@@ -2366,33 +2366,9 @@ MonoBehaviour:
     type: 3}
   m_SpawnPoints:
   - m_SpawnPoint: {fileID: 194018016}
-    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_PlayerNumber: 0
-    m_ColoredPlayerText: 
-    m_Instance: {fileID: 0}
-    m_Wins: 0
-    m_ComputerControlled: 0
   - m_SpawnPoint: {fileID: 2083660209}
-    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_PlayerNumber: 0
-    m_ColoredPlayerText: 
-    m_Instance: {fileID: 0}
-    m_Wins: 0
-    m_ComputerControlled: 0
   - m_SpawnPoint: {fileID: 185897748}
-    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_PlayerNumber: 0
-    m_ColoredPlayerText: 
-    m_Instance: {fileID: 0}
-    m_Wins: 0
-    m_ComputerControlled: 0
   - m_SpawnPoint: {fileID: 1979544988}
-    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-    m_PlayerNumber: 0
-    m_ColoredPlayerText: 
-    m_Instance: {fileID: 0}
-    m_Wins: 0
-    m_ComputerControlled: 0
 --- !u!1 &1359195124
 GameObject:
   m_ObjectHideFlags: 0
