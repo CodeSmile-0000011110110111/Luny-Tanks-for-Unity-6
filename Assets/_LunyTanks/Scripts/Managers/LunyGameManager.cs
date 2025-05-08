@@ -4,6 +4,7 @@
 using CodeSmile.Luny.Api;
 using Lua;
 using System;
+using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
@@ -45,11 +46,16 @@ namespace CodeSmile.Luny.Tanks
 			SetObject(nameof(m_Tank4Prefab).Substring(2), m_Tank4Prefab);
 
 			// TankManager is a standard C# class thus simply serialize its fields to a LuaTable
-			var tanksTable = new LuaTable();
+			var spawnPoints = new LuaTable();
+			var spawnPointsName = nameof(m_SpawnPoints).Substring(2);
 			for (var i = 0; i < m_SpawnPoints.Length; i++)
-				tanksTable[i + 1] = m_SpawnPoints[i].ToLua();
+			{
+				var tanksTable = InvokeLuaFunction("CreateTank").Preserve().GetAwaiter().GetResult().Read<LuaTable>();
+				tanksTable["SpawnPoint"] = new LunyTransform(m_SpawnPoints[i].m_SpawnPoint);
+				spawnPoints[i + 1] = tanksTable;
+			}
 
-			SetTable(nameof(m_SpawnPoints).Substring(2), tanksTable);
+			SetTable(spawnPointsName, spawnPoints);
 		}
 
 		public void StartGame(PlayerData[] playerData)

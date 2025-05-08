@@ -28,6 +28,17 @@ local m_PlayerData = nil                  -- Data passed from the menu about eac
 local m_PlayerCount = 0                 -- The number of players (2 to 4), decided from the number of PlayerData passed by the menu
 local m_TitleText = nil                 -- The text used to display game message. Automatically found as part of the Menu prefab
 
+
+function script.CreateTank()
+    -- unpack the default values into a new table to create a shallow copy (will not copy 'nil' values)
+    local tank = {}
+    for key, value in pairs(LunyTankManager) do
+        print("tank" , key, value)
+        tank[key] = value
+    end
+    return tank
+end
+
 function script.Start()
     m_CurrentState = GameState.MainMenu
 
@@ -178,14 +189,16 @@ end
 function script.RoundEnding() -- coroutine
     print("RoundEnding")
     -- Stop tanks from moving.
-    script.DisableTankControl ()
+    script.EnableTankControl(false)
 
     -- See if there is a winner now the round is over.
     m_RoundWinner = script.GetRoundWinner()
+    print("winner", m_RoundWinner)
+    print("wins", m_RoundWinner.Wins)
 
     -- If there is a winner, increment their score.
     if m_RoundWinner then
-        m_RoundWinner.m_Wins = m_RoundWinner.m_Wins + 1
+        m_RoundWinner.Wins = m_RoundWinner.Wins + 1
     end
 
     -- Now the winner's score has been incremented, see if someone has one the game.
@@ -195,7 +208,7 @@ function script.RoundEnding() -- coroutine
     m_TitleText.text = script.EndMessage()
 
     -- Wait for the specified length of time until yielding control back to the game loop.
-    yield.WaitForSeconds(EndDelay)
+    yield.WaitForSeconds(script.EndDelay)
     print("RoundEnding ends")
 end
 
@@ -228,13 +241,11 @@ function script.GetRoundWinner()
 
         -- ... and if one of them is active, it is the winner so return it.
         if tank.Instance.activeSelf then
-            print("GetRoundWinner returns", tank)
             return tank
         end
     end
 
     -- If none of the tanks are active it is a draw so return null.
-    print("GetRoundWinner returns nil")
     return nil
 end
 
@@ -245,7 +256,8 @@ function script.GetGameWinner()
     for i = 1, m_PlayerCount do
         -- ... and if one of them has enough rounds to win the game, return it.
         local tank = script.SpawnPoints[i];
-        if tank.m_Wins == m_NumRoundsToWin then
+
+        if tank.Wins == script.NumRoundsToWin then
             print("GetGameWinner returns", tank)
             return tank
         end
@@ -264,7 +276,7 @@ function script.EndMessage()
 
     -- If there is a winner then change the message to reflect that.
     if m_RoundWinner then
-        message = m_RoundWinner.m_ColoredPlayerText .. " WINS THE ROUND!"
+        message = m_RoundWinner.ColoredPlayerText .. " WINS THE ROUND!"
     end
 
     -- Add some line breaks after the initial message.
@@ -273,13 +285,13 @@ function script.EndMessage()
     -- Go through all the tanks and add each of their scores to the message.
     for i = 1, m_PlayerCount do
         local tank = script.SpawnPoints[i];
-        local playerText = tank.m_ColoredPlayerText
-        message = message .. playerText .. ": " .. tank.m_Wins .. " WINS\n"
+        local playerText = tank.ColoredPlayerText
+        message = message .. playerText .. ": " .. tank.Wins .. " WINS\n"
     end
 
     -- If there is a game winner, change the entire message to reflect that.
     if m_GameWinner then
-        message = m_GameWinner.m_ColoredPlayerText .. " WINS THE GAME!"
+        message = m_GameWinner.ColoredPlayerText .. " WINS THE GAME!"
     end
 
     print("EndMessage returns", message)

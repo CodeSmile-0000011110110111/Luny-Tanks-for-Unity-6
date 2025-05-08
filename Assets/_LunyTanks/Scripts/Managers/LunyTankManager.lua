@@ -1,5 +1,10 @@
 -- NOTE: This script is assigned to the Luny component. It is not a LunyScript (MonoBehaviour) class.
 
+-- This script is to manage various settings on a tank.
+-- It works with the GameManager class to control how the tanks behave
+-- and whether or not players have control of their tank in the
+-- different phases of the game.
+
 -- this must be a global table, therefore the 'local' keyword is omitted
 LunyTankManager =
 {
@@ -16,11 +21,6 @@ LunyTankManager =
     AI = nil,                   -- The Tank AI script that let a tank be a bot controlled by the computer
     --InputUser = nil,            -- The Input user link to that tank. Input user identify a single player in the Input system
 }
-
-function LunyTankManager.CreateTank()
-    -- unpack the default values into a new table to create a shallow copy
-    return { table.unpack(LunyTankManager) }
-end
 
 function LunyTankManager.Setup(tank, gameManager)
     -- Get references to the components.
