@@ -112,7 +112,8 @@ function script.SeekUpdate()
 
          -- Initialize the shorted path length to the max value a float can have, so no matter what is the length
          -- of the first found path, it will for sure be shortest than this initial value
-         local shortestPath = 3.40282347E+38
+         local shortestPath = 3.40282347E+38 -- equal to float.MaxValue, actual value doesn't really matter as long as it's huge
+
          -- which of the path in the paths array we use. By default none, which is represented by -1 here.
          local usedPath = -1
          local target = nil
@@ -134,11 +135,10 @@ function script.SeekUpdate()
                  goto continue
              end
 
-             print("FIXME: NavMeshPath")
-             paths[i] = new NavMeshPath()
+             paths[i] = navmeshpath.New()
 
              -- this return true if a path was found
-             if navmesh.CalculatePath(transform.position, tank.transform.position, bit32.bnot(0), paths[i]) then
+             if navmesh.CalculatePath(transform.position, tank.transform.position, -1, paths[i]) then
                  -- Compute how long the path is...
                  local length = script.GetPathLength(paths[i])
                  -- And if it's the shortest path so far, this is the one we want to go after
@@ -197,7 +197,7 @@ function script.SeekUpdate()
 
          local targetDistance = toTarget.magnitude
          -- normalize the vector to the target, setting its length to 1, which is useful for some mathematical operations.
-         toTarget.Normalize()
+         toTarget:Normalize()
 
          -- the dot product between 2 normalized vector is the cosine of the angle between those vector. This is useful as it
          -- allow to test how aligned those vector are : 1 -> in the same direction, 0 -> 90 deg angle, -1, pointing in opposite direction.
@@ -208,7 +208,7 @@ function script.SeekUpdate()
          --if we are charging, check if the current shot can reach the target
          if m_Shooting.IsCharging then
              -- get the estimated point of the projectile with the current charging value
-             local currentShotTarget = m_Shooting.GetProjectilePosition(m_Shooting.CurrentChargeRatio)
+             local currentShotTarget = m_Shooting.GetProjectilePosition(m_Shooting.GetCurrentChargeRatio())
              -- the distance from us to that estimated point
              local currentShotDistance = vector3.Distance(currentShotTarget, transform.position)
 
@@ -234,8 +234,7 @@ function script.SeekUpdate()
              if targetDistance < m_MaxShootingDistance then
                  -- This use the navmesh to check if there are any obstacle between us and the target. If this return false
                  -- this mean there is no unobstructed path, so there *is* an obstacle, so we shouldn't start shooting yet
-                 local hit = nil
-                 if not navmesh.Raycast(transform.position, m_CurrentTarget.position, hit, bit32.bnot(0)) then
+                 if not navmesh.Raycast(transform.position, m_CurrentTarget.position, -1) then
                      -- we stop moving as we can reach our target with our shot
                      m_IsMoving = false
 
@@ -254,7 +253,7 @@ function script.SeekUpdate()
 function script.FleeUpdate()
     -- When fleeing the tank will go toward a random point away from its target. When we reach the last corners
     -- (i.e. point) of that path, we can go back to seek mode
-    if m_CurrentCorner >= m_CurrentPath.corners.Length then
+    if m_CurrentCorner >= #m_CurrentPath.corners then
         m_CurrentState = State.Seek
     end
 end
@@ -273,7 +272,7 @@ function script.StartFleeing()
     toTarget = toTarget * random.Range(5, 20)
 
     -- Finally we compute a path toward that random point, which become our new current path.
-    if navmesh.CalculatePath(transform.position, transform.position + toTarget, navmesh.AllAreas, m_CurrentPath) then
+    if navmesh.CalculatePath(transform.position, transform.position + toTarget, -1, m_CurrentPath) then
         m_CurrentState = State.Flee
         m_CurrentCorner = 1
 
@@ -302,25 +301,25 @@ end
 
      local toOrientTarget = orientTarget - transform.position
      toOrientTarget.y = 0
-     toOrientTarget.Normalize()
+     toOrientTarget:Normalize()
 
-     local forward = rb.rotation * Vector3.forward
+     local forward = rb.rotation * vector3.forward
 
      local orientDot = vector3.Dot(forward, toOrientTarget)
      local rotatingAngle = vector3.SignedAngle(toOrientTarget, forward, vector3.up)
 
      --if we are moving we move in our forward direction by our max speed
-     local moveAmount = mathf.Clamp01(orientDot) * m_Movement.m_Speed * time.deltaTime
+     local moveAmount = mathf.Clamp01(orientDot) * m_Movement.Speed * time.deltaTime
      if m_IsMoving and moveAmount > 0.000001 then
-         rb.MovePosition(rb.position + forward * moveAmount)
+         rb:MovePosition(rb.position + forward * moveAmount)
      end
 
      --the actual rotation for that frame is the smallest between the max turning speed for that time frame and the
      --angle itself. Multiplied by the sign of the angle to ensure we rotate in the right direction
-     rotatingAngle = mathf.Sign(rotatingAngle) * mathf.Min(mathf.Abs(rotatingAngle), m_Movement.m_TurnSpeed * time.deltaTime)
+     rotatingAngle = mathf.Sign(rotatingAngle) * mathf.Min(mathf.Abs(rotatingAngle), m_Movement.TurnSpeed * time.deltaTime)
 
      if mathf.Abs(rotatingAngle) > 0.000001 then
-         rb.MoveRotation(rb.rotation * quaternion.AngleAxis(-rotatingAngle, vector3.up))
+         rb:MoveRotation(rb.rotation * quaternion.AngleAxis(-rotatingAngle, vector3.up))
      end
 
      -- If we reached our current target, we increase our corner. We will never reach the target when the target

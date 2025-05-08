@@ -1,4 +1,5 @@
 local script = {...}
+script.Targets = {}                       -- All the targets the camera needs to encompass.
 
 local m_Camera = nil                        -- Used for referencing the camera.
 local m_ZoomSpeed = 0                     -- Reference speed for the smooth damping of the orthographic size.
@@ -6,11 +7,17 @@ local m_MoveVelocity = vector3.New()                 -- Reference velocity for t
 local m_DesiredPosition = vector3.New()              -- The position the camera is moving towards.
 local m_AimToRig = vector3.New()                     -- The offset to apply to the position so the child camera aim at the desired point
 
+local gameObject = nil
+local transform = nil
+
 function script.Awake()
-    m_Camera = script.gameObject:GetComponentInChildren(camera)
+    gameObject = script.gameObject
+    transform = script.transform
+
+    m_Camera = gameObject:GetComponentInChildren(camera)
 
     -- plane in which the camera rig is in
-    local p = plane.New(vector3.up, script.transform.position)
+    local p = plane.New(vector3.up, transform.position)
     local r = ray.New(m_Camera.transform.position, m_Camera.transform.forward)
     local didHit, d = p:Raycast(r)
 
@@ -20,20 +27,15 @@ function script.Awake()
     -- User can set the camera in random position and rotation as a child of this object, so it won't aim at the
     -- center of this, meaning placing this object at the desired position won't make the camera aim at that desired position.
     -- This offset correct that so the camera actually aim at the desired position
-    m_AimToRig = script.transform.position - aimTArget
+    m_AimToRig = transform.position - aimTArget
 end
 
 function script.FixedUpdate()
-    if not once then
-        once = true
-        warn("camera update disabled")
-    end
-
     -- Move the camera towards a desired position.
-    --script.Move()
+    script.Move()
 
     -- Change the size of the camera based.
-    --script.Zoom()
+    script.Zoom()
 end
 
 function script.Move()
@@ -42,7 +44,7 @@ function script.Move()
 
     -- Smoothly transition to that position.
     local targetPos = m_DesiredPosition + m_AimToRig
-    transform.position = vector3.SmoothDamp(script.transform.position, targetPos, m_MoveVelocity, script.DampTime)
+    transform.position = vector3.SmoothDamp(transform.position, targetPos, m_MoveVelocity, script.DampTime)
 end
 
 function script.FindAveragePosition()
@@ -69,7 +71,7 @@ function script.FindAveragePosition()
     end
 
     -- Keep the same y value.
-    averagePos.y = script.transform.position.y
+    averagePos.y = transform.position.y
 
     m_DesiredPosition = averagePos
 end
@@ -77,7 +79,7 @@ end
 function script.Zoom()
     -- Find the required size based on the desired position and smoothly transition to that size.
     local requiredSize = script.FindRequiredSize()
-    m_Camera.orthographicSize = mathf.SmoothDamp(m_Camera.orthographicSize, requiredSize, m_ZoomSpeed, m_DampTime)
+    m_Camera.orthographicSize = mathf.SmoothDamp(m_Camera.orthographicSize, requiredSize, m_ZoomSpeed, script.DampTime)
 end
 
 function script.FindRequiredSize()
@@ -123,7 +125,7 @@ function script.SetStartPositionAndSize()
     script.FindAveragePosition()
 
     -- Set the camera's position to the desired position without damping.
-    script.transform.position = m_DesiredPosition
+    transform.position = m_DesiredPosition
 
     -- Find and set the required size of the camera.
     m_Camera.orthographicSize = script.FindRequiredSize()

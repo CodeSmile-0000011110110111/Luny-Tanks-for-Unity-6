@@ -84,11 +84,9 @@ function script.GameStart()
 end
 
 function script.SpawnAllTanks()
-    print("SpawnAllTanks")
     -- For all the tanks...
     for i, playerData in ipairs(m_PlayerData) do
         local tank = script.SpawnPoints[i];
-        print(i, playerData, tank)
 
         -- ... create them, set their player number and references needed for control.
         local pos = tank.SpawnPoint.position

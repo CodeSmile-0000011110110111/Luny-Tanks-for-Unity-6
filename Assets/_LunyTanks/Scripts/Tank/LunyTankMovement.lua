@@ -1,8 +1,8 @@
 local script = {...}
+script.Rigidbody = nil              -- Reference used to move the tank.
 
 local m_MovementAxisName = nil          -- The name of the input axis for moving forward and back.
 local m_TurnAxisName = nil              -- The name of the input axis for turning.
-local m_Rigidbody = nil              -- Reference used to move the tank.
 local m_MovementInputValue = nil         -- The current value of the movement input.
 local m_TurnInputValue = 0             -- The current value of the turn input.
 local m_OriginalPitch = 0              -- The pitch of the audio source at the start of the scene.
@@ -22,7 +22,7 @@ function script.Awake()
     gameObject = script.gameObject
     transform = script.transform
 
-    m_Rigidbody = gameObject:GetComponent(rigidbody)
+    script.Rigidbody = gameObject:GetComponent(rigidbody)
 
     m_InputUser = gameObject:GetComponent(lunytankinputuser)
     if not m_InputUser then
@@ -35,7 +35,7 @@ end
 
 function script.OnEnable()
     -- Computer controlled tank are kinematic
-    m_Rigidbody.isKinematic = false
+    script.Rigidbody.isKinematic = false
 
     -- Also reset the input values.
     m_MovementInputValue = 0
@@ -52,7 +52,7 @@ end
 
 function script.OnDisable()
     -- When the tank is turned off, set it to kinematic so it stops moving.
-    m_Rigidbody.isKinematic = true
+    script.Rigidbody.isKinematic = true
 
     -- Stop all particle system so it "reset" it's position to the actual one instead of thinking we moved when spawning
     for _, particleSystem in ipairs(m_ParticleSystems) do
@@ -173,9 +173,7 @@ function script.Move()
         speedInput = m_RequestedDirection.magnitude
         --if we are direct control, the speed of the move is based angle between current direction and the wanted
         --direction. If under 90, full speed, then speed reduced between 90 and 180
-        print("angle")
         local wantedAngle = vector3.Angle(m_RequestedDirection, transform.forward) - 90
-        print("angle", wantedAngle)
         speedInput = speedInput * (1 - mathf.Clamp01(wantedAngle / 90))
     else
         -- in normal "tank control" the speed value is how much we press "up/forward"
@@ -186,7 +184,7 @@ function script.Move()
     local movement = transform.forward * speedInput * script.Speed * time.deltaTime
 
     -- Apply this movement to the rigidbody's position.
-    m_Rigidbody:MovePosition(m_Rigidbody.position + movement)
+    script.Rigidbody:MovePosition(script.Rigidbody.position + movement)
 end
 
 function script.Turn()
@@ -207,7 +205,7 @@ function script.Turn()
     end
 
     -- Apply this rotation to the rigidbody's rotation.
-    m_Rigidbody:MoveRotation(m_Rigidbody.rotation * turnRotation)
+    script.Rigidbody:MoveRotation(script.Rigidbody.rotation * turnRotation)
 end
 
 return script

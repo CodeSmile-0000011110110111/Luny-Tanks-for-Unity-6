@@ -12,7 +12,8 @@ local m_ShotCooldownTimer = 0          -- The timer counting down before a shot 
 local m_InputUser = nil           -- The Input User component for that tanks. Contains the Input Actions.
 
 function script.GetCurrentChargeRatio()
-    return (m_CurrentLaunchForce - m_MinLaunchForce) / (m_MaxLaunchForce - m_MinLaunchForce) --The charging amount between 0-1
+    return (m_CurrentLaunchForce - script.MinLaunchForce) /
+            (script.MaxLaunchForce - script.MinLaunchForce) --The charging amount between 0-1
 end
 
 script.IsCharging = false           -- Are we currently charging the shot
@@ -89,20 +90,17 @@ function script.ComputerUpdate()
     if not m_Fired then
         -- If the max force has been exceeded...
         if m_CurrentLaunchForce >= script.MaxLaunchForce then
-            print("C A")
             -- ... use the max force and launch the shell.
             m_CurrentLaunchForce = script.MaxLaunchForce
             script.Fire()
         -- Otherwise, if the fire button is being held...
         elseif script.IsCharging then
-            print("C B")
             -- Increment the launch force and update the slider.
             m_CurrentLaunchForce = m_CurrentLaunchForce + m_ChargeSpeed * time.deltaTime
 
             script.AimSlider.value = m_CurrentLaunchForce
         -- Otherwise, if the fire button is released...
         elseif m_FireAction:WasReleasedThisFrame() then
-            print("C C")
             -- ... launch the shell.
             script.Fire()
             script.IsCharging = false
@@ -121,13 +119,11 @@ function script.HumanUpdate()
 
     -- If the max force has been exceeded and the shell hasn't yet been launched...
     if m_CurrentLaunchForce >= script.MaxLaunchForce and not m_Fired then
-        print("HumanUpdate A")
         -- ... use the max force and launch the shell.
         m_CurrentLaunchForce = script.MaxLaunchForce
         script.Fire()
     -- Otherwise, if the fire button has just started being pressed...
     elseif m_ShotCooldownTimer <= 0 and m_FireAction:WasPressedThisFrame() then
-        print("HumanUpdate B")
         -- ... reset the fired flag and reset the launch force.
         m_Fired = false
         m_CurrentLaunchForce = script.MinLaunchForce
@@ -137,30 +133,25 @@ function script.HumanUpdate()
         script.ShootingAudio:Play()
     -- Otherwise, if the fire button is being held and the shell hasn\'t been launched yet...
     elseif m_FireAction:IsPressed() and not m_Fired then
-        print("HumanUpdate C")
         -- Increment the launch force and update the slider.
         m_CurrentLaunchForce = m_CurrentLaunchForce + m_ChargeSpeed * time.deltaTime
 
         script.AimSlider.value = m_CurrentLaunchForce
     -- Otherwise, if the fire button is released and the shell hasn\'t been launched yet...
     elseif m_FireAction:WasReleasedThisFrame() and not m_Fired then
-        print("HumanUpdate D")
         -- ... launch the shell.
         script.Fire()
     end
 end
 
 function script.Fire()
-    print("Fire")
     -- Set the fired flag so only Fire is only called once.
     m_Fired = true
 
     -- Create an instance of the shell and store a reference to it\'s rigidbody.
-    print("FIXME: instantiate 'as Rigidbody'")
     local shellPos = script.FireTransform.position
     local shellRot = script.FireTransform.rotation
     local shellInstance = gameobject.Instantiate(script.Shell, shellPos, shellRot)
-    print("shellInstance", shellInstance)
 
     -- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
     shellInstance.linearVelocity = m_CurrentLaunchForce * script.FireTransform.forward
