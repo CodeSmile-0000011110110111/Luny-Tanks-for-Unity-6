@@ -48,7 +48,7 @@ function LunyTankManager.Setup(tank, gameManager)
     -- If this tank is computer controlled, add a TankAI component that take care of controlling the behavior
     if tank.ComputerControlled then
         tank.AI = tank.Instance:AddComponent(lunytankai).script
-        tank.AI.Setup(tank, gameManager)
+        tank.AI.Setup(gameManager)
     end
 
     -- Create a string using the correct color that says 'PLAYER 1' etc based on the tank's color and the player's number.
