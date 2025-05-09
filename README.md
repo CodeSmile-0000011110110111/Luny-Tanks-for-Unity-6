@@ -1,6 +1,6 @@
 # Luny Tanks! for Unity 6 (Remastered)
 
-Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/tree/main/Assets/_LunyTanks/Scripts). Powered by [Luny](https://lunyscript.com), the Lua solution for Unity. 
+Unity's Tanks! project with all C# scripts ported to **Lua scripts**. Powered by [Luny](https://lunyscript.com), the Lua solution for Unity. 
 
 ## [Join my Patreon](https://www.patreon.com/c/CodeSmile), get notified when Luny is released!
 
