@@ -23,14 +23,9 @@ These are the scripts you should be reviewing:
 
 The syntax is subject to change prior to release. Specifically the 'all lowercase' types will likely be changed to match Unity's API.
 
-## [Join my Patreon](https://www.patreon.com/c/CodeSmile) to not miss out!
+See also [the announcement post](https://lunyscript.com/2025/05/09/luny-tanks-the-code-is-lua/).
 
-# Unity Tanks! on the web
-
-- [Tanks! 'ported to Lua' announcement](https://lunyscript.com/2025/05/09/luny-tanks-the-code-is-lua/)
-- [Tanks! 'Learn Along' Thread](https://discussions.unity.com/t/official-unity-learn-event-learn-along-featuring-tanks-remastered-for-unity-6-on-unity-learn/1633869)
-- [Tanks! on Unity Learn](https://learn.unity.com/course/tanks-make-a-battle-game-for-web-and-mobile)
-- [Tanks! on the Asset Store (free)](https://assetstore.unity.com/packages/essentials/tutorial-projects/tanks-complete-project-46209)
+# [Join my Patreon](https://www.patreon.com/c/CodeSmile) to not miss out!
 
 ## Licenses
 
