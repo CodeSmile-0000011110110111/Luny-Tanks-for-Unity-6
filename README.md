@@ -2,6 +2,8 @@
 
 Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/tree/main/Assets/_LunyTanks/Scripts). Powered by [Luny](https://lunyscript.com), the Lua solution for Unity. 
 
+## [Join my Patreon](https://www.patreon.com/c/CodeSmile), get notified when Luny is released!
+
 [![Unity Learn Tanks!](LunyTanks.png)](https://lunyscript.com/2025/05/09/luny-tanks-the-code-is-lua/)
 
 **CAVEAT:** This project is **NOT playable** because Luny itself is not included. Luny is (will be) [available separately](https://lunyscript.com). Luny can be imported into this project to make it playable/buildable again.
@@ -20,6 +22,8 @@ These are the scripts you should be reviewing:
 - [LunyShellExplosion.lua](Assets/_LunyTanks/Scripts/Shell/LunyShellExplosion.lua)
 
 The syntax is subject to change prior to release. Specifically the 'all lowercase' types will likely be changed to match Unity's API.
+
+## [Join my Patreon](https://www.patreon.com/c/CodeSmile) to not miss out!
 
 # Unity Tanks! on the web
 
