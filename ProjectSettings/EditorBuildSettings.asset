@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_LunyTanks/Tutorial_Demo/Demo_Scenes/LunyDemo_Game_Desert.unity
     guid: 9251763c7c98a32418162591c3fb7339
-  - enabled: 1
-    path: Assets/_LunyTanks/Tutorial_Demo/Demo_Scenes/LunyDemo_Game_Jungle.unity
-    guid: 079c83600abc4c448afd0a19dac5b969
-  - enabled: 1
-    path: Assets/_LunyTanks/Tutorial_Demo/Demo_Scenes/LunyDemo_Game_Moon.unity
-    guid: 808a8852bc96aef4ca68a2e9c6305c8e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7fb6c1c790fa04865b379a6e8ccd7e9c,
       type: 3}
