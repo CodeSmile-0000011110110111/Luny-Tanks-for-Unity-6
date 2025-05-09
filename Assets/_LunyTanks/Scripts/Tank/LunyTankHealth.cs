@@ -34,7 +34,7 @@ namespace CodeSmile.Luny.Tanks
 		{
 			get
 			{
-				Debug.LogWarning("StartingHealth - REPLACE ME");
+				//Debug.LogWarning("StartingHealth - REPLACE ME");
 				return GetFloat(nameof(StartingHealth));
 			}
 		}

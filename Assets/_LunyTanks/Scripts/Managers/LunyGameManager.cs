@@ -60,7 +60,7 @@ namespace CodeSmile.Luny.Tanks
 
 		public void StartGame(PlayerData[] playerData)
 		{
-			Debug.LogWarning("FIXME: Start Game called from C#");
+			//Debug.LogWarning("FIXME: Start Game called from C#");
 			var playerDataTable = new LuaTable();
 			for (var i = 0; i < playerData.Length; i++)
 			{

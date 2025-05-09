@@ -12,9 +12,6 @@ local m_HasShield                   -- Has the tank picked up a shield power up?
 function script.GetHasShield()
     return m_HasShield
 end
-function script.GetStartingHealth()
-    return script.StartingHealth
-end
 
 function script.Awake()
     -- Instantiate the explosion prefab and get a reference to the particle system on it.
