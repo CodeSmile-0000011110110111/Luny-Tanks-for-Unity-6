@@ -133,22 +133,18 @@ function script.GameLoop() -- coroutine
     yield.StartCoroutine(script.RoundStarting)
 
     -- Once the 'RoundStarting' coroutine is finished, run the 'RoundPlaying' coroutine but don't return until it's finished.
-    print("GameLoop - before playing")
     yield.StartCoroutine(script.RoundPlaying)
 
     -- Once execution has returned here, run the 'RoundEnding' coroutine, again don't return until it's finished.
-    print("GameLoop - before ending")
     yield.StartCoroutine(script.RoundEnding)
 
     -- This code is not run until 'RoundEnding' has finished.  At which point, check if a game winner has been found.
     if m_GameWinner then
         -- If there is a game winner, restart the level.
-        print("GameLoop - before loadscene")
         scenemanager.LoadScene(0)
     else
         -- If there isn't a winner yet, restart this coroutine so the loop continues.
         -- Note that this coroutine doesn't yield.  This means that the current version of the GameLoop will end.
-        print("GameLoop - before restart GameLoop")
         script.component:StartCoroutine(script.GameLoop)
     end
 end
@@ -170,7 +166,6 @@ function script.RoundStarting() -- coroutine
 end
 
 function script.RoundPlaying() -- coroutine
-    print("RoundPlaying")
     -- As soon as the round begins playing let the players control the tanks.
     script.EnableTankControl(true)
 
@@ -182,18 +177,14 @@ function script.RoundPlaying() -- coroutine
         -- ... return on the next frame.
         yield.null()
     end
-    print("RoundPlaying ends")
 end
 
 function script.RoundEnding() -- coroutine
-    print("RoundEnding")
     -- Stop tanks from moving.
     script.EnableTankControl(false)
 
     -- See if there is a winner now the round is over.
     m_RoundWinner = script.GetRoundWinner()
-    print("winner", m_RoundWinner)
-    print("wins", m_RoundWinner.Wins)
 
     -- If there is a winner, increment their score.
     if m_RoundWinner then
@@ -208,7 +199,6 @@ function script.RoundEnding() -- coroutine
 
     -- Wait for the specified length of time until yielding control back to the game loop.
     yield.WaitForSeconds(script.EndDelay)
-    print("RoundEnding ends")
 end
 
 -- This is used to check if there is one or fewer tanks remaining and thus the round should end.
@@ -233,7 +223,6 @@ end
 -- This function is to find out if there is a winner of the round.
 -- This function is called with the assumption that 1 or fewer tanks are currently active.
 function script.GetRoundWinner()
-    print("GetRoundWinner")
     -- Go through all the tanks...
     for i = 1, m_PlayerCount do
         local tank = script.SpawnPoints[i];
@@ -250,26 +239,22 @@ end
 
 -- This function is to find out if there is a winner of the game.
 function script.GetGameWinner()
-    print("GetGameWinner")
     -- Go through all the tanks...
     for i = 1, m_PlayerCount do
         -- ... and if one of them has enough rounds to win the game, return it.
         local tank = script.SpawnPoints[i];
 
         if tank.Wins == script.NumRoundsToWin then
-            print("GetGameWinner returns", tank)
             return tank
         end
     end
 
     -- If no tanks have enough rounds to win, return null.
-    print("GetGameWinner returns nil")
     return nil
 end
 
 -- Returns a string message to display at the end of each round.
 function script.EndMessage()
-    print("EndMessage")
     -- By default when a round ends there are no winners so the default end message is a draw.
     local message = "DRAW!"
 
@@ -293,7 +278,6 @@ function script.EndMessage()
         message = m_GameWinner.ColoredPlayerText .. " WINS THE GAME!"
     end
 
-    print("EndMessage returns", message)
     return message
 end
 

@@ -244,11 +244,13 @@ function script.SeekUpdate()
                          m_Shooting.StartCharging()
                      end
                  end
+             elseif targetDistance < 2 then
+                -- prevent AI from circling each other indefinitely
+                script.StartFleeing()
              end
          end
      end
  end
-
 
 function script.FleeUpdate()
     -- When fleeing the tank will go toward a random point away from its target. When we reach the last corners
@@ -292,7 +294,7 @@ end
      local rb = m_Movement.Rigidbody
 
      --The point we will orient toward. By default, the current corner in our path
-     local orientTarget = m_CurrentPath.corners[mathf.Min(m_CurrentCorner, #m_CurrentPath.corners - 1)]
+     local orientTarget = m_CurrentPath.corners[mathf.Min(m_CurrentCorner, #m_CurrentPath.corners)]
 
      --if we are not moving, we orient toward our target instead
      if not m_IsMoving then
@@ -304,7 +306,6 @@ end
      toOrientTarget:Normalize()
 
      local forward = rb.rotation * vector3.forward
-
      local orientDot = vector3.Dot(forward, toOrientTarget)
      local rotatingAngle = vector3.SignedAngle(toOrientTarget, forward, vector3.up)
 
