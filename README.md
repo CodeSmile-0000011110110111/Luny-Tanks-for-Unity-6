@@ -23,6 +23,7 @@ The syntax is subject to change prior to release. Specifically the 'all lowercas
 
 # Unity Tanks! on the web
 
+- [Tanks! 'ported to Lua' announcement](https://lunyscript.com/2025/05/09/luny-tanks-the-code-is-lua/)
 - [Tanks! 'Learn Along' Thread](https://discussions.unity.com/t/official-unity-learn-event-learn-along-featuring-tanks-remastered-for-unity-6-on-unity-learn/1633869)
 - [Tanks! on Unity Learn](https://learn.unity.com/course/tanks-make-a-battle-game-for-web-and-mobile)
 - [Tanks! on the Asset Store (free)](https://assetstore.unity.com/packages/essentials/tutorial-projects/tanks-complete-project-46209)
