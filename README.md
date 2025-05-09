@@ -19,6 +19,7 @@ These are the scripts you should be reviewing:
 - [LunyTankInputUser.lua](Assets/_LunyTanks/Scripts/Tank/LunyTankInputUser.lua)
 - [LunyShellExplosion.lua](Assets/_LunyTanks/Scripts/Shell/LunyShellExplosion.lua)
 
+The syntax is subject to change prior to release. Specifically the 'all lowercase' types will likely be changed to match Unity's API.
 
 # Unity Tanks! on the web
 
