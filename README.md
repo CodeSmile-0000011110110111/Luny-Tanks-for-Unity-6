@@ -6,7 +6,7 @@ Unity's Tanks! project with all C# scripts ported to **Lua scripts**. Powered by
 
 [![Unity Learn Tanks!](LunyTanks.png)](https://lunyscript.com/2025/05/09/luny-tanks-the-code-is-lua/)
 
-**CAVEAT:** This project is **NOT playable** because Luny itself is not included. Luny is (will be) [available separately](https://lunyscript.com). Luny can be imported into this project to make it playable/buildable again.
+**CAVEAT:** This project is **NOT playable** because Luny itself is not included. Luny is (will be) available separately. Luny can be imported into this project to make it playable/buildable again.
 
 # Ported Lua Scripts
 
