@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: CodeSmile
-  productName: Luny Tanks! - The Code Is Lua :)
+  productName: Luny Tanks! - The Code Is Lua
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.6
+  bundleVersion: 0.6.2
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 7fb6c1c790fa04865b379a6e8ccd7e9c, type: 3}
   metroInputSource: 0
@@ -815,7 +815,7 @@ PlayerSettings:
     iPhone: 1
   scriptingBackend:
     Android: 1
-    Standalone: 0
+    Standalone: 1
     WP8: 2
     WebGL: 1
     Windows Store Apps: 2
@@ -832,6 +832,7 @@ PlayerSettings:
     PS4: 1
     PS5: 1
     QNX: 1
+    Standalone: 1
     VisionOS: 1
     WebGL: 1
     Windows Store Apps: 1
@@ -844,7 +845,7 @@ PlayerSettings:
   useDeterministicCompilation: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  gcIncremental: 0
+  gcIncremental: 1
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform: {}
   editorAssembliesCompatibilityLevel: 1

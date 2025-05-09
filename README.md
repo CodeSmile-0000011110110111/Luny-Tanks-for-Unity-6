@@ -2,9 +2,24 @@
 
 Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/tree/main/Assets/_LunyTanks/Scripts). Powered by [Luny](https://lunyscript.com), the Lua solution for Unity. 
 
-[![Unity Learn Tanks!](LunyTanks.jpg)](https://discussions.unity.com/t/official-unity-learn-event-learn-along-featuring-tanks-remastered-for-unity-6-on-unity-learn/1633869)
+[![Unity Learn Tanks!](LunyTanks.png)](https://lunyscript.com/2025/05/09/luny-tanks-the-code-is-lua/)
 
-**CAVEAT:** This project is NOT playable/buildable because Luny itself is not included. Luny is (will be) [available separately](https://lunyscript.com). Luny can be imported into this project to make it playable/buildable again.
+**CAVEAT:** This project is **NOT playable** because Luny itself is not included. Luny is (will be) [available separately](https://lunyscript.com). Luny can be imported into this project to make it playable/buildable again.
+
+# Ported Lua Scripts
+
+These are the scripts you should be reviewing:
+- [LunyCameraControl.lua](Assets/_LunyTanks/Scripts/Camera/LunyCameraControl.lua)
+- [LunyGameManager.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Managers/LunyGameManager.lua)
+- [LunyTankManager.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Managers/LunyTankManager.lua) (not a MonoBehaviour)
+- [LunyTankAI.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankAI.lua)
+- [LunyTankMovement.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankMovement.lua)
+- [LunyTankShooting.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankShooting.lua)
+- [LunyTankHealth.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankHealth.lua)
+- [LunyTankInputUser.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankInputUser.lua)
+- [LunyShellExplosion.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Shell/LunyShellExplosion.lua)
+- 
+
 
 # Unity Tanks! on the web
 
