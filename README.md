@@ -10,15 +10,14 @@ Unity's Tanks! project with all C# scripts ported to [Lua scripts](https://githu
 
 These are the scripts you should be reviewing:
 - [LunyCameraControl.lua](Assets/_LunyTanks/Scripts/Camera/LunyCameraControl.lua)
-- [LunyGameManager.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Managers/LunyGameManager.lua)
-- [LunyTankManager.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Managers/LunyTankManager.lua) (not a MonoBehaviour)
-- [LunyTankAI.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankAI.lua)
-- [LunyTankMovement.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankMovement.lua)
-- [LunyTankShooting.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankShooting.lua)
-- [LunyTankHealth.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankHealth.lua)
-- [LunyTankInputUser.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Tank/LunyTankInputUser.lua)
-- [LunyShellExplosion.lua](https://github.com/CodeSmile-0000011110110111/Luny-Tanks-for-Unity-6/blob/main/Assets/_LunyTanks/Scripts/Shell/LunyShellExplosion.lua)
-- 
+- [LunyGameManager.lua](Assets/_LunyTanks/Scripts/Managers/LunyGameManager.lua)
+- [LunyTankManager.lua](Assets/_LunyTanks/Scripts/Managers/LunyTankManager.lua) (not a MonoBehaviour)
+- [LunyTankAI.lua](Assets/_LunyTanks/Scripts/Tank/LunyTankAI.lua)
+- [LunyTankMovement.lua](Assets/_LunyTanks/Scripts/Tank/LunyTankMovement.lua)
+- [LunyTankShooting.lua](Assets/_LunyTanks/Scripts/Tank/LunyTankShooting.lua)
+- [LunyTankHealth.lua](Assets/_LunyTanks/Scripts/Tank/LunyTankHealth.lua)
+- [LunyTankInputUser.lua](Assets/_LunyTanks/Scripts/Tank/LunyTankInputUser.lua)
+- [LunyShellExplosion.lua](Assets/_LunyTanks/Scripts/Shell/LunyShellExplosion.lua)
 
 
 # Unity Tanks! on the web
