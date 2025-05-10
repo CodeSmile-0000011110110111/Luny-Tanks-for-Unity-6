@@ -91,6 +91,19 @@ function script.SpawnAllTanks()
         -- ... create them, set their player number and references needed for control.
         local pos = tank.SpawnPoint.position
         local rot = tank.SpawnPoint.rotation
+
+        -- spawn more for testing
+        for j = 1, playerData.ExtraTankCount do
+            tank.Instance = gameobject.Instantiate(playerData.UsedPrefab, pos, rot)
+            local movement = tank.Instance:GetComponent(lunytankmovement).script
+            movement.IsComputerControlled = true
+            tank.PlayerNumber = -1
+            tank.ControlIndex = playerData.ControlIndex
+            tank.PlayerColor = color.New(1.0, 0.75, 0.75)
+            tank.ComputerControlled = true
+            LunyTankManager.Setup(tank, script)
+        end
+
         tank.Instance = gameobject.Instantiate(playerData.UsedPrefab, pos, rot)
 
         --this guard against possible user error : if they created a prefab with Is Computer Control set to true

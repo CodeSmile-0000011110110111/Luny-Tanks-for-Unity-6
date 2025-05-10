@@ -7,6 +7,7 @@ using System;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CodeSmile.Luny.Tanks
 {
@@ -24,6 +25,12 @@ namespace CodeSmile.Luny.Tanks
 		public GameObject m_Tank4Prefab; // The Prefab used by the tank in Slot 4 of the Menu
 
 		public LunyTankManager[] m_SpawnPoints; // A collection of managers for enabling and disabling different aspects of the tanks.
+
+		private int m_ExtraTankCount;
+		public void SetExtraTankCount(Slider slider)
+		{
+			m_ExtraTankCount = (int)slider.value;
+		}
 
 		// Data about the selected tanks passed from the menu to the GameManager
 		public class PlayerData
@@ -61,14 +68,17 @@ namespace CodeSmile.Luny.Tanks
 		public void StartGame(PlayerData[] playerData)
 		{
 			//Debug.LogWarning("FIXME: Start Game called from C#");
+			var tankCount = playerData.Length;
 			var playerDataTable = new LuaTable();
-			for (var i = 0; i < playerData.Length; i++)
+			for (var i = 0; i < tankCount; i++)
 			{
+				var index = i % 4;
 				var data = new LuaTable();
-				data[nameof(PlayerData.IsComputer)] = playerData[i].IsComputer;
-				data[nameof(PlayerData.TankColor)] = LunyColor.Bind(playerData[i].TankColor);
-				data[nameof(PlayerData.UsedPrefab)] = LunyGameObject.Bind(playerData[i].UsedPrefab);
-				data[nameof(PlayerData.ControlIndex)] = playerData[i].ControlIndex;
+				data[nameof(PlayerData.IsComputer)] = playerData[index].IsComputer;
+				data[nameof(PlayerData.TankColor)] = LunyColor.Bind(playerData[index].TankColor);
+				data[nameof(PlayerData.UsedPrefab)] = LunyGameObject.Bind(playerData[index].UsedPrefab);
+				data[nameof(PlayerData.ControlIndex)] = playerData[index].ControlIndex;
+				data["ExtraTankCount"] = m_ExtraTankCount;
 				playerDataTable[i + 1] = data;
 			}
 			Script.Invoke("StartGame", playerDataTable);
