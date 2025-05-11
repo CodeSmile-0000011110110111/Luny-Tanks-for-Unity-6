@@ -160,6 +160,40 @@ function script.Fire()
     explosionData.ExplosionForce = script.ExplosionForce
     explosionData.ExplosionRadius = script.ExplosionRadius
     explosionData.MaxDamage = script.MaxDamage
+    explosionData.OwningTank = gameObject
+
+
+    ---- Create an instance of the shell and store a reference to it\'s rigidbody.
+    --shellPos = script.FireTransform.position + vector3.New(0.2, 0, 0)
+    --shellRot = script.FireTransform.rotation
+    --shellInstance = gameobject.Instantiate(script.Shell, shellPos, shellRot)
+    --
+    ---- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
+    --shellInstance.linearVelocity = m_CurrentLaunchForce * (script.FireTransform.forward + vector3.New(0.2, 0, 0))
+    --
+    --local explosionData = shellInstance:GetComponent(lunyshellexplosion).script
+    --explosionData.ExplosionForce = script.ExplosionForce
+    --explosionData.ExplosionRadius = script.ExplosionRadius
+    --explosionData.MaxDamage = script.MaxDamage
+    --explosionData.OwningTank = gameObject
+    --
+    --
+    --
+    ---- Create an instance of the shell and store a reference to it\'s rigidbody.
+    --shellPos = script.FireTransform.position + vector3.New(-0.2, 0, 0)
+    --shellRot = script.FireTransform.rotation
+    --shellInstance = gameobject.Instantiate(script.Shell, shellPos, shellRot)
+    --
+    ---- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
+    --shellInstance.linearVelocity = m_CurrentLaunchForce * (script.FireTransform.forward + vector3.New(-0.2, 0, 0))
+    --
+    --local explosionData = shellInstance:GetComponent(lunyshellexplosion).script
+    --explosionData.ExplosionForce = script.ExplosionForce
+    --explosionData.ExplosionRadius = script.ExplosionRadius
+    --explosionData.MaxDamage = script.MaxDamage
+    --explosionData.OwningTank = gameObject
+
+
 
     -- Increase the damage if extra damage PowerUp is active
     if m_HasSpecialShell then

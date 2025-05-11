@@ -4,6 +4,7 @@ local script = {...}
 script.MaxDamage = 100                    -- The amount of damage done if the explosion is centred on a tank.
 script.ExplosionForce = 1000              -- The amount of force added to a tank at the centre of the explosion.
 script.ExplosionRadius = 5                -- The maximum distance away from the explosion tanks can be and are still affected.
+script.OwningTank = nil
 
 local m_MaxLifeTime = 2  -- The time in seconds before the shell is removed.
 
@@ -23,9 +24,24 @@ end
 function script.OnTriggerEnter(other)
     -- Collect all the colliders in a sphere from the shell's current position to a radius of the explosion radius.
     local colliders = physics.OverlapSphere(transform.position, script.ExplosionRadius, script.TankMask)
+    local shouldExplode = true
 
     -- Go through all the colliders...
     for i, collider in ipairs(colliders) do
+        local otherObject = collider.gameObject
+        -- avoid hitting oneself
+        if otherObject == script.OwningTank then
+            shouldExplode = false
+            goto continue
+        end
+
+        --local otherShell = otherObject:GetComponent(lunyshellexplosion)
+        --if otherShell and otherShell.script.OwningTank == script.OwningTank then
+        --    print("self collision avoided")
+        --    shouldExplode = false
+        --    goto continue
+        --end
+
         -- ... and find their rigidbody.
         local targetRigidbody = collider:GetComponent(rigidbody)
 
@@ -54,21 +70,23 @@ function script.OnTriggerEnter(other)
         ::continue::
     end
 
-    -- Unparent the particles from the shell.
-    script.ExplosionParticles.transform.parent = nil
+    if shouldExplode then
+        -- Unparent the particles from the shell.
+        script.ExplosionParticles.transform.parent = nil
 
-    -- Play the particle system.
-    script.ExplosionParticles:Play()
+        -- Play the particle system.
+        script.ExplosionParticles:Play()
 
-    -- Play the explosion sound effect.
-    script.ExplosionAudio:Play()
+        -- Play the explosion sound effect.
+        script.ExplosionAudio:Play()
 
-    -- Once the particles have finished, destroy the gameobject they are on.
-    local mainModule = script.ExplosionParticles.main
-    gameobject.Destroy(script.ExplosionParticles.gameObject, mainModule.duration)
+        -- Once the particles have finished, destroy the gameobject they are on.
+        local mainModule = script.ExplosionParticles.main
+        gameobject.Destroy(script.ExplosionParticles.gameObject, mainModule.duration)
 
-    -- Destroy the shell.
-    gameobject.Destroy(gameObject)
+        -- Destroy the shell.
+        gameobject.Destroy(gameObject)
+    end
 end
 
 function script.CalculateDamage(targetPosition)
