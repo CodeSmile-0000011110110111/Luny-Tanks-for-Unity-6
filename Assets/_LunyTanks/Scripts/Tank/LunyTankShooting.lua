@@ -144,56 +144,56 @@ function script.HumanUpdate()
     end
 end
 
+-- This function instantiates shells (projectiles) and returns preset data for flight and impact.
+--function FireShell(ShellPrefab, FireTransform, LaunchForce)
+--    local shellPos = FireTransform.position
+--    local shellRot = FireTransform.rotation
+--
+--    -- Create one or more instances of the shell and store them in the table 'instances'
+--    local instances = {}
+--    instances[1] = gameobject.Instantiate(ShellPrefab, shellPos, shellRot)
+--
+--    -- Uncomment the following lines to create a multi-shot:
+--    --shellPos = shellPos + vector3.up
+--    --instances[2] = gameobject.Instantiate(ShellPrefab, shellPos, shellRot)
+--    --shellPos = shellPos + vector3.up
+--    --instances[3] = gameobject.Instantiate(ShellPrefab, shellPos, shellRot)
+--
+--    -- Set the shell's properties and return them
+--    local shellData = {}
+--    shellData.Instances = instances
+--    shellData.Velocity = LaunchForce * FireTransform.forward
+--    shellData.ExplosionForce = script.ExplosionForce
+--    shellData.ExplosionRadius = script.ExplosionRadius
+--    shellData.MaxDamage = script.MaxDamage
+--
+--    return shellData
+--end
+
 function script.Fire()
     -- Set the fired flag so only Fire is only called once.
     m_Fired = true
 
-    -- Create an instance of the shell and store a reference to it\'s rigidbody.
-    local shellPos = script.FireTransform.position
-    local shellRot = script.FireTransform.rotation
-    local shellInstance = gameobject.Instantiate(script.Shell, shellPos, shellRot)
+    -- Create an instance of the shell
+    local shellData = FireShell(script.Shell, script.FireTransform, m_CurrentLaunchForce, script.ExplosionForce,
+                                script.ExplosionRadius, script.MaxDamage)
+    if type(shellData) ~= "table" then
+        error("shellData is not a table")
+    end
+    if type(shellData.Instances) ~= "table" then
+        error("shellData Instances is not a table")
+    end
 
-    -- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
-    shellInstance.linearVelocity = m_CurrentLaunchForce * script.FireTransform.forward
+    for i, shell in ipairs(shellData.Instances) do
+        -- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
+        shell.linearVelocity = shellData.Velocity
 
-    local explosionData = shellInstance:GetComponent(lunyshellexplosion).script
-    explosionData.ExplosionForce = script.ExplosionForce
-    explosionData.ExplosionRadius = script.ExplosionRadius
-    explosionData.MaxDamage = script.MaxDamage
-    explosionData.OwningTank = gameObject
-
-
-    ---- Create an instance of the shell and store a reference to it\'s rigidbody.
-    --shellPos = script.FireTransform.position + vector3.New(0.2, 0, 0)
-    --shellRot = script.FireTransform.rotation
-    --shellInstance = gameobject.Instantiate(script.Shell, shellPos, shellRot)
-    --
-    ---- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
-    --shellInstance.linearVelocity = m_CurrentLaunchForce * (script.FireTransform.forward + vector3.New(0.2, 0, 0))
-    --
-    --local explosionData = shellInstance:GetComponent(lunyshellexplosion).script
-    --explosionData.ExplosionForce = script.ExplosionForce
-    --explosionData.ExplosionRadius = script.ExplosionRadius
-    --explosionData.MaxDamage = script.MaxDamage
-    --explosionData.OwningTank = gameObject
-    --
-    --
-    --
-    ---- Create an instance of the shell and store a reference to it\'s rigidbody.
-    --shellPos = script.FireTransform.position + vector3.New(-0.2, 0, 0)
-    --shellRot = script.FireTransform.rotation
-    --shellInstance = gameobject.Instantiate(script.Shell, shellPos, shellRot)
-    --
-    ---- Set the shell\'s velocity to the launch force in the fire position\'s forward direction.
-    --shellInstance.linearVelocity = m_CurrentLaunchForce * (script.FireTransform.forward + vector3.New(-0.2, 0, 0))
-    --
-    --local explosionData = shellInstance:GetComponent(lunyshellexplosion).script
-    --explosionData.ExplosionForce = script.ExplosionForce
-    --explosionData.ExplosionRadius = script.ExplosionRadius
-    --explosionData.MaxDamage = script.MaxDamage
-    --explosionData.OwningTank = gameObject
-
-
+        local explosionData = shell:GetComponent(lunyshellexplosion).script
+        explosionData.ExplosionForce = shellData.ExplosionForce
+        explosionData.ExplosionRadius = shellData.ExplosionRadius
+        explosionData.MaxDamage = shellData.Damage
+        explosionData.OwningTank = shellData.Instance
+    end
 
     -- Increase the damage if extra damage PowerUp is active
     if m_HasSpecialShell then
