@@ -815,7 +815,7 @@ PlayerSettings:
     iPhone: 1
   scriptingBackend:
     Android: 1
-    Standalone: 1
+    Standalone: 0
     WP8: 2
     WebGL: 1
     Windows Store Apps: 2
@@ -832,7 +832,7 @@ PlayerSettings:
     PS4: 1
     PS5: 1
     QNX: 1
-    Standalone: 1
+    Standalone: 0
     VisionOS: 1
     WebGL: 1
     Windows Store Apps: 1
