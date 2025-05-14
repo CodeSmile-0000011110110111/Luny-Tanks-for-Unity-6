@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62bfbf4574a48879ef2d09f021e67fd, type: 3}
   m_Name: New Lua Module
   m_EditorClassIdentifier: 
+  m_AssemblyName: UnityEngine.CoreModule
   m_ModuleLoader:
     rid: 5308811886226571343
-  m_AssemblyName: UnityEngine.CoreModule
   m_IsValidAssembly: 1
-  m_ModuleLoaderExists: 1
-  m_GeneratedAssetsPathGuid: 309625fcf358bf24e805465fbe0955ed
+  m_HasModuleLoader: 1
   m_ModuleLoaderTypeName: ThatGame._Luny_UnityEngine_CoreModule_Loader
+  m_GeneratedScriptsPathGuid: 309625fcf358bf24e805465fbe0955ed
   m_ClickToLogAssemblyNames: 0
   m_ClickToGenerateBindings: 0
   m_StaticClasses:

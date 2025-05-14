@@ -33,6 +33,7 @@ MonoBehaviour:
   - {fileID: -6979533126094156877, guid: 01505922d88788d4094c2acb7b4f405f, type: 3}
   - {fileID: -6979533126094156877, guid: cc0a02da017331b4f94f71cbecbab63f, type: 3}
   - {fileID: -6979533126094156877, guid: 5ee560ad10891d34f811c59a1869409d, type: 3}
+  - {fileID: -6979533126094156877, guid: ce828aac4a7b4154aa7c8dfb758a38a3, type: 3}
   - {fileID: -6979533126094156877, guid: 3ed496e423786564d890e109d9aecd4f, type: 3}
   - {fileID: -6979533126094156877, guid: ac3c31e7a72a4900920b47d4c01103c2, type: 3}
   - {fileID: -6979533126094156877, guid: f15d74223dbd426ca390a2d78b6dc492, type: 3}
@@ -68,6 +69,7 @@ MonoBehaviour:
   - LunyStartMenuSlot
   - LunyMobileUIControl
   - LunyUIVirtualJoystick
+  - LuaBindingsGenerator
   - New Luny Script
   - LunyApiCompatibility
   - ParseError
@@ -103,6 +105,7 @@ MonoBehaviour:
   - lunystartmenuslot
   - lunymobileuicontrol
   - lunyuivirtualjoystick
+  - luabindingsgenerator
   - new luny script
   - lunyapicompatibility
   - parseerror
@@ -138,6 +141,7 @@ MonoBehaviour:
   - Assets/_LunyTanks/Scripts/UI/LunyStartMenuSlot.lua
   - Assets/_LunyTanks/Scripts/UI/MobileControl/LunyMobileUIControl.lua
   - Assets/_LunyTanks/Scripts/UI/MobileControl/VirtualInputs/LunyUIVirtualJoystick.lua
+  - Packages/de.codesmile.luny/Editor/Luny/LuaBindingsGenerator.lua
   - Packages/de.codesmile.luny/Runtime/Luny/Extensions/New Luny Script.lua
   - Packages/de.codesmile.luny/Runtime/Luny/Resources/LunyApiCompatibility.lua
   - Packages/de.codesmile.luny/Tests/Assets/ParseError.lua
