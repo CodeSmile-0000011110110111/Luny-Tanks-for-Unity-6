@@ -156,4 +156,4 @@ MonoBehaviour:
   - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_SendMessage.lua
   - Packages/de.codesmile.luny/Tests/Assets/TestObjectScript.lua
   - Packages/de.codesmile.luny/Tests/Assets/TestObjectScriptWithParseError.lua
-  m_LastSerializedUnityVersion: 6000.0.48f1
+  m_ModuleBindingsUnityVersion: 6000.0.48f1
