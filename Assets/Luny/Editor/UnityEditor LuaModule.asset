@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc9271ed4244f4a9d1f2db803b5cc50, type: 3}
+  m_Name: UnityEditor LuaModule
+  m_EditorClassIdentifier: 
+  m_ModuleName: UnityEditor_LuaModule
+  m_Namespace: UnityEditor.CoreModule
+  m_ModuleLoader:
+    rid: 5308811922457231439
+  m_BindTypeNames: []
+  m_BoundTypes: []
+  m_NamespaceStaticClasses: []
+  m_NamespaceClasses: []
+  m_NamespaceStructs: []
+  m_NamespaceEnums: []
+  m_NamespaceUnsupportedTypes: []
+  m_HasModuleLoader: 1
+  m_ModuleLoaderTypeFullName: CodeSmileEditor.Luny.DefaultContext._UnityEditor_LuaModule_Loader
+  m_GeneratedScriptsPathGuid: e457cff967a896c47a825a20ba35c6e4
+  references:
+    version: 2
+    RefIds:
+    - rid: 5308811922457231439
+      type: {class: _UnityEditor_LuaModule_Loader, ns: CodeSmileEditor.Luny.DefaultContext,
+        asm: CodeSmileEditor.Luny.DefaultContext}
+      data: 

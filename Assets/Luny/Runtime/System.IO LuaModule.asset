@@ -10,85 +10,82 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b62bfbf4574a48879ef2d09f021e67fd, type: 3}
-  m_Name: System.IO Module
+  m_Name: System.IO LuaModule
   m_EditorClassIdentifier: 
-  m_ModuleName: LunySystemIOModule
+  m_ModuleName: System_IO_LuaModule
   m_Namespace: System.IO
   m_ModuleLoader:
-    rid: -2
+    rid: 5308811922457231438
   m_BindTypeNames:
-  - Path
   - File
-  - Directory
   m_BoundTypes:
-  - m_AssemblyQualifiedName: System.IO.Path, mscorlib, Version=4.0.0.0, Culture=neutral,
-      PublicKeyToken=b77a5c561934e089
   - m_AssemblyQualifiedName: System.IO.File, mscorlib, Version=4.0.0.0, Culture=neutral,
       PublicKeyToken=b77a5c561934e089
-  - m_AssemblyQualifiedName: System.IO.Directory, mscorlib, Version=4.0.0.0, Culture=neutral,
-      PublicKeyToken=b77a5c561934e089
+  m_NamespaceStaticClasses:
+  - Directory
+  - File
+  - Path
   m_NamespaceClasses:
+  - BinaryReader
+  - BinaryWriter
+  - BufferedStream
+  - DirectoryInfo
+  - DriveInfo
+  - EnumerationOptions
+  - ErrorEventArgs
+  - ErrorEventHandler
+  - FileInfo
+  - FileStream
+  - FileSystemEventArgs
+  - FileSystemEventHandler
+  - FileSystemInfo
+  - FileSystemWatcher
   - MemoryStream
+  - RenamedEventArgs
+  - RenamedEventHandler
+  - Stream
   - StreamReader
   - StreamWriter
+  - StringReader
+  - StringWriter
   - TextReader
   - TextWriter
   - UnmanagedMemoryAccessor
   - UnmanagedMemoryStream
-  - Directory
-  - DirectoryInfo
-  - EnumerationOptions
-  - File
-  - FileInfo
-  - FileSystemInfo
-  - BufferedStream
-  - Stream
-  - BinaryReader
-  - BinaryWriter
-  - StringReader
-  - StringWriter
-  - DriveInfo
-  - FileStream
-  - Path
-  - FileSystemEventArgs
-  - FileSystemEventHandler
-  - RenamedEventArgs
-  - RenamedEventHandler
-  - ErrorEventArgs
-  - ErrorEventHandler
-  - FileSystemWatcher
   m_NamespaceStructs:
   - WaitForChangedResult
   m_NamespaceEnums:
+  - DriveType
   - FileAccess
+  - FileAttributes
   - FileMode
   - FileOptions
   - FileShare
-  - SeekOrigin
-  - DriveType
+  - HandleInheritability
   - MatchCasing
   - MatchType
-  - SearchOption
-  - FileAttributes
-  - HandleInheritability
   - NotifyFilters
+  - SearchOption
+  - SeekOrigin
   - WatcherChangeTypes
   m_NamespaceUnsupportedTypes:
   - DirectoryNotFoundException
+  - DriveNotFoundException
   - EndOfStreamException
   - FileLoadException
   - FileNotFoundException
-  - IOException
-  - PathTooLongException
-  - DriveNotFoundException
-  - IODescriptionAttribute
   - InternalBufferOverflowException
   - InvalidDataException
-  m_HasModuleLoader: 0
-  m_ModuleLoaderTypeName: 
-  m_GeneratedScriptsPathGuid: 
+  - IODescriptionAttribute
+  - IOException
+  - PathTooLongException
+  m_HasModuleLoader: 1
+  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._System_IO_LuaModule_Loader
+  m_GeneratedScriptsPathGuid: 0575537ced754b549ab422549c7601d3
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 5308811922457231438
+      type: {class: _System_IO_LuaModule_Loader, ns: CodeSmile.Luny.DefaultContext,
+        asm: CodeSmile.Luny.DefaultContext}
+      data: 
