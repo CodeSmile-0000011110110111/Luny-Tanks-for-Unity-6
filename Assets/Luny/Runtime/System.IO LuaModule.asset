@@ -80,7 +80,7 @@ MonoBehaviour:
   - IOException
   - PathTooLongException
   m_HasModuleLoader: 0
-  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._System_IO_LuaModule_Loader
+  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext.System_IO_LuaModuleLoader
   m_GeneratedScriptsPathGuid: 63b9addbe4f6a3d4ba5992103f045a16
   references:
     version: 2

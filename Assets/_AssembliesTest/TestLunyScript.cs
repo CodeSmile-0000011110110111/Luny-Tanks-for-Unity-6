@@ -14,11 +14,11 @@ public sealed class TestLunyScript : LunyScript
 	{
 		var env = Luny.Lua.State.Environment;
 
-		env["System"] = new LuaTable();
-		env["System"].AsTable()["IO"] = new LuaTable();
-		env["System"].AsTable()["IO"].Read<LuaTable>()["File"] = new LuaTable();
+		// env["System"] = new LuaTable();
+		// env["System"].AsTable()["IO"] = new LuaTable();
+		// env["System"].AsTable()["IO"].Read<LuaTable>()["File"] = new LuaTable();
 
-		BindType(env, FileIO_static.TypeFullName, new FileIO_static());
+		//BindType(env, FileIO_static.TypeFullName, new FileIO_static());
 	}
 
 	private static void BindType(LuaTable env, String[] typeFullName, LuaValue instance)

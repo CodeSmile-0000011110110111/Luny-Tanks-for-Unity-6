@@ -3,18 +3,20 @@
 // --------------------------------------------------------------
 using CodeSmile.Luny;
 using Lua;
+using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 namespace CodeSmile.Luny.DefaultContext
 {
-	public sealed class _System_IO_LuaModule_Loader : LuaModuleLoader
+	[Serializable] [Preserve]
+	public sealed class System_IO_LuaModuleLoader : LuaModuleLoader
 	{
+
 		public override void Load(LuaTable table)
 		{
-base.Load(table);
+			base.Load(table);
 		}
 	}
 }
-
-
