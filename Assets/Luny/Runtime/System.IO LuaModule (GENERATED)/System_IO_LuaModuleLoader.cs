@@ -14,9 +14,11 @@ namespace CodeSmile.Luny.DefaultContext
 	public sealed class System_IO_LuaModuleLoader : LuaModuleLoader
 	{
 
-		public override void Load(LuaTable table)
+		public override void Load(LuaTable env)
 		{
-			base.Load(table);
+			base.Load(env);
+			var ns = GetOrCreateNamespaceTable(env, new[] { "System", "IO" });
+			ns["File"] = new System_IO_File_static();
 		}
 	}
 }

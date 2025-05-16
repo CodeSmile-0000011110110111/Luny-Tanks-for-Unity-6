@@ -274,6 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LuaAssetRegistry: {fileID: 11400000, guid: 4c4579470a65ce54dadf7a3c12fce9f9, type: 2}
+  m_LuaContexts:
+  - {fileID: 11400000, guid: e23a15a81417a8246a65e34b46cf4016, type: 2}
   m_StartupScripts:
   - {fileID: -6979533126094156877, guid: 290b5fc4f09b59f4497310864e6c5e49, type: 3}
   m_LunyScriptTypesAreLowercase: 0

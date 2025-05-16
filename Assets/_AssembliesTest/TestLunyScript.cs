@@ -10,7 +10,7 @@ using UnityEngine;
 
 public sealed class TestLunyScript : LunyScript
 {
-	protected override void OnAwake()
+	protected override async void OnAwake()
 	{
 		var env = Luny.Lua.State.Environment;
 
@@ -19,6 +19,10 @@ public sealed class TestLunyScript : LunyScript
 		// env["System"].AsTable()["IO"].Read<LuaTable>()["File"] = new LuaTable();
 
 		//BindType(env, FileIO_static.TypeFullName, new FileIO_static());
+
+
+		var script = "print(System)\nprint(System.IO)\n";
+		await Luny.MainLua.DoStringAsync(script, "test");
 	}
 
 	private static void BindType(LuaTable env, String[] typeFullName, LuaValue instance)

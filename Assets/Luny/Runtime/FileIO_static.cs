@@ -37,20 +37,16 @@ namespace CodeSmile.Luny.DefaultContext
             }
         );
 
-        internal static LuaValue TryGetValue(FileIO_static instance, String key,
-            LuaFunctionExecutionContext context)
+        internal static LuaValue TryGetValue(FileIO_static instance, String key, LuaFunctionExecutionContext context)
         {
             switch (key)
             {
-                case "testfunc":
-                     return _testfunc;
-                case var _:
-                    throw new LunyBindingException(instance, key, context, BindingType.Getter);
+                case "testfunc": return _testfunc;
+                default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
             }
         }
 
-        internal static void TrySetValue(FileIO_static instance, String key, LuaValue value,
-            LuaFunctionExecutionContext context)
+        internal static void TrySetValue(FileIO_static instance, String key, LuaValue value, LuaFunctionExecutionContext context)
         {
             switch (key)
             {
