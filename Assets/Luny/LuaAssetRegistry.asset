@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: LuaAssetRegistry
   m_EditorClassIdentifier: 
   m_LuaAssets:
+  - {fileID: -6979533126094156877, guid: 290b5fc4f09b59f4497310864e6c5e49, type: 3}
+  - {fileID: -6979533126094156877, guid: a542a05586245d84f86c6ee16029f497, type: 3}
   - {fileID: -6979533126094156877, guid: 25284e7754397384088f1e31691e1cef, type: 3}
   - {fileID: -6979533126094156877, guid: a69b1abb666506541bfa50b8416b08e5, type: 3}
   - {fileID: -6979533126094156877, guid: 6c5b2baf53917f4458e56bb515399d0c, type: 3}
@@ -49,6 +51,8 @@ MonoBehaviour:
   - {fileID: -6979533126094156877, guid: 75a96fc0e612b0145a087aa6467dbf01, type: 3}
   - {fileID: -6979533126094156877, guid: 3cd3ae464bf04f14b61e102c2273fbf4, type: 3}
   m_LuaAssetNames:
+  - TestLaunchScript
+  - TestLunyScript
   - LunyCameraControl
   - LunyGameManager
   - LunyTankManager
@@ -85,6 +89,8 @@ MonoBehaviour:
   - TestObjectScript
   - TestObjectScriptWithParseError
   m_LuaAssetNamesLowercase:
+  - testlaunchscript
+  - testlunyscript
   - lunycameracontrol
   - lunygamemanager
   - lunytankmanager
@@ -121,6 +127,8 @@ MonoBehaviour:
   - testobjectscript
   - testobjectscriptwithparseerror
   m_LuaAssetPaths:
+  - Assets/_AssembliesTest/TestLaunchScript.lua
+  - Assets/_AssembliesTest/TestLunyScript.lua
   - Assets/_LunyTanks/Scripts/Camera/LunyCameraControl.lua
   - Assets/_LunyTanks/Scripts/Managers/LunyGameManager.lua
   - Assets/_LunyTanks/Scripts/Managers/LunyTankManager.lua
@@ -156,4 +164,4 @@ MonoBehaviour:
   - Packages/de.codesmile.luny/Tests/Assets/TestCustomLunyScript_SendMessage.lua
   - Packages/de.codesmile.luny/Tests/Assets/TestObjectScript.lua
   - Packages/de.codesmile.luny/Tests/Assets/TestObjectScriptWithParseError.lua
-  m_ModuleBindingsUnityVersion: 6000.0.48f1
+  m_ModuleBindingsUnityVersion: 6000.0.49f1

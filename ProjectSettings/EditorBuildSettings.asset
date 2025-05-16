@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_LunyTanks/Tutorial_Demo/Demo_Scenes/LunyDemo_Game_Desert.unity
-    guid: 9251763c7c98a32418162591c3fb7339
+    path: Assets/_AssembliesTest/AssembliesTest.unity
+    guid: 93599f4edc61493489d4609417fc1817
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7fb6c1c790fa04865b379a6e8ccd7e9c,
       type: 3}

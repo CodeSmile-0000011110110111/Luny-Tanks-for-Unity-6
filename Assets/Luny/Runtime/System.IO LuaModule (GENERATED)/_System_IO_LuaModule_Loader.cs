@@ -6,13 +6,13 @@ using Lua;
 using UnityEditor;
 using UnityEngine;
 
-namespace CodeSmileEditor.Luny.DefaultContext
+namespace CodeSmile.Luny.DefaultContext
 {
-	public sealed class _UnityEditorCoreModule_Loader : LuaModuleLoader
+	public sealed class _System_IO_LuaModule_Loader : LuaModuleLoader
 	{
-		public override void Load(LuaState luaState)
+		public override void Load(LuaTable table)
 		{
-base.Load(luaState);
+base.Load(table);
 		}
 	}
 }

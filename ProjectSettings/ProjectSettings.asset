@@ -516,6 +516,7 @@ PlayerSettings:
   - serializedVersion: 2
     m_BuildTarget: PS4
     m_EncodingQuality: 1
+  m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
@@ -832,7 +833,7 @@ PlayerSettings:
     PS4: 1
     PS5: 1
     QNX: 1
-    Standalone: 1
+    Standalone: 3
     VisionOS: 1
     WebGL: 1
     Windows Store Apps: 1
