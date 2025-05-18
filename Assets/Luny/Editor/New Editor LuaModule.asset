@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc9271ed4244f4a9d1f2db803b5cc50, type: 3}
-  m_Name: UnityEditor LuaModule
+  m_Script: {fileID: 11500000, guid: dd4ec5971b604626b8cbc7830f5fca0b, type: 3}
+  m_Name: New Editor LuaModule
   m_EditorClassIdentifier: 
-  m_ModuleName: UnityEditor_LuaModule
-  m_Namespace: UnityEditor.CoreModule
+  m_ModuleName: 
+  m_Namespace: System
   m_ModuleLoader:
     rid: -2
   m_BindTypeNames: []
@@ -24,8 +24,8 @@ MonoBehaviour:
   m_NamespaceEnums: []
   m_NamespaceUnsupportedTypes: []
   m_HasModuleLoader: 0
-  m_ModuleLoaderTypeFullName: CodeSmileEditor.Luny.DefaultContext._UnityEditor_LuaModule_Loader
-  m_GeneratedScriptsPathGuid: 06115419202e6d649aaeec788a6a3717
+  m_ModuleLoaderTypeFullName: 
+  m_GeneratedScriptsPathGuid: 
   references:
     version: 2
     RefIds:

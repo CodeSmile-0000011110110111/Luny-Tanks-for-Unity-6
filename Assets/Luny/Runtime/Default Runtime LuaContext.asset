@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4ea79b7d3f44948c11e4b70a148e66, type: 3}
-  m_Name: DefaultRuntimeContext
+  m_Name: Default Runtime LuaContext
   m_EditorClassIdentifier: 
   m_SearchPaths:
   - '%PersistentDataPath%'
