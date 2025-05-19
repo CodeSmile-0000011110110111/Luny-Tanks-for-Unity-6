@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SearchPaths:
   - Assets
-  m_Modules: []
+  m_Modules:
+  - {fileID: 11400000, guid: b1ee7eda82fc1b14f8b9acc7cbf625b6, type: 2}
   m_ClickToGenerateBindings: 0

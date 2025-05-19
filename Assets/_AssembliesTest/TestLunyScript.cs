@@ -11,7 +11,8 @@ public sealed class TestLunyScript : LunyScript
 	{
 		var env = Luny.Lua.State.Environment;
 
-		var script = "print('System',System)\nprint('System.IO',System.IO)\nprint('System.IO.File',System.IO.File)";
+		var script = "print('System',System)\nprint('System.IO',System.IO)\nprint('System.IO.File',System.IO.File)\n" +
+		             "print(System.IO.File.ReadAllText('U:/error.lua'))";
 		await Luny.MainLua.DoStringAsync(script, nameof(TestLunyScript));
 	}
 

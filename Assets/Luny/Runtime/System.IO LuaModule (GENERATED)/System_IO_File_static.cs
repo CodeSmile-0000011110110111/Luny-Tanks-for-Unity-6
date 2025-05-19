@@ -84,6 +84,15 @@ namespace CodeSmile.Luny.DefaultContext
 			return new ValueTask<Int32>(0);
 		});
 
+		private static readonly LuaFunction _ReadAllText = new("System.IO.File.ReadAllText", (context, buffer, ct) =>
+		{
+			var argCount = context.ArgumentCount;
+			var arg0 = context.GetArgument(0);
+			var path = arg0.Read<System.String>();
+			buffer.Span[0] = System.IO.File.ReadAllText(path);
+			return new ValueTask<Int32>(1);
+		});
+
 		private static readonly LuaFunction _Replace = new("System.IO.File.Replace", (context, buffer, ct) =>
 		{
 			var argCount = context.ArgumentCount;
@@ -118,6 +127,7 @@ namespace CodeSmile.Luny.DefaultContext
 				case "Delete": return _Delete;
 				case "Encrypt": return _Encrypt;
 				case "Move": return _Move;
+				case "ReadAllText": return _ReadAllText;
 				case "Replace": return _Replace;
 				case "WriteAllText": return _WriteAllText;
 				default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
