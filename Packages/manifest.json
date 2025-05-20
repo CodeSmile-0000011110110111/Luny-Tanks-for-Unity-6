@@ -9,6 +9,7 @@
     "com.unity.memoryprofiler": "1.1.6",
     "com.unity.multiplayer.center": "1.0.0",
     "com.unity.postprocessing": "3.4.0",
+    "com.unity.recorder": "5.1.2",
     "com.unity.render-pipelines.core": "17.0.4",
     "com.unity.render-pipelines.universal": "17.0.4",
     "com.unity.render-pipelines.universal-config": "17.0.3",
@@ -52,5 +53,9 @@
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
   },
-  "testables": [ "de.codesmile.luny", "de.codesmile.core", "de.codesmile.scriptbuilder" ]
+  "testables": [
+    "de.codesmile.luny",
+    "de.codesmile.core",
+    "de.codesmile.scriptbuilder"
+  ]
 }

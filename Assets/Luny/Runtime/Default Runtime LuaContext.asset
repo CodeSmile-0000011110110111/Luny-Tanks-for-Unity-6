@@ -18,4 +18,5 @@ MonoBehaviour:
   - Assets
   m_Modules:
   - {fileID: 11400000, guid: 881a883152555bb4fa074b1c85b6284f, type: 2}
+  m_AutoGenerateBindingsOnFocus: 1
   m_ClickToGenerateBindings: 0

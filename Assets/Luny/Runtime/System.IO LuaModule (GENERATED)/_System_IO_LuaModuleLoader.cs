@@ -3,22 +3,27 @@
 // --------------------------------------------------------------
 using CodeSmile.Luny;
 using Lua;
+using Lua.Runtime;
 using System;
+using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Scripting;
 
 namespace CodeSmile.Luny.DefaultContext
 {
-	[Serializable] [Preserve]
-	public sealed class System_IO_LuaModuleLoader : LuaModuleLoader
+	[Serializable]
+	public sealed class _System_IO_LuaModuleLoader : LuaModuleLoader
 	{
 
 		public override void Load(LuaTable env)
 		{
 			base.Load(env);
-			var ns = GetOrCreateNamespaceTable(env, new[] { "System", "IO" });
-			ns["File"] = new System_IO_File_static();
+			var namespaces = new[] { "System", "IO" };
+			var nsTable = GetOrCreateNamespaceTable(env, namespaces);
+			nsTable["Directory"] = new System_IO_Directory_static();
+			nsTable["File"] = new System_IO_File_static();
+			nsTable["Path"] = new System_IO_Path_static();
 		}
 	}
 }

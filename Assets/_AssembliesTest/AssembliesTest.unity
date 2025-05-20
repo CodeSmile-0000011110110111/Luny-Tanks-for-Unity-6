@@ -244,6 +244,54 @@ MonoBehaviour:
     ScriptAsset: {fileID: -6979533126094156877, guid: a542a05586245d84f86c6ee16029f497,
       type: 3}
     DebugLogScriptExecution: 0
+--- !u!1 &635251269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635251271}
+  - component: {fileID: 635251270}
+  m_Layer: 0
+  m_Name: LunyScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &635251270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635251269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0eacb5489942f591e77cfd7c202eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LunyScriptSettings:
+    ScriptAsset: {fileID: -6979533126094156877, guid: e1408a9af1833364bb4ecfc4466903ca,
+      type: 3}
+    DebugLogScriptExecution: 0
+--- !u!4 &635251271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635251269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371663931
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,3 +540,4 @@ SceneRoots:
   - {fileID: 2053150537}
   - {fileID: 1371663933}
   - {fileID: 496528622}
+  - {fileID: 635251271}
