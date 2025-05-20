@@ -15,11 +15,47 @@ MonoBehaviour:
   m_ModuleName: UnityEngine_LuaModule
   m_Namespace: UnityEngine
   m_ModuleLoader:
-    rid: 5308812042295836792
+    rid: -2
   m_BindTypeNames:
+  - Bounds
+  - BoundsInt
+  - Color
+  - Color32
+  - LayerMask
+  - Mathf
+  - Matrix4x4
+  - Quaternion
+  - Vector2
+  - Vector2Int
   - Vector3
+  - Vector3Int
+  - Vector4
   m_BoundTypes:
+  - m_AssemblyQualifiedName: UnityEngine.Bounds, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoundsInt, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Color32, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LayerMask, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Mathf, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Matrix4x4, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Vector2Int, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Vector3Int, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Vector4, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_NamespaceStaticClasses:
   - AndroidJNI
@@ -932,13 +968,11 @@ MonoBehaviour:
   - UnassignedReferenceException
   - UnityAPICompatibilityVersionAttribute
   - UnityException
-  m_HasModuleLoader: 1
+  m_HasModuleLoader: 0
   m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._UnityEngine_LuaModule_Loader
   m_GeneratedScriptsPathGuid: 4fc23a2832d9c7647a7e8dfc4af6fc6e
   references:
     version: 2
     RefIds:
-    - rid: 5308812042295836792
-      type: {class: _UnityEngine_LuaModule_Loader, ns: CodeSmile.Luny.DefaultContext,
-        asm: CodeSmile.Luny.DefaultContext}
-      data: 
+    - rid: -2
+      type: {class: , ns: , asm: }
