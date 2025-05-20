@@ -15,7 +15,7 @@ MonoBehaviour:
   m_ModuleName: UnityEngine_LuaModule
   m_Namespace: UnityEngine
   m_ModuleLoader:
-    rid: 5308812035785752993
+    rid: 5308812042295836792
   m_BindTypeNames:
   - Vector3
   m_BoundTypes:
@@ -933,12 +933,12 @@ MonoBehaviour:
   - UnityAPICompatibilityVersionAttribute
   - UnityException
   m_HasModuleLoader: 1
-  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._UnityEngine_LuaModuleLoader
+  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._UnityEngine_LuaModule_Loader
   m_GeneratedScriptsPathGuid: 4fc23a2832d9c7647a7e8dfc4af6fc6e
   references:
     version: 2
     RefIds:
-    - rid: 5308812035785752993
-      type: {class: _UnityEngine_LuaModuleLoader, ns: CodeSmile.Luny.DefaultContext,
+    - rid: 5308812042295836792
+      type: {class: _UnityEngine_LuaModule_Loader, ns: CodeSmile.Luny.DefaultContext,
         asm: CodeSmile.Luny.DefaultContext}
       data: 

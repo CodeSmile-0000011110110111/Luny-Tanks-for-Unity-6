@@ -15,7 +15,7 @@ MonoBehaviour:
   m_ModuleName: System_IO_LuaModule
   m_Namespace: System.IO
   m_ModuleLoader:
-    rid: 5308812035785752977
+    rid: -2
   m_BindTypeNames:
   - Directory
   - File
@@ -85,13 +85,11 @@ MonoBehaviour:
   - IODescriptionAttribute
   - IOException
   - PathTooLongException
-  m_HasModuleLoader: 1
-  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._System_IO_LuaModuleLoader
-  m_GeneratedScriptsPathGuid: 5fb2ff88cf6d4f940af3d1cd10616c82
+  m_HasModuleLoader: 0
+  m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._System_IO_LuaModule_Loader
+  m_GeneratedScriptsPathGuid: ac1047af583583f4ca808bac4ea61920
   references:
     version: 2
     RefIds:
-    - rid: 5308812035785752977
-      type: {class: _System_IO_LuaModuleLoader, ns: CodeSmile.Luny.DefaultContext,
-        asm: CodeSmile.Luny.DefaultContext}
-      data: 
+    - rid: -2
+      type: {class: , ns: , asm: }
