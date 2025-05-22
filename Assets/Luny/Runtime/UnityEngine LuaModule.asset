@@ -15,8 +15,10 @@ MonoBehaviour:
   m_ModuleName: UnityEngine_LuaModule
   m_Namespace: UnityEngine
   m_ModuleLoader:
-    rid: 5308812083262914634
-  m_BindTypeNames:
+    rid: -2
+  m_BindAll: 1
+  m_BindThisTypeOnly: 
+  m_BindByTypeNames:
   - Mathf
   - Bounds
   - BoundsInt
@@ -31,22 +33,1496 @@ MonoBehaviour:
   - Vector3Int
   - Vector4
   m_BoundTypes:
+  - m_AssemblyQualifiedName: UnityEngine.AccelerationEvent, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ADBannerView, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AddComponentMenu, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AdditionalCanvasShaderChannels, UnityEngine.UIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ADInterstitialAd, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnchoredJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidActivityIndicatorStyle, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidInput, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJavaClass, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJavaException, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJavaObject, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJavaProxy, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJavaRunnable, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJNI, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AndroidJNIHelper, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Animation, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationBlendMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationClip, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationClipPair, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationCullingType, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationCurve, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationEvent, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationInfo, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationPlayMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationState, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimationUpdateMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorClipInfo, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorControllerParameter, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorControllerParameterType, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorCullingMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorOverrideController, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorRecorderMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorStateInfo, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorTransitionInfo, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorUpdateMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnimatorUtility, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AnisotropicFiltering, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Application, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ApplicationInstallMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ApplicationMemoryUsage, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ApplicationMemoryUsageChange, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ApplicationSandboxType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AreaEffector2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArmDof, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationBody, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationDofLock, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationDrive, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationDriveAxis, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationDriveType, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationJacobian, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationJointType, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ArticulationReducedSpace, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssemblyIsEditorAssembly, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundle, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundleCreateRequest, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundleLoadResult, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundleManifest, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundleRecompressOperation, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundleRequest, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AssetBundleUnloadOperation, UnityEngine.AssetBundleModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AsyncInstantiateOperation, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AsyncInstantiateOperation`1, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AsyncOperation, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AsyncOperationAwaitableExtensions, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioBehaviour, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioChorusFilter, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioClipLoadType, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioCompressionFormat, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioConfiguration, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioDataLoadState, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioDistortionFilter, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioEchoFilter, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioHighPassFilter, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioListener, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioLowPassFilter, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioRenderer, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioReverbFilter, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioReverbPreset, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioReverbZone, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioRolloffMode, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioSettings, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioSourceCurveType, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioSpeakerMode, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioType, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AudioVelocityUpdateMode, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Avatar, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AvatarBuilder, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AvatarIKGoal, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AvatarIKHint, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AvatarMask, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AvatarMaskBodyPart, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AvatarTarget, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Awaitable, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Awaitable`1, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AwaitableCompletionSource, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.AwaitableCompletionSource`1, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BackgroundThreadAwaitable, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BatteryStatus, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BeforeRenderOrderAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Behaviour, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BillboardAsset, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BillboardRenderer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BlendShapeBufferRange, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BlendWeights, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BodyDof, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoneWeight, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoneWeight1, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoundingSphere, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Bounds, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.BoundsInt, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoxcastCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoxCollider, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BoxCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BuildCompression, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.BuoyancyEffector2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Cache, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CachedAssetBundle, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CacheIndex, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Caching, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Camera, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CameraClearFlags, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CameraType, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Canvas, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CanvasGroup, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CanvasRenderer, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CapsulecastCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CapsuleCollider, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CapsuleCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CapsuleDirection2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CharacterController, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CharacterInfo, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CharacterJoint, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CircleCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClosestPointCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Cloth, UnityEngine.ClothModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClothSkinningCoefficient, UnityEngine.ClothModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClothSphereColliderPair, UnityEngine.ClothModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClusterInput, UnityEngine.ClusterInputModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClusterInputType, UnityEngine.ClusterInputModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClusterNetwork, UnityEngine.ClusterRendererModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ClusterSerialization, UnityEngine.ClusterRendererModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Collider, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Collider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColliderDistance2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColliderErrorState2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColliderHit, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Collision, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Collision2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CollisionDetectionMode, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CollisionDetectionMode2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CollisionFlags, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Color32, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColorGamut, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColorGamutUtility, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColorPrimaries, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColorSpace, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColorUsageAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ColorUtility, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CombineInstance, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Compass, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Component, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CompositeCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CompressionLevel, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CompressionType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ComputeBuffer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ComputeBufferMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ComputeBufferType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ComputeShader, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ConfigurableJoint, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ConfigurableJointMotion, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ConstantForce, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ConstantForce2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContactFilter2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContactPair, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContactPairHeader, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContactPairPoint, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContactPoint, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContactPoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContextMenu, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ContextMenuItemAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ControllerColliderHit, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Coroutine, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CrashReport, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CreateAssetMenuAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Cubemap, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CubemapArray, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CubemapFace, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CullingGroup, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CullingGroupEvent, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Cursor, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CursorLockMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CursorMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomGridBrushAttribute, UnityEngine.TilemapModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomRenderTexture, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomRenderTextureInitializationSource,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomRenderTextureManager, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomRenderTextureUpdateMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomRenderTextureUpdateZone, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomRenderTextureUpdateZoneSpace, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.CustomYieldInstruction, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.D3DHDRDisplayBitDepth, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Debug, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DefaultExecutionOrder, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DelayedAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DepthTextureMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DetailInstanceTransform, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DetailPrototype, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DetailRenderMode, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DetailScatterMode, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DeviceOrientation, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DeviceType, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DisallowMultipleComponent, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Display, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DisplayInfo, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DistanceJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DrivenRectTransformTracker, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DrivenTransformProperties, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DurationUnit, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.DynamicGI, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EdgeCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Effector2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EffectorForceMode2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EffectorSelection2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EnumButtonsAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Event, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EventModifiers, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EventProvider, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.EventType, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExcludeFromObjectFactoryAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExcludeFromPresetAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExecuteAlways, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExecuteInEditMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExitGUIException, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExposedPropertyResolver, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExposedReference`1, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ExpressionEvaluator, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FFTWindow, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FilterMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FindObjectsInactive, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FindObjectsSortMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FingerDof, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FixedJoint, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FixedJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Flare, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FlareLayer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FocusType, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FogMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Font, UnityEngine.TextRenderingModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FontStyle, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ForceMode, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ForceMode2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FrameDebugger, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FrameTiming, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FrameTimingManager, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FrictionJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FrustumPlanes, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FullScreenMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FullScreenMovieControlMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.FullScreenMovieScalingMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GamepadSpeakerOutputType, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GeometryUtility, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Gizmos, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GL, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GradientAlphaKey, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GradientColorKey, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GradientMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GradientUsageAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Graphics, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GraphicsBuffer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GraphicsBufferHandle, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Grid, UnityEngine.GridModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GridBrushBase, UnityEngine.TilemapModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GridLayout, UnityEngine.GridModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUI, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUIContent, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUIElement, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUILayer, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUILayout, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUILayoutOption, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUILayoutUtility, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUISettings, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUISkin, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUIStyle, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUIStyleState, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUITargetAttribute, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUIText, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUITexture, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.GUIUtility, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Gyroscope, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Handheld, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Hash128, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HashUnsafeUtilities, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HashUtilities, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HDRDisplayBitDepth, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HDRDisplaySupportFlags, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HDROutputSettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HeadDof, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HeaderAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HelpURLAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HideFlags, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HideInCallstackAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HideInInspector, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HingeJoint, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HingeJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HmiPlatform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HorizontalWrapMode, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanBodyBones, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanBone, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanDescription, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanLimit, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanPartDof, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanPose, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanPoseHandler, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.HumanTrait, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IAnimationClipSource, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ICanvasRaycastFilter, UnityEngine.UIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IconAttribute, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IExposedPropertyTable, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ILogger, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ILogHandler, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImageConversion, UnityEngine.ImageConversionModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImageEffectAfterScale, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImageEffectAllowedInSceneView, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImageEffectOpaque, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImageEffectTransformsToLDR, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImageEffectUsesCommandBuffer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ImagePosition, UnityEngine.IMGUIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IMECompositionMode, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Input, UnityEngine.InputLegacyModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InputManagerEntry, Unity.RenderPipelines.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InputRegistering, Unity.RenderPipelines.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InspectorNameAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InspectorOrderAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InspectorSort, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InspectorSortDirection, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.InstantiateParameters, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IntegratedSubsystem, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IntegratedSubsystem`1, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IntegratedSubsystemDescriptor, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IntegratedSubsystemDescriptor`1, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.IntegrityCheckLevel, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhone, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneAccelerationEvent, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneGeneration, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneInput, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneKeyboard, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneKeyboardType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneMovieControlMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneMovieScalingMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneNetworkReachability, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneOrientation, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneScreenOrientation, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneSettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneTouch, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneTouchPhase, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.iPhoneUtils, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ISerializationCallbackReceiver, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ISubsystem, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ISubsystemDescriptor, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JNINativeMethod, UnityEngine.AndroidJNIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Joint, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Joint2D, UnityEngine.Physics2DModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointAngleLimits2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointBreakAction2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointDrive, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointDriveMode, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointLimits, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointLimitState2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointMotor, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointMotor2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointProjectionMode, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointSpring, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointSuspension2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JointTranslationLimits2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.JsonUtility, UnityEngine.JSONSerializeModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.jvalue, UnityEngine.AndroidJNIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.KeyCode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Keyframe, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.LayerMask, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LazyLoadReference`1, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LegDof, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LensFlare, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Light, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightAnchor, Unity.RenderPipelines.Core.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightBakingOutput, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightingSettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmapBakeType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmapCompression, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmapData, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmappingMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmapSettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmapsMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightmapsModeLegacy, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightProbeGroup, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightProbeProxyVolume, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightProbes, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightProbesQuery, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightRenderMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightShadowCasterMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightShadows, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightShape, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LightType, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LineAlignment, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LineRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LineTextureMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LineUtility, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LocalizationAsset, UnityEngine.LocalizationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LocationInfo, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LocationService, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LocationServiceStatus, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LOD, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LODFadeMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LODGroup, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Logger, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LogOption, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.LogType, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MainThreadAwaitable, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MatchTargetWeightMask, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MaterialGlobalIlluminationFlags, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MaterialPropertyBlock, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MaterialPropertyType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Mathf, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Matrix4x4, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MeshCollider, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MeshColliderCookingOptions, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MeshFilter, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MeshRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MeshTopology, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Microphone, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MinAttribute, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MipmapLimitDescriptor, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MissingComponentException, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MissingReferenceException, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MixedLightingMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ModifiableContactPair, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ModifiableMassProperties, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MonoBehaviour, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Motion, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MotionVectorGenerationMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MovieTexture, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.MultilineAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.NetworkReachability, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.NonReorderableAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.NPOTSupport, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.OcclusionArea, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.OcclusionPortal, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.OperatingSystemFamily, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.OverlapBoxCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.OverlapCapsuleCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.OverlapSphereCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleCollisionEvent, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticlePhysicsExtensions, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystem, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemAnimationMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemAnimationRowMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemAnimationTimeMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemAnimationType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemBakeMeshOptions, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemBakeTextureOptions, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemColliderQueryMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCollisionMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCollisionQuality, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCollisionType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCullingMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCurveMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCustomData, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemCustomDataMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemEmissionType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemEmitterVelocityMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemForceField, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemForceFieldShape, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemGameObjectFilter, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemGradientMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemGravitySource, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemInheritVelocityMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemMeshDistribution, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemMeshShapeType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemNoiseQuality, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemOverlapAction, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemRenderer, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemRenderMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemRenderSpace, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemRingBufferMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemScalingMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemShapeMultiModeValue, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemShapeTextureChannel, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemShapeType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemSimulationSpace, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemSortMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemStopAction, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemStopBehavior, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemSubEmitterProperties, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemSubEmitterType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemTrailMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemTrailTextureMode, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemTriggerEventType, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemVertexStream, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ParticleSystemVertexStreams, UnityEngine.ParticleSystemModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PatchExtents, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PenData, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PenEventType, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PenStatus, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicMaterial, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicMaterialCombine, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Physics, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Physics2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsJobOptions2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsMaterial, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsMaterial2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsMaterialCombine, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsMaterialCombine2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsScene, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsScene2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsSceneExtensions, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsSceneExtensions2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsShape2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsShapeGroup2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsShapeType2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PhysicsUpdateBehaviour2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Ping, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Plane, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PlatformEffector2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PlayerPrefs, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PlayerPrefsException, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PlayMode, UnityEngine.AnimationModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PointEffector2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PointerType, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PolygonCollider2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Pose, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PreferBinarySerialization, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PrimitiveType, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralCacheSize, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralLoadingBehavior, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralMaterial, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralOutputType, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralProcessorUsage, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralPropertyDescription, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralPropertyType, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ProceduralTexture, UnityEngine.SubstanceModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Projector, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PropertyAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PropertyCollectionAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.PropertyName, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.QualityLevel, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.QualitySettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.QueryParameters, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.QueryTriggerInteraction, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.QueueMode, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Random, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RangeAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RangeInt, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Ray, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Ray2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RaycastCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RaycastHit, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RaycastHit2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ReceiveGI, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Rect, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RectInt, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RectOffset, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RectTransform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RectTransformUtility, UnityEngine.UIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ReflectionProbe, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RefreshRate, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RelativeJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RemoteConfigSettings, UnityEngine.UnityAnalyticsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RemoteSettings, UnityEngine.UnityAnalyticsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderBuffer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Renderer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RendererExtensions, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderingLayerMask, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderingPath, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderMode, UnityEngine.UIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderParams, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderSettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTargetSetup, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTexture, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTextureCreationFlags, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTextureDescriptor, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTextureFormat, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTextureMemoryless, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RenderTextureReadWrite, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RequireComponent, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Resolution, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ResourceRequest, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Resources, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ResourcesAPI, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Rigidbody2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RigidbodyConstraints, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RigidbodyConstraints2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RigidbodyInterpolation, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RigidbodyInterpolation2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RigidbodySleepMode2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RigidbodyType2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RotationDriveMode, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RuntimeAnimatorController, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RuntimeInitializeLoadType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RuntimeInitializeOnLoadMethodAttribute,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.RuntimePlatform, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ScalableBufferManager, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ScaleMode, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Screen, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ScreenCapture, UnityEngine.ScreenCaptureModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ScreenOrientation, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ScriptableObject, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SecondarySpriteTexture, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Security, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SelectionBaseAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SendMessageOptions, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SerializeField, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SerializeReference, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Shader, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ShaderVariantCollection, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ShadowmaskMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ShadowObjectsFilter, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ShadowProjection, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ShadowQuality, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ShadowResolution, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SharedBetweenAnimatorsAttribute, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SimulationMode, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SimulationMode2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SimulationOption, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SimulationStage, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SkeletonBone, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SkinnedMeshRenderer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SkinQuality, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SkinWeights, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Skybox, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SleepTimeout, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SliderJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SnapAxis, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Snapping, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Social, UnityEngine.GameCenterModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SoftJointLimit, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SoftJointLimitSpring, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SortingLayer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Space, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpaceAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SparseTexture, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpeedTreeWindAsset, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpherecastCommand, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SphereCollider, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SplatPrototype, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpringJoint, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpringJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteAlignment, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteDrawMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteMask, UnityEngine.SpriteMaskModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteMaskInteraction, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteMeshType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpritePackingMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpritePackingRotation, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteRenderer, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteSortPoint, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SpriteTileMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StackTraceLogType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StackTraceUtility, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StandaloneRenderResize, UnityEngine.UIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StateMachineBehaviour, UnityEngine.AnimationModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StaticBatchingUtility, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StereoTargetEyeMask, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.StreamingController, UnityEngine.StreamingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Subsystem, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Subsystem`1, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SubsystemDescriptor, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SubsystemDescriptor`1, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SubsystemManager, UnityEngine.SubsystemsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SurfaceEffector2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SystemInfo, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.SystemLanguage, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TagHandle, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TargetJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Terrain, UnityEngine.TerrainModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainCallbacks, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainChangedFlags, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainCollider, UnityEngine.TerrainPhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainData, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainExtensions, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainHeightmapSyncControl, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainLayer, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainLayerSmoothnessSource, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainQualityOverrides, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TerrainRenderFlags, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TexGenMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextAlignment, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextAnchor, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextAreaAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextClipping, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextEditor, UnityEngine.IMGUIModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextGenerationSettings, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextGenerator, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextGeneratorType, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextMesh, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Texture, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Texture2DArray, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Texture3D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextureFormat, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextureMipmapLimitBiasMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextureMipmapLimitGroups, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextureMipmapLimitSettings, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TextureWrapMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ThreadPriority, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Time, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TooltipAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Touch, UnityEngine.InputLegacyModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TouchPhase, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TouchScreenKeyboard, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TouchScreenKeyboardType, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TouchType, UnityEngine.InputLegacyModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TrackedReference, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TrailRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TransferFunction, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TransparencySortMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Tree, UnityEngine.TerrainModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TreeInstance, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TreeMotionVectorModeOverride, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.TreePrototype, UnityEngine.TerrainModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.Types, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UICharInfo, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UILineInfo, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UISystemProfilerApi, UnityEngine.UIModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UIVertex, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UnassignedReferenceException, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UnityAPICompatibilityVersionAttribute, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UnityEventAwaitableExtensions, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UnityEventQueueSystem, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UnityException, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.UserAuthorization, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.ValidationLevel, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Vector2Int, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -57,6 +1533,58 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - m_AssemblyQualifiedName: UnityEngine.Vector4, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.VerticalWrapMode, UnityEngine.TextRenderingModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.VRTextureUsage, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitForEndOfFrame, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitForFixedUpdate, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitForSeconds, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitForSecondsRealtime, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitTimeoutMode, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitUntil, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WaitWhile, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WebCamDevice, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WebCamFlags, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WebCamKind, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WebCamTexture, UnityEngine.AudioModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WeightedMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WheelCollider, UnityEngine.VehiclesModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WheelFrictionCurve, UnityEngine.PhysicsModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WheelHit, UnityEngine.VehiclesModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WheelJoint2D, UnityEngine.Physics2DModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WhitePoint, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WindZone, UnityEngine.WindModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WindZoneMode, UnityEngine.WindModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WrapMode, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WWW, UnityEngine.UnityWebRequestWWWModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WWWAudioExtensions, UnityEngine.UnityWebRequestWWWModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.WWWForm, UnityEngine.UnityWebRequestModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_AssemblyQualifiedName: UnityEngine.YieldInstruction, UnityEngine.CoreModule,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_NamespaceStaticClasses:
   - AndroidJNI
   - AndroidJNIHelper
@@ -968,13 +2496,11 @@ MonoBehaviour:
   - UnassignedReferenceException
   - UnityAPICompatibilityVersionAttribute
   - UnityException
-  m_HasModuleLoader: 1
+  m_HasModuleLoader: 0
   m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._UnityEngine_LuaModule_Loader
   m_GeneratedScriptsPathGuid: 4fc23a2832d9c7647a7e8dfc4af6fc6e
   references:
     version: 2
     RefIds:
-    - rid: 5308812083262914634
-      type: {class: _UnityEngine_LuaModule_Loader, ns: CodeSmile.Luny.DefaultContext,
-        asm: CodeSmile.Luny.DefaultContext}
-      data: 
+    - rid: -2
+      type: {class: , ns: , asm: }
