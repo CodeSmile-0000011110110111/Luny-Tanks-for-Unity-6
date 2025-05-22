@@ -150,14 +150,6 @@ namespace CodeSmile.Luny.DefaultContext
 					buffer.Span[0] = new LuaValue(returnValue);
 					return new ValueTask<Int32>(1);
 				}
-				case 1:
-				{
-					var arg1 = context.GetArgument(1);
-					var format = arg1.Read<System.String>();
-					var returnValue = _this.m_Instance.ToString(format);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
 			}
 		});

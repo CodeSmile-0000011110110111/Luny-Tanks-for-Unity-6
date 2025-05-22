@@ -60,12 +60,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				case 1:
 				{
 					var arg1 = context.GetArgument(1);
@@ -135,18 +129,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 3:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var H = arg0.Read<System.Single>();
-					var S = arg1.Read<System.Single>();
-					var V = arg2.Read<System.Single>();
-					var returnValue = UnityEngine.Color.HSVToRGB(H, S, V);
-					buffer.Span[0] = new Lua_UnityEngine_Color(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				case 4:
 				{
 					var arg0 = context.GetArgument(0);

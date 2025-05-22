@@ -117,12 +117,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				case 1:
 				{
 					var arg1 = context.GetArgument(1);

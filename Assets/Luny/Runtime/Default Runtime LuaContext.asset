@@ -19,4 +19,5 @@ MonoBehaviour:
   m_Modules:
   - {fileID: 11400000, guid: a492de0c0144f224b8d7e893da18d253, type: 2}
   m_AutoGenerateBindingsOnFocus: 1
+  m_ClickToDeleteBindings: 0
   m_ClickToGenerateBindings: 0

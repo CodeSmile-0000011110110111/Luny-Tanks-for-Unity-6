@@ -132,12 +132,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				case 1:
 				{
 					var arg1 = context.GetArgument(1);
@@ -486,46 +480,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 4:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var currentUserData = arg0.Read<Lua_UnityEngine_Vector2>();
-					var targetUserData = arg1.Read<Lua_UnityEngine_Vector2>();
-					var currentVelocityUserData = arg2.Read<Lua_UnityEngine_Vector2>();
-					var smoothTime = arg3.Read<System.Single>();
-					var current = currentUserData.Instance;
-					var target = targetUserData.Instance;
-					var currentVelocity = currentVelocityUserData.Instance;
-					var returnValue = UnityEngine.Vector2.SmoothDamp(current, target, ref currentVelocity, smoothTime);
-					currentVelocityUserData.Instance = currentVelocity;
-					buffer.Span[0] = new Lua_UnityEngine_Vector2(returnValue);
-					buffer.Span[1] = arg2;
-					return new ValueTask<Int32>(2);
-				}
-				case 5:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var arg4 = context.GetArgument(4);
-					var currentUserData = arg0.Read<Lua_UnityEngine_Vector2>();
-					var targetUserData = arg1.Read<Lua_UnityEngine_Vector2>();
-					var currentVelocityUserData = arg2.Read<Lua_UnityEngine_Vector2>();
-					var smoothTime = arg3.Read<System.Single>();
-					var maxSpeed = arg4.Read<System.Single>();
-					var current = currentUserData.Instance;
-					var target = targetUserData.Instance;
-					var currentVelocity = currentVelocityUserData.Instance;
-					var returnValue = UnityEngine.Vector2.SmoothDamp(current, target, ref currentVelocity, smoothTime, maxSpeed);
-					currentVelocityUserData.Instance = currentVelocity;
-					buffer.Span[0] = new Lua_UnityEngine_Vector2(returnValue);
-					buffer.Span[1] = arg2;
-					return new ValueTask<Int32>(2);
-				}
 				case 6:
 				{
 					var arg0 = context.GetArgument(0);

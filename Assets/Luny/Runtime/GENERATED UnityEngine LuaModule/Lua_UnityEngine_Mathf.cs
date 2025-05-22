@@ -109,14 +109,6 @@ namespace CodeSmile.Luny.DefaultContext
 				case 1:
 				{
 					var arg0 = context.GetArgument(0);
-					var value = arg0.Read<System.Int32>();
-					var returnValue = UnityEngine.Mathf.Abs(value);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
 					var f = arg0.Read<System.Single>();
 					var returnValue = UnityEngine.Mathf.Abs(f);
 					buffer.Span[0] = new LuaValue(returnValue);
@@ -262,18 +254,6 @@ namespace CodeSmile.Luny.DefaultContext
 					var value = arg0.Read<System.Single>();
 					var min = arg1.Read<System.Single>();
 					var max = arg2.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.Clamp(value, min, max);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 3:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var value = arg0.Read<System.Int32>();
-					var min = arg1.Read<System.Int32>();
-					var max = arg2.Read<System.Int32>();
 					var returnValue = UnityEngine.Mathf.Clamp(value, min, max);
 					buffer.Span[0] = new LuaValue(returnValue);
 					return new ValueTask<Int32>(1);
@@ -598,14 +578,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
-					var f = arg0.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.Log(f);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				case 2:
 				{
 					var arg0 = context.GetArgument(0);
@@ -645,36 +617,8 @@ namespace CodeSmile.Luny.DefaultContext
 				case 1:
 				{
 					var arg0 = context.GetArgument(0);
-					var values = arg0.Read<System.Int32>();
-					var returnValue = UnityEngine.Mathf.Max(values);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
 					var values = arg0.Read<System.Single>();
 					var returnValue = UnityEngine.Mathf.Max(values);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 2:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var a = arg0.Read<System.Int32>();
-					var b = arg1.Read<System.Int32>();
-					var returnValue = UnityEngine.Mathf.Max(a, b);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 2:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var a = arg0.Read<System.Single>();
-					var b = arg1.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.Max(a, b);
 					buffer.Span[0] = new LuaValue(returnValue);
 					return new ValueTask<Int32>(1);
 				}
@@ -687,32 +631,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
-					var values = arg0.Read<System.Int32>();
-					var returnValue = UnityEngine.Mathf.Min(values);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
-					var values = arg0.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.Min(values);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 2:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var a = arg0.Read<System.Int32>();
-					var b = arg1.Read<System.Int32>();
-					var returnValue = UnityEngine.Mathf.Min(a, b);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
 				case 2:
 				{
 					var arg0 = context.GetArgument(0);
@@ -952,21 +870,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 4:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var current = arg0.Read<System.Single>();
-					var target = arg1.Read<System.Single>();
-					var currentVelocity = arg2.Read<System.Single>();
-					var smoothTime = arg3.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.SmoothDamp(current, target, ref currentVelocity, smoothTime);
-					buffer.Span[0] = new LuaValue(returnValue);
-					buffer.Span[1] = arg2;
-					return new ValueTask<Int32>(2);
-				}
 				case 5:
 				{
 					var arg0 = context.GetArgument(0);
@@ -984,25 +887,6 @@ namespace CodeSmile.Luny.DefaultContext
 					buffer.Span[1] = arg2;
 					return new ValueTask<Int32>(2);
 				}
-				case 6:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var arg4 = context.GetArgument(4);
-					var arg5 = context.GetArgument(5);
-					var current = arg0.Read<System.Single>();
-					var target = arg1.Read<System.Single>();
-					var currentVelocity = arg2.Read<System.Single>();
-					var smoothTime = arg3.Read<System.Single>();
-					var maxSpeed = arg4.Read<System.Single>();
-					var deltaTime = arg5.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.SmoothDamp(current, target, ref currentVelocity, smoothTime, maxSpeed, deltaTime);
-					buffer.Span[0] = new LuaValue(returnValue);
-					buffer.Span[1] = arg2;
-					return new ValueTask<Int32>(2);
-				}
 				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
 			}
 		});
@@ -1012,38 +896,6 @@ namespace CodeSmile.Luny.DefaultContext
 			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
-				case 4:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var current = arg0.Read<System.Single>();
-					var target = arg1.Read<System.Single>();
-					var currentVelocity = arg2.Read<System.Single>();
-					var smoothTime = arg3.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.SmoothDampAngle(current, target, ref currentVelocity, smoothTime);
-					buffer.Span[0] = new LuaValue(returnValue);
-					buffer.Span[1] = arg2;
-					return new ValueTask<Int32>(2);
-				}
-				case 5:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var arg4 = context.GetArgument(4);
-					var current = arg0.Read<System.Single>();
-					var target = arg1.Read<System.Single>();
-					var currentVelocity = arg2.Read<System.Single>();
-					var smoothTime = arg3.Read<System.Single>();
-					var maxSpeed = arg4.Read<System.Single>();
-					var returnValue = UnityEngine.Mathf.SmoothDampAngle(current, target, ref currentVelocity, smoothTime, maxSpeed);
-					buffer.Span[0] = new LuaValue(returnValue);
-					buffer.Span[1] = arg2;
-					return new ValueTask<Int32>(2);
-				}
 				case 6:
 				{
 					var arg0 = context.GetArgument(0);
