@@ -16,87 +16,56 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AndroidJavaClass" };
 
-		private static readonly LuaFunction _Dispose = new("UnityEngine.AndroidJavaClass.Dispose", (context, buffer, ct) =>
+		private static readonly LuaFunction _Dispose = new("UnityEngine.AndroidJavaClass.Dispose", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AndroidJavaClass>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.Dispose();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.Dispose();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AndroidJavaClass.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AndroidJavaClass.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AndroidJavaClass>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetRawClass = new("UnityEngine.AndroidJavaClass.GetRawClass", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.AndroidJavaClass.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AndroidJavaClass>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.GetRawClass();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
 
-		private static readonly LuaFunction _GetRawObject = new("UnityEngine.AndroidJavaClass.GetRawObject", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_AndroidJavaClass>();
-			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetRawObject();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _ToString = new("UnityEngine.AndroidJavaClass.ToString", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_AndroidJavaClass>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -106,8 +75,6 @@ namespace CodeSmile.Luny.DefaultContext
 			{
 				case "Dispose": return _Dispose;
 				case "GetHashCode": return _GetHashCode;
-				case "GetRawClass": return _GetRawClass;
-				case "GetRawObject": return _GetRawObject;
 				case "ToString": return _ToString;
 				default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
 			}
@@ -121,14 +88,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AndroidJavaClass>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AndroidJavaClass>(0);
 			var key = context.GetArgument<String>(1);
@@ -148,6 +115,7 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_AndroidJavaClass(UnityEngine.AndroidJavaClass instance) { m_Instance = instance; }
 		private UnityEngine.AndroidJavaClass m_Instance;
 		public UnityEngine.AndroidJavaClass Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_AndroidJavaClass_static : ILuaUserData
 	{
@@ -169,14 +137,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AndroidJavaClass_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AndroidJavaClass_static>(0);
 			var key = context.GetArgument<String>(1);

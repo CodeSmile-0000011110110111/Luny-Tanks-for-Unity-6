@@ -16,17 +16,10 @@ MonoBehaviour:
   m_Namespace: System.IO
   m_ModuleLoader:
     rid: -2
-  m_BindTypeNames:
-  - Directory
-  - File
-  - Path
-  m_BoundTypes:
-  - m_AssemblyQualifiedName: System.IO.Directory, mscorlib, Version=4.0.0.0, Culture=neutral,
-      PublicKeyToken=b77a5c561934e089
-  - m_AssemblyQualifiedName: System.IO.File, mscorlib, Version=4.0.0.0, Culture=neutral,
-      PublicKeyToken=b77a5c561934e089
-  - m_AssemblyQualifiedName: System.IO.Path, mscorlib, Version=4.0.0.0, Culture=neutral,
-      PublicKeyToken=b77a5c561934e089
+  m_BindAll: 0
+  m_BindThisTypeOnly: 
+  m_BindByTypeNames: []
+  m_BoundTypes: []
   m_NamespaceStaticClasses:
   - Directory
   - File
@@ -87,7 +80,7 @@ MonoBehaviour:
   - PathTooLongException
   m_HasModuleLoader: 0
   m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._System_IO_LuaModule_Loader
-  m_GeneratedScriptsPathGuid: ac1047af583583f4ca808bac4ea61920
+  m_GeneratedScriptsPathGuid: af975c2272430d948a53535e2d10dc2d
   references:
     version: 2
     RefIds:

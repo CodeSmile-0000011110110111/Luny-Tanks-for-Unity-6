@@ -16,180 +16,154 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "CullingGroup" };
 
-		private static readonly LuaFunction _Dispose = new("UnityEngine.CullingGroup.Dispose", (context, buffer, ct) =>
+		private static readonly LuaFunction _Dispose = new("UnityEngine.CullingGroup.Dispose", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.Dispose();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.Dispose();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _EraseSwapBack = new("UnityEngine.CullingGroup.EraseSwapBack", (context, buffer, ct) =>
+		private static readonly LuaFunction _EraseSwapBack = new("UnityEngine.CullingGroup.EraseSwapBack", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var index = arg1.Read<System.Int32>();
-					_this.m_Instance.EraseSwapBack(index);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Int32>(out index))
+					{
+						_this.m_Instance.EraseSwapBack(index);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetDistance = new("UnityEngine.CullingGroup.GetDistance", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetDistance = new("UnityEngine.CullingGroup.GetDistance", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var index = arg1.Read<System.Int32>();
-					var returnValue = _this.m_Instance.GetDistance(index);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.Int32>(out index))
+					{
+						var returnValue = _this.m_Instance.GetDistance(index);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.CullingGroup.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.CullingGroup.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _IsVisible = new("UnityEngine.CullingGroup.IsVisible", (context, buffer, ct) =>
+		private static readonly LuaFunction _IsVisible = new("UnityEngine.CullingGroup.IsVisible", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var index = arg1.Read<System.Int32>();
-					var returnValue = _this.m_Instance.IsVisible(index);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.Int32>(out index))
+					{
+						var returnValue = _this.m_Instance.IsVisible(index);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _QueryIndices = new("UnityEngine.CullingGroup.QueryIndices", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetBoundingSphereCount = new("UnityEngine.CullingGroup.SetBoundingSphereCount", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 3:
-				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var distanceIndex = arg1.Read<System.Int32>();
-					var result = arg2.Read<System.Int32>();
-					var firstIndex = arg3.Read<System.Int32>();
-					var returnValue = _this.m_Instance.QueryIndices(distanceIndex, result, firstIndex);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				case 3:
-				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var visible = arg1.Read<System.Boolean>();
-					var result = arg2.Read<System.Int32>();
-					var firstIndex = arg3.Read<System.Int32>();
-					var returnValue = _this.m_Instance.QueryIndices(visible, result, firstIndex);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
+			System.Int32 count;
 
-		private static readonly LuaFunction _SetBoundingDistances = new("UnityEngine.CullingGroup.SetBoundingDistances", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var distances = arg1.Read<System.Single>();
-					_this.m_Instance.SetBoundingDistances(distances);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Int32>(out count))
+					{
+						_this.m_Instance.SetBoundingSphereCount(count);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetBoundingSphereCount = new("UnityEngine.CullingGroup.SetBoundingSphereCount", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.CullingGroup.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 1:
-				{
-					var arg1 = context.GetArgument(1);
-					var count = arg1.Read<System.Int32>();
-					_this.m_Instance.SetBoundingSphereCount(count);
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.CullingGroup.ToString", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_CullingGroup>();
-			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -202,8 +176,6 @@ namespace CodeSmile.Luny.DefaultContext
 				case "GetDistance": return _GetDistance;
 				case "GetHashCode": return _GetHashCode;
 				case "IsVisible": return _IsVisible;
-				case "QueryIndices": return _QueryIndices;
-				case "SetBoundingDistances": return _SetBoundingDistances;
 				case "SetBoundingSphereCount": return _SetBoundingSphereCount;
 				case "ToString": return _ToString;
 				default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
@@ -218,14 +190,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_CullingGroup>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_CullingGroup>(0);
 			var key = context.GetArgument<String>(1);
@@ -245,6 +217,7 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_CullingGroup(UnityEngine.CullingGroup instance) { m_Instance = instance; }
 		private UnityEngine.CullingGroup m_Instance;
 		public UnityEngine.CullingGroup Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_CullingGroup_static : ILuaUserData
 	{
@@ -266,14 +239,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_CullingGroup_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_CullingGroup_static>(0);
 			var key = context.GetArgument<String>(1);

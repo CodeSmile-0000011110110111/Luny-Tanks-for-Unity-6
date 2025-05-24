@@ -16,86 +16,91 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AnimationClip" };
 
-		private static readonly LuaFunction _ClearCurves = new("UnityEngine.AnimationClip.ClearCurves", (context, buffer, ct) =>
+		private static readonly LuaFunction _ClearCurves = new("UnityEngine.AnimationClip.ClearCurves", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AnimationClip>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ClearCurves();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ClearCurves();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _EnsureQuaternionContinuity = new("UnityEngine.AnimationClip.EnsureQuaternionContinuity", (context, buffer, ct) =>
+		private static readonly LuaFunction _EnsureQuaternionContinuity = new("UnityEngine.AnimationClip.EnsureQuaternionContinuity", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AnimationClip>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.EnsureQuaternionContinuity();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.EnsureQuaternionContinuity();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AnimationClip.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AnimationClip.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AnimationClip>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.AnimationClip.GetInstanceID", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.AnimationClip.GetInstanceID", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AnimationClip>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetInstanceID();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetInstanceID();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.AnimationClip.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.AnimationClip.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AnimationClip>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -120,14 +125,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AnimationClip>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AnimationClip>(0);
 			var key = context.GetArgument<String>(1);
@@ -147,6 +152,7 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_AnimationClip(UnityEngine.AnimationClip instance) { m_Instance = instance; }
 		private UnityEngine.AnimationClip m_Instance;
 		public UnityEngine.AnimationClip Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_AnimationClip_static : ILuaUserData
 	{
@@ -168,14 +174,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AnimationClip_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AnimationClip_static>(0);
 			var key = context.GetArgument<String>(1);

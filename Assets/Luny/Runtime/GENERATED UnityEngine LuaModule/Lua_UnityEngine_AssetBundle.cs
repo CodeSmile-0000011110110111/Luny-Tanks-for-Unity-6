@@ -16,91 +16,106 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AssetBundle" };
 
-		private static readonly LuaFunction _Contains = new("UnityEngine.AssetBundle.Contains", (context, buffer, ct) =>
+		private static readonly LuaFunction _Contains = new("UnityEngine.AssetBundle.Contains", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.String name;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_AssetBundle>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var name = arg1.Read<System.String>();
-					var returnValue = _this.m_Instance.Contains(name);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.String>(out name))
+					{
+						var returnValue = _this.m_Instance.Contains(name);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AssetBundle.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AssetBundle.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AssetBundle>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.AssetBundle.GetInstanceID", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.AssetBundle.GetInstanceID", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AssetBundle>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetInstanceID();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetInstanceID();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.AssetBundle.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.AssetBundle.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AssetBundle>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _Unload = new("UnityEngine.AssetBundle.Unload", (context, buffer, ct) =>
+		private static readonly LuaFunction _Unload = new("UnityEngine.AssetBundle.Unload", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Boolean unloadAllLoadedObjects;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_AssetBundle>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var unloadAllLoadedObjects = arg1.Read<System.Boolean>();
-					_this.m_Instance.Unload(unloadAllLoadedObjects);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Boolean>(out unloadAllLoadedObjects))
+					{
+						_this.m_Instance.Unload(unloadAllLoadedObjects);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -125,14 +140,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AssetBundle>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AssetBundle>(0);
 			var key = context.GetArgument<String>(1);
@@ -152,62 +167,81 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_AssetBundle(UnityEngine.AssetBundle instance) { m_Instance = instance; }
 		private UnityEngine.AssetBundle m_Instance;
 		public UnityEngine.AssetBundle Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_AssetBundle_static : ILuaUserData
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AssetBundle" };
 
-		private static readonly LuaFunction _LoadFromFile = new("UnityEngine.AssetBundle.LoadFromFile", (context, buffer, ct) =>
+		private static readonly LuaFunction _LoadFromFile = new("UnityEngine.AssetBundle.LoadFromFile", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.String path;
+			System.UInt32 crc;
+			System.UInt64 offset;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+
 			switch (argCount)
 			{
+				case 2:
+				{
+					if (arg0.TryRead<System.String>(out path) &&
+					    arg1.TryRead<System.UInt32>(out crc))
+					{
+						var returnValue = UnityEngine.AssetBundle.LoadFromFile(path, crc);
+						_buffer.Span[0] = new Lua_UnityEngine_AssetBundle(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
+				}
+				case 1:
+				{
+					if (arg0.TryRead<System.String>(out path))
+					{
+						var returnValue = UnityEngine.AssetBundle.LoadFromFile(path);
+						_buffer.Span[0] = new Lua_UnityEngine_AssetBundle(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
+				}
 				case 3:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var path = arg0.Read<System.String>();
-					var crc = arg1.Read<System.UInt32>();
-					var offset = arg2.Read<System.UInt64>();
-					var returnValue = UnityEngine.AssetBundle.LoadFromFile(path, crc, offset);
-					buffer.Span[0] = new Lua_UnityEngine_AssetBundle(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<System.String>(out path) &&
+					    arg1.TryRead<System.UInt32>(out crc) &&
+					    arg2.TryRead<System.UInt64>(out offset))
+					{
+						var returnValue = UnityEngine.AssetBundle.LoadFromFile(path, crc, offset);
+						_buffer.Span[0] = new Lua_UnityEngine_AssetBundle(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _LoadFromMemory = new("UnityEngine.AssetBundle.LoadFromMemory", (context, buffer, ct) =>
+		private static readonly LuaFunction _UnloadAllAssetBundles = new("UnityEngine.AssetBundle.UnloadAllAssetBundles", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Boolean unloadAllObjects;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg0 = context.GetArgument(0);
-					var binary = arg0.Read<System.Byte>();
-					var returnValue = UnityEngine.AssetBundle.LoadFromMemory(binary);
-					buffer.Span[0] = new Lua_UnityEngine_AssetBundle(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<System.Boolean>(out unloadAllObjects))
+					{
+						UnityEngine.AssetBundle.UnloadAllAssetBundles(unloadAllObjects);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _UnloadAllAssetBundles = new("UnityEngine.AssetBundle.UnloadAllAssetBundles", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
-					var unloadAllObjects = arg0.Read<System.Boolean>();
-					UnityEngine.AssetBundle.UnloadAllAssetBundles(unloadAllObjects);
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -216,7 +250,6 @@ namespace CodeSmile.Luny.DefaultContext
 			switch (key)
 			{
 				case "LoadFromFile": return _LoadFromFile;
-				case "LoadFromMemory": return _LoadFromMemory;
 				case "UnloadAllAssetBundles": return _UnloadAllAssetBundles;
 				default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
 			}
@@ -230,14 +263,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AssetBundle_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AssetBundle_static>(0);
 			var key = context.GetArgument<String>(1);

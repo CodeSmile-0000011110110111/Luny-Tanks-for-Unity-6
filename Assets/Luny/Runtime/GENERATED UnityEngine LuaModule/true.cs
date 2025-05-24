@@ -14,91 +14,12 @@ namespace CodeSmile.Luny.DefaultContext
 {
 	public sealed class true_static : ILuaUserData
 	{
-		public static readonly string[] TypeFullName = { "UnityEngine", "FrameTimingManager" };
-
-		private static readonly LuaFunction _CaptureFrameTimings = new("UnityEngine.FrameTimingManager.CaptureFrameTimings", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					UnityEngine.FrameTimingManager.CaptureFrameTimings();
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _GetCpuTimerFrequency = new("UnityEngine.FrameTimingManager.GetCpuTimerFrequency", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = UnityEngine.FrameTimingManager.GetCpuTimerFrequency();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _GetGpuTimerFrequency = new("UnityEngine.FrameTimingManager.GetGpuTimerFrequency", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = UnityEngine.FrameTimingManager.GetGpuTimerFrequency();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _GetVSyncsPerSecond = new("UnityEngine.FrameTimingManager.GetVSyncsPerSecond", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = UnityEngine.FrameTimingManager.GetVSyncsPerSecond();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _IsFeatureEnabled = new("UnityEngine.FrameTimingManager.IsFeatureEnabled", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = UnityEngine.FrameTimingManager.IsFeatureEnabled();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
+		public static readonly string[] TypeFullName = { "UnityEngine", "WWWAudioExtensions" };
 
 		internal static LuaValue TryGetValue(true_static instance, String key, LuaFunctionExecutionContext context)
 		{
 			switch (key)
 			{
-				case "CaptureFrameTimings": return _CaptureFrameTimings;
-				case "GetCpuTimerFrequency": return _GetCpuTimerFrequency;
-				case "GetGpuTimerFrequency": return _GetGpuTimerFrequency;
-				case "GetVSyncsPerSecond": return _GetVSyncsPerSecond;
-				case "IsFeatureEnabled": return _IsFeatureEnabled;
 				default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
 			}
 		}
@@ -111,14 +32,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<true_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<true_static>(0);
 			var key = context.GetArgument<String>(1);

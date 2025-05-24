@@ -16,37 +16,39 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AudioSettings" };
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AudioSettings.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AudioSettings.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AudioSettings>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.AudioSettings.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.AudioSettings.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AudioSettings>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -68,14 +70,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AudioSettings>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AudioSettings>(0);
 			var key = context.GetArgument<String>(1);
@@ -95,59 +97,74 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_AudioSettings(UnityEngine.AudioSettings instance) { m_Instance = instance; }
 		private UnityEngine.AudioSettings m_Instance;
 		public UnityEngine.AudioSettings Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_AudioSettings_static : ILuaUserData
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AudioSettings" };
 
-		private static readonly LuaFunction _GetDSPBufferSize = new("UnityEngine.AudioSettings.GetDSPBufferSize", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetDSPBufferSize = new("UnityEngine.AudioSettings.GetDSPBufferSize", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Int32 bufferLength;
+			System.Int32 numBuffers;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var bufferLength = arg0.Read<System.Int32>();
-					var numBuffers = arg1.Read<System.Int32>();
-					UnityEngine.AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
-					buffer.Span[0] = arg0;
-					buffer.Span[1] = arg1;
-					return new ValueTask<Int32>(2);
+					if (arg0.TryRead<System.Int32>(out bufferLength) &&
+					    arg1.TryRead<System.Int32>(out numBuffers))
+					{
+						UnityEngine.AudioSettings.GetDSPBufferSize(out bufferLength, out numBuffers);
+						_buffer.Span[0] = arg0;
+						_buffer.Span[1] = arg1;
+						return new ValueTask<Int32>(2);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetSpatializerPluginName = new("UnityEngine.AudioSettings.GetSpatializerPluginName", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetSpatializerPluginName = new("UnityEngine.AudioSettings.GetSpatializerPluginName", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = UnityEngine.AudioSettings.GetSpatializerPluginName();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = UnityEngine.AudioSettings.GetSpatializerPluginName();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetSpatializerPluginName = new("UnityEngine.AudioSettings.SetSpatializerPluginName", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetSpatializerPluginName = new("UnityEngine.AudioSettings.SetSpatializerPluginName", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.String pluginName;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg0 = context.GetArgument(0);
-					var pluginName = arg0.Read<System.String>();
-					UnityEngine.AudioSettings.SetSpatializerPluginName(pluginName);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.String>(out pluginName))
+					{
+						UnityEngine.AudioSettings.SetSpatializerPluginName(pluginName);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -170,14 +187,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AudioSettings_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AudioSettings_static>(0);
 			var key = context.GetArgument<String>(1);

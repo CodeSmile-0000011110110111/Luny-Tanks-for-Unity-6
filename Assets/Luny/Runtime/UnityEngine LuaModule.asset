@@ -15,16 +15,16 @@ MonoBehaviour:
   m_ModuleName: UnityEngine_LuaModule
   m_Namespace: UnityEngine
   m_ModuleLoader:
-    rid: -2
+    rid: 5308812126211539103
   m_BindAll: 1
   m_BindThisTypeOnly: 
   m_BindByTypeNames:
-  - Mathf
   - Bounds
   - BoundsInt
   - Color
   - Color32
   - LayerMask
+  - Mathf
   - Matrix4x4
   - Quaternion
   - Vector2
@@ -2496,11 +2496,13 @@ MonoBehaviour:
   - UnassignedReferenceException
   - UnityAPICompatibilityVersionAttribute
   - UnityException
-  m_HasModuleLoader: 0
+  m_HasModuleLoader: 1
   m_ModuleLoaderTypeFullName: CodeSmile.Luny.DefaultContext._UnityEngine_LuaModule_Loader
   m_GeneratedScriptsPathGuid: 4fc23a2832d9c7647a7e8dfc4af6fc6e
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 5308812126211539103
+      type: {class: _UnityEngine_LuaModule_Loader, ns: CodeSmile.Luny.DefaultContext,
+        asm: CodeSmile.Luny.DefaultContext}
+      data: 

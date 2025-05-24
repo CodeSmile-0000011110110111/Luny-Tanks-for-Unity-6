@@ -16,132 +16,161 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "AvatarMask" };
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AvatarMask.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.AvatarMask.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.AvatarMask.GetInstanceID", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.AvatarMask.GetInstanceID", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetInstanceID();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetInstanceID();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetTransformActive = new("UnityEngine.AvatarMask.GetTransformActive", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetTransformActive = new("UnityEngine.AvatarMask.GetTransformActive", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var index = arg1.Read<System.Int32>();
-					var returnValue = _this.m_Instance.GetTransformActive(index);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.Int32>(out index))
+					{
+						var returnValue = _this.m_Instance.GetTransformActive(index);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetTransformPath = new("UnityEngine.AvatarMask.GetTransformPath", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetTransformPath = new("UnityEngine.AvatarMask.GetTransformPath", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var index = arg1.Read<System.Int32>();
-					var returnValue = _this.m_Instance.GetTransformPath(index);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.Int32>(out index))
+					{
+						var returnValue = _this.m_Instance.GetTransformPath(index);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetTransformActive = new("UnityEngine.AvatarMask.SetTransformActive", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetTransformActive = new("UnityEngine.AvatarMask.SetTransformActive", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+			System.Boolean value;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var index = arg1.Read<System.Int32>();
-					var value = arg2.Read<System.Boolean>();
-					_this.m_Instance.SetTransformActive(index, value);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Int32>(out index) &&
+					    arg2.TryRead<System.Boolean>(out value))
+					{
+						_this.m_Instance.SetTransformActive(index, value);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetTransformPath = new("UnityEngine.AvatarMask.SetTransformPath", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetTransformPath = new("UnityEngine.AvatarMask.SetTransformPath", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 index;
+			System.String path;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var index = arg1.Read<System.Int32>();
-					var path = arg2.Read<System.String>();
-					_this.m_Instance.SetTransformPath(index, path);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Int32>(out index) &&
+					    arg2.TryRead<System.String>(out path))
+					{
+						_this.m_Instance.SetTransformPath(index, path);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.AvatarMask.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.AvatarMask.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_AvatarMask>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -168,14 +197,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AvatarMask>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AvatarMask>(0);
 			var key = context.GetArgument<String>(1);
@@ -195,6 +224,7 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_AvatarMask(UnityEngine.AvatarMask instance) { m_Instance = instance; }
 		private UnityEngine.AvatarMask m_Instance;
 		public UnityEngine.AvatarMask Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_AvatarMask_static : ILuaUserData
 	{
@@ -216,14 +246,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AvatarMask_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_AvatarMask_static>(0);
 			var key = context.GetArgument<String>(1);

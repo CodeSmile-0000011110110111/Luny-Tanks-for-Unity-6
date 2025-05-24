@@ -16,37 +16,39 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "Handheld" };
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Handheld.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Handheld.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Handheld>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.Handheld.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.Handheld.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Handheld>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -68,14 +70,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Handheld>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Handheld>(0);
 			var key = context.GetArgument<String>(1);
@@ -95,96 +97,108 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_Handheld(UnityEngine.Handheld instance) { m_Instance = instance; }
 		private UnityEngine.Handheld m_Instance;
 		public UnityEngine.Handheld Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_Handheld_static : ILuaUserData
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "Handheld" };
 
-		private static readonly LuaFunction _ClearShaderCache = new("UnityEngine.Handheld.ClearShaderCache", (context, buffer, ct) =>
+		private static readonly LuaFunction _ClearShaderCache = new("UnityEngine.Handheld.ClearShaderCache", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.Handheld.ClearShaderCache();
-					return new ValueTask<Int32>(0);
+						UnityEngine.Handheld.ClearShaderCache();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetActivityIndicatorStyle = new("UnityEngine.Handheld.GetActivityIndicatorStyle", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetActivityIndicatorStyle = new("UnityEngine.Handheld.GetActivityIndicatorStyle", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = UnityEngine.Handheld.GetActivityIndicatorStyle();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = UnityEngine.Handheld.GetActivityIndicatorStyle();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _PlayFullScreenMovie = new("UnityEngine.Handheld.PlayFullScreenMovie", (context, buffer, ct) =>
+		private static readonly LuaFunction _PlayFullScreenMovie = new("UnityEngine.Handheld.PlayFullScreenMovie", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.String path;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg0 = context.GetArgument(0);
-					var path = arg0.Read<System.String>();
-					var returnValue = UnityEngine.Handheld.PlayFullScreenMovie(path);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<System.String>(out path))
+					{
+						var returnValue = UnityEngine.Handheld.PlayFullScreenMovie(path);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _StartActivityIndicator = new("UnityEngine.Handheld.StartActivityIndicator", (context, buffer, ct) =>
+		private static readonly LuaFunction _StartActivityIndicator = new("UnityEngine.Handheld.StartActivityIndicator", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.Handheld.StartActivityIndicator();
-					return new ValueTask<Int32>(0);
+						UnityEngine.Handheld.StartActivityIndicator();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _StopActivityIndicator = new("UnityEngine.Handheld.StopActivityIndicator", (context, buffer, ct) =>
+		private static readonly LuaFunction _StopActivityIndicator = new("UnityEngine.Handheld.StopActivityIndicator", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.Handheld.StopActivityIndicator();
-					return new ValueTask<Int32>(0);
+						UnityEngine.Handheld.StopActivityIndicator();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _Vibrate = new("UnityEngine.Handheld.Vibrate", (context, buffer, ct) =>
+		private static readonly LuaFunction _Vibrate = new("UnityEngine.Handheld.Vibrate", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.Handheld.Vibrate();
-					return new ValueTask<Int32>(0);
+						UnityEngine.Handheld.Vibrate();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -210,14 +224,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Handheld_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Handheld_static>(0);
 			var key = context.GetArgument<String>(1);

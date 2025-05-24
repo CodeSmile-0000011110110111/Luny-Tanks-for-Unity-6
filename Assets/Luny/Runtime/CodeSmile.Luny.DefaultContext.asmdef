@@ -2,7 +2,8 @@
     "name": "CodeSmile.Luny.DefaultContext",
     "rootNamespace": "CodeSmile.Luny.DefaultContext",
     "references": [
-        "GUID:9b55f4f68dfe468baa19ce3e5cf6155c"
+        "GUID:9b55f4f68dfe468baa19ce3e5cf6155c",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

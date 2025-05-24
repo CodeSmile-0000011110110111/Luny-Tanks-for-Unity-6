@@ -16,97 +16,116 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "Display" };
 
-		private static readonly LuaFunction _Activate = new("UnityEngine.Display.Activate", (context, buffer, ct) =>
+		private static readonly LuaFunction _Activate = new("UnityEngine.Display.Activate", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Display>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.Activate();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.Activate();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Display.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Display.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Display>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetParams = new("UnityEngine.Display.SetParams", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetParams = new("UnityEngine.Display.SetParams", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 width;
+			System.Int32 height;
+			System.Int32 x;
+			System.Int32 y;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+			var arg3 = argCount > 3 ? _context.GetArgument(3) : LuaValue.Nil;
+			var arg4 = argCount > 4 ? _context.GetArgument(4) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Display>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 4:
 				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var arg4 = context.GetArgument(4);
-					var width = arg1.Read<System.Int32>();
-					var height = arg2.Read<System.Int32>();
-					var x = arg3.Read<System.Int32>();
-					var y = arg4.Read<System.Int32>();
-					_this.m_Instance.SetParams(width, height, x, y);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Int32>(out width) &&
+					    arg2.TryRead<System.Int32>(out height) &&
+					    arg3.TryRead<System.Int32>(out x) &&
+					    arg4.TryRead<System.Int32>(out y))
+					{
+						_this.m_Instance.SetParams(width, height, x, y);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetRenderingResolution = new("UnityEngine.Display.SetRenderingResolution", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetRenderingResolution = new("UnityEngine.Display.SetRenderingResolution", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Int32 w;
+			System.Int32 h;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Display>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var w = arg1.Read<System.Int32>();
-					var h = arg2.Read<System.Int32>();
-					_this.m_Instance.SetRenderingResolution(w, h);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Int32>(out w) &&
+					    arg2.TryRead<System.Int32>(out h))
+					{
+						_this.m_Instance.SetRenderingResolution(w, h);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.Display.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.Display.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Display>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -131,14 +150,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Display>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Display>(0);
 			var key = context.GetArgument<String>(1);
@@ -158,6 +177,7 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_Display(UnityEngine.Display instance) { m_Instance = instance; }
 		private UnityEngine.Display m_Instance;
 		public UnityEngine.Display Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_Display_static : ILuaUserData
 	{
@@ -179,14 +199,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Display_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Display_static>(0);
 			var key = context.GetArgument<String>(1);

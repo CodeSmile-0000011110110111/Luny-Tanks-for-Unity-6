@@ -16,372 +16,420 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "Camera" };
 
-		private static readonly LuaFunction _BroadcastMessage = new("UnityEngine.Camera.BroadcastMessage", (context, buffer, ct) =>
+		private static readonly LuaFunction _BroadcastMessage = new("UnityEngine.Camera.BroadcastMessage", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.String methodName;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var methodName = arg1.Read<System.String>();
-					_this.m_Instance.BroadcastMessage(methodName);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.String>(out methodName))
+					{
+						_this.m_Instance.BroadcastMessage(methodName);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _CompareTag = new("UnityEngine.Camera.CompareTag", (context, buffer, ct) =>
+		private static readonly LuaFunction _CompareTag = new("UnityEngine.Camera.CompareTag", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.String tag;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var tag = arg1.Read<System.String>();
-					var returnValue = _this.m_Instance.CompareTag(tag);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.String>(out tag))
+					{
+						var returnValue = _this.m_Instance.CompareTag(tag);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _CopyFrom = new("UnityEngine.Camera.CopyFrom", (context, buffer, ct) =>
+		private static readonly LuaFunction _CopyFrom = new("UnityEngine.Camera.CopyFrom", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			UnityEngine.Camera other;
+			Lua_UnityEngine_Camera other_UserData;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var otherUserData = arg1.Read<Lua_UnityEngine_Camera>();
-					var other = otherUserData.Instance;
-					_this.m_Instance.CopyFrom(other);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<Lua_UnityEngine_Camera>(out other_UserData))
+					{
+						other = other_UserData.Instance;
+						_this.m_Instance.CopyFrom(other);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetComponentIndex = new("UnityEngine.Camera.GetComponentIndex", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetComponentIndex = new("UnityEngine.Camera.GetComponentIndex", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetComponentIndex();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetComponentIndex();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetGateFittedFieldOfView = new("UnityEngine.Camera.GetGateFittedFieldOfView", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetGateFittedFieldOfView = new("UnityEngine.Camera.GetGateFittedFieldOfView", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetGateFittedFieldOfView();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetGateFittedFieldOfView();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Camera.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Camera.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.Camera.GetInstanceID", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.Camera.GetInstanceID", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetInstanceID();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetInstanceID();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _RemoveAllCommandBuffers = new("UnityEngine.Camera.RemoveAllCommandBuffers", (context, buffer, ct) =>
+		private static readonly LuaFunction _RemoveAllCommandBuffers = new("UnityEngine.Camera.RemoveAllCommandBuffers", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.RemoveAllCommandBuffers();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.RemoveAllCommandBuffers();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _Render = new("UnityEngine.Camera.Render", (context, buffer, ct) =>
+		private static readonly LuaFunction _Render = new("UnityEngine.Camera.Render", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.Render();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.Render();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _RenderDontRestore = new("UnityEngine.Camera.RenderDontRestore", (context, buffer, ct) =>
+		private static readonly LuaFunction _RenderDontRestore = new("UnityEngine.Camera.RenderDontRestore", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.RenderDontRestore();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.RenderDontRestore();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _Reset = new("UnityEngine.Camera.Reset", (context, buffer, ct) =>
+		private static readonly LuaFunction _Reset = new("UnityEngine.Camera.Reset", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.Reset();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.Reset();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetAspect = new("UnityEngine.Camera.ResetAspect", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetAspect = new("UnityEngine.Camera.ResetAspect", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetAspect();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetAspect();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetCullingMatrix = new("UnityEngine.Camera.ResetCullingMatrix", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetCullingMatrix = new("UnityEngine.Camera.ResetCullingMatrix", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetCullingMatrix();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetCullingMatrix();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetProjectionMatrix = new("UnityEngine.Camera.ResetProjectionMatrix", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetProjectionMatrix = new("UnityEngine.Camera.ResetProjectionMatrix", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetProjectionMatrix();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetProjectionMatrix();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetReplacementShader = new("UnityEngine.Camera.ResetReplacementShader", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetReplacementShader = new("UnityEngine.Camera.ResetReplacementShader", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetReplacementShader();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetReplacementShader();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetStereoProjectionMatrices = new("UnityEngine.Camera.ResetStereoProjectionMatrices", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetStereoProjectionMatrices = new("UnityEngine.Camera.ResetStereoProjectionMatrices", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetStereoProjectionMatrices();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetStereoProjectionMatrices();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetStereoViewMatrices = new("UnityEngine.Camera.ResetStereoViewMatrices", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetStereoViewMatrices = new("UnityEngine.Camera.ResetStereoViewMatrices", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetStereoViewMatrices();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetStereoViewMatrices();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetTransparencySortSettings = new("UnityEngine.Camera.ResetTransparencySortSettings", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetTransparencySortSettings = new("UnityEngine.Camera.ResetTransparencySortSettings", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetTransparencySortSettings();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetTransparencySortSettings();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ResetWorldToCameraMatrix = new("UnityEngine.Camera.ResetWorldToCameraMatrix", (context, buffer, ct) =>
+		private static readonly LuaFunction _ResetWorldToCameraMatrix = new("UnityEngine.Camera.ResetWorldToCameraMatrix", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ResetWorldToCameraMatrix();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ResetWorldToCameraMatrix();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SendMessage = new("UnityEngine.Camera.SendMessage", (context, buffer, ct) =>
+		private static readonly LuaFunction _SendMessage = new("UnityEngine.Camera.SendMessage", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.String methodName;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var methodName = arg1.Read<System.String>();
-					_this.m_Instance.SendMessage(methodName);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.String>(out methodName))
+					{
+						_this.m_Instance.SendMessage(methodName);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SendMessageUpwards = new("UnityEngine.Camera.SendMessageUpwards", (context, buffer, ct) =>
+		private static readonly LuaFunction _SendMessageUpwards = new("UnityEngine.Camera.SendMessageUpwards", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.String methodName;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var methodName = arg1.Read<System.String>();
-					_this.m_Instance.SendMessageUpwards(methodName);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.String>(out methodName))
+					{
+						_this.m_Instance.SendMessageUpwards(methodName);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.Camera.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.Camera.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_Camera>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -423,14 +471,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Camera>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Camera>(0);
 			var key = context.GetArgument<String>(1);
@@ -450,119 +498,137 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_Camera(UnityEngine.Camera instance) { m_Instance = instance; }
 		private UnityEngine.Camera m_Instance;
 		public UnityEngine.Camera Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_Camera_static : ILuaUserData
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "Camera" };
 
-		private static readonly LuaFunction _FieldOfViewToFocalLength = new("UnityEngine.Camera.FieldOfViewToFocalLength", (context, buffer, ct) =>
+		private static readonly LuaFunction _FieldOfViewToFocalLength = new("UnityEngine.Camera.FieldOfViewToFocalLength", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single fieldOfView;
+			System.Single sensorSize;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var fieldOfView = arg0.Read<System.Single>();
-					var sensorSize = arg1.Read<System.Single>();
-					var returnValue = UnityEngine.Camera.FieldOfViewToFocalLength(fieldOfView, sensorSize);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<System.Single>(out fieldOfView) &&
+					    arg1.TryRead<System.Single>(out sensorSize))
+					{
+						var returnValue = UnityEngine.Camera.FieldOfViewToFocalLength(fieldOfView, sensorSize);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _FocalLengthToFieldOfView = new("UnityEngine.Camera.FocalLengthToFieldOfView", (context, buffer, ct) =>
+		private static readonly LuaFunction _FocalLengthToFieldOfView = new("UnityEngine.Camera.FocalLengthToFieldOfView", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single focalLength;
+			System.Single sensorSize;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var focalLength = arg0.Read<System.Single>();
-					var sensorSize = arg1.Read<System.Single>();
-					var returnValue = UnityEngine.Camera.FocalLengthToFieldOfView(focalLength, sensorSize);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<System.Single>(out focalLength) &&
+					    arg1.TryRead<System.Single>(out sensorSize))
+					{
+						var returnValue = UnityEngine.Camera.FocalLengthToFieldOfView(focalLength, sensorSize);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetAllCameras = new("UnityEngine.Camera.GetAllCameras", (context, buffer, ct) =>
+		private static readonly LuaFunction _HorizontalToVerticalFieldOfView = new("UnityEngine.Camera.HorizontalToVerticalFieldOfView", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single horizontalFieldOfView;
+			System.Single aspectRatio;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+
+			switch (argCount)
+			{
+				case 2:
+				{
+					if (arg0.TryRead<System.Single>(out horizontalFieldOfView) &&
+					    arg1.TryRead<System.Single>(out aspectRatio))
+					{
+						var returnValue = UnityEngine.Camera.HorizontalToVerticalFieldOfView(horizontalFieldOfView, aspectRatio);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _SetupCurrent = new("UnityEngine.Camera.SetupCurrent", (_context, _buffer, _) =>
+		{
+			UnityEngine.Camera cur;
+			Lua_UnityEngine_Camera cur_UserData;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg0 = context.GetArgument(0);
-					var camerasUserData = arg0.Read<Lua_UnityEngine_Camera>();
-					var cameras = camerasUserData.Instance;
-					var returnValue = UnityEngine.Camera.GetAllCameras(cameras);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<Lua_UnityEngine_Camera>(out cur_UserData))
+					{
+						cur = cur_UserData.Instance;
+						UnityEngine.Camera.SetupCurrent(cur);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _HorizontalToVerticalFieldOfView = new("UnityEngine.Camera.HorizontalToVerticalFieldOfView", (context, buffer, ct) =>
+		private static readonly LuaFunction _VerticalToHorizontalFieldOfView = new("UnityEngine.Camera.VerticalToHorizontalFieldOfView", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single verticalFieldOfView;
+			System.Single aspectRatio;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var horizontalFieldOfView = arg0.Read<System.Single>();
-					var aspectRatio = arg1.Read<System.Single>();
-					var returnValue = UnityEngine.Camera.HorizontalToVerticalFieldOfView(horizontalFieldOfView, aspectRatio);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg0.TryRead<System.Single>(out verticalFieldOfView) &&
+					    arg1.TryRead<System.Single>(out aspectRatio))
+					{
+						var returnValue = UnityEngine.Camera.VerticalToHorizontalFieldOfView(verticalFieldOfView, aspectRatio);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _SetupCurrent = new("UnityEngine.Camera.SetupCurrent", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 1:
-				{
-					var arg0 = context.GetArgument(0);
-					var curUserData = arg0.Read<Lua_UnityEngine_Camera>();
-					var cur = curUserData.Instance;
-					UnityEngine.Camera.SetupCurrent(cur);
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _VerticalToHorizontalFieldOfView = new("UnityEngine.Camera.VerticalToHorizontalFieldOfView", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 2:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var verticalFieldOfView = arg0.Read<System.Single>();
-					var aspectRatio = arg1.Read<System.Single>();
-					var returnValue = UnityEngine.Camera.VerticalToHorizontalFieldOfView(verticalFieldOfView, aspectRatio);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -572,7 +638,6 @@ namespace CodeSmile.Luny.DefaultContext
 			{
 				case "FieldOfViewToFocalLength": return _FieldOfViewToFocalLength;
 				case "FocalLengthToFieldOfView": return _FocalLengthToFieldOfView;
-				case "GetAllCameras": return _GetAllCameras;
 				case "HorizontalToVerticalFieldOfView": return _HorizontalToVerticalFieldOfView;
 				case "SetupCurrent": return _SetupCurrent;
 				case "VerticalToHorizontalFieldOfView": return _VerticalToHorizontalFieldOfView;
@@ -588,14 +653,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Camera_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Camera_static>(0);
 			var key = context.GetArgument<String>(1);

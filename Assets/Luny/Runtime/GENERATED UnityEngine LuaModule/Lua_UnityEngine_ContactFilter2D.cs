@@ -16,161 +16,187 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "ContactFilter2D" };
 
-		private static readonly LuaFunction _ClearDepth = new("UnityEngine.ContactFilter2D.ClearDepth", (context, buffer, ct) =>
+		private static readonly LuaFunction _ClearDepth = new("UnityEngine.ContactFilter2D.ClearDepth", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ClearDepth();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ClearDepth();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ClearLayerMask = new("UnityEngine.ContactFilter2D.ClearLayerMask", (context, buffer, ct) =>
+		private static readonly LuaFunction _ClearLayerMask = new("UnityEngine.ContactFilter2D.ClearLayerMask", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ClearLayerMask();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ClearLayerMask();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ClearNormalAngle = new("UnityEngine.ContactFilter2D.ClearNormalAngle", (context, buffer, ct) =>
+		private static readonly LuaFunction _ClearNormalAngle = new("UnityEngine.ContactFilter2D.ClearNormalAngle", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					_this.m_Instance.ClearNormalAngle();
-					return new ValueTask<Int32>(0);
+						_this.m_Instance.ClearNormalAngle();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.ContactFilter2D.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.ContactFilter2D.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _IsFilteringNormalAngle = new("UnityEngine.ContactFilter2D.IsFilteringNormalAngle", (context, buffer, ct) =>
+		private static readonly LuaFunction _IsFilteringNormalAngle = new("UnityEngine.ContactFilter2D.IsFilteringNormalAngle", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Single angle;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var angle = arg1.Read<System.Single>();
-					var returnValue = _this.m_Instance.IsFilteringNormalAngle(angle);
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+					if (arg1.TryRead<System.Single>(out angle))
+					{
+						var returnValue = _this.m_Instance.IsFilteringNormalAngle(angle);
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _NoFilter = new("UnityEngine.ContactFilter2D.NoFilter", (context, buffer, ct) =>
+		private static readonly LuaFunction _NoFilter = new("UnityEngine.ContactFilter2D.NoFilter", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.NoFilter();
-					buffer.Span[0] = new Lua_UnityEngine_ContactFilter2D(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.NoFilter();
+						_buffer.Span[0] = new Lua_UnityEngine_ContactFilter2D(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetDepth = new("UnityEngine.ContactFilter2D.SetDepth", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetDepth = new("UnityEngine.ContactFilter2D.SetDepth", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Single minDepth;
+			System.Single maxDepth;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var minDepth = arg1.Read<System.Single>();
-					var maxDepth = arg2.Read<System.Single>();
-					_this.m_Instance.SetDepth(minDepth, maxDepth);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Single>(out minDepth) &&
+					    arg2.TryRead<System.Single>(out maxDepth))
+					{
+						_this.m_Instance.SetDepth(minDepth, maxDepth);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _SetNormalAngle = new("UnityEngine.ContactFilter2D.SetNormalAngle", (context, buffer, ct) =>
+		private static readonly LuaFunction _SetNormalAngle = new("UnityEngine.ContactFilter2D.SetNormalAngle", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			System.Single minNormalAngle;
+			System.Single maxNormalAngle;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var minNormalAngle = arg1.Read<System.Single>();
-					var maxNormalAngle = arg2.Read<System.Single>();
-					_this.m_Instance.SetNormalAngle(minNormalAngle, maxNormalAngle);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Single>(out minNormalAngle) &&
+					    arg2.TryRead<System.Single>(out maxNormalAngle))
+					{
+						_this.m_Instance.SetNormalAngle(minNormalAngle, maxNormalAngle);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.ContactFilter2D.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.ContactFilter2D.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_ContactFilter2D>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -199,14 +225,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_ContactFilter2D>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_ContactFilter2D>(0);
 			var key = context.GetArgument<String>(1);
@@ -227,6 +253,7 @@ namespace CodeSmile.Luny.DefaultContext
 		private UnityEngine.ContactFilter2D m_Instance;
 		public UnityEngine.ContactFilter2D Value { get => m_Instance; set => m_Instance = value; }
 		internal UnityEngine.ContactFilter2D Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_ContactFilter2D_static : ILuaUserData
 	{
@@ -248,14 +275,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_ContactFilter2D_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_ContactFilter2D_static>(0);
 			var key = context.GetArgument<String>(1);

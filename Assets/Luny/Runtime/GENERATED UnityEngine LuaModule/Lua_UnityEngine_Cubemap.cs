@@ -16,174 +16,179 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "Cubemap" };
 
-		private static readonly LuaFunction _Apply = new("UnityEngine.Cubemap.Apply", (context, buffer, ct) =>
+		private static readonly LuaFunction _Apply = new("UnityEngine.Cubemap.Apply", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 2:
-				{
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var updateMipmaps = arg1.Read<System.Boolean>();
-					var makeNoLongerReadable = arg2.Read<System.Boolean>();
-					_this.m_Instance.Apply(updateMipmaps, makeNoLongerReadable);
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
+			System.Boolean updateMipmaps;
+			System.Boolean makeNoLongerReadable;
 
-		private static readonly LuaFunction _ClearRequestedMipmapLevel = new("UnityEngine.Cubemap.ClearRequestedMipmapLevel", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
 			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					_this.m_Instance.ClearRequestedMipmapLevel();
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Cubemap.GetHashCode", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.Cubemap.GetInstanceID", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.GetInstanceID();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _GetNativeTexturePtr = new("UnityEngine.Cubemap.GetNativeTexturePtr", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.GetNativeTexturePtr();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _IncrementUpdateCount = new("UnityEngine.Cubemap.IncrementUpdateCount", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					_this.m_Instance.IncrementUpdateCount();
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _IsRequestedMipmapLevelLoaded = new("UnityEngine.Cubemap.IsRequestedMipmapLevelLoaded", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.IsRequestedMipmapLevelLoaded();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _SmoothEdges = new("UnityEngine.Cubemap.SmoothEdges", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					_this.m_Instance.SmoothEdges();
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _ToString = new("UnityEngine.Cubemap.ToString", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 0:
-				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
-
-		private static readonly LuaFunction _UpdateExternalTexture = new("UnityEngine.Cubemap.UpdateExternalTexture", (context, buffer, ct) =>
-		{
-			var arg0 = context.GetArgument(0);
-			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
-			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg1 = context.GetArgument(1);
-					var nativeTexture = arg1.Read<System.IntPtr>();
-					_this.m_Instance.UpdateExternalTexture(nativeTexture);
-					return new ValueTask<Int32>(0);
+					if (arg1.TryRead<System.Boolean>(out updateMipmaps))
+					{
+						_this.m_Instance.Apply(updateMipmaps);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				case 0:
+				{
+						_this.m_Instance.Apply();
+						return new ValueTask<Int32>(0);
+				}
+				case 2:
+				{
+					if (arg1.TryRead<System.Boolean>(out updateMipmaps) &&
+					    arg2.TryRead<System.Boolean>(out makeNoLongerReadable))
+					{
+						_this.m_Instance.Apply(updateMipmaps, makeNoLongerReadable);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _ClearRequestedMipmapLevel = new("UnityEngine.Cubemap.ClearRequestedMipmapLevel", (_context, _buffer, _) =>
+		{
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						_this.m_Instance.ClearRequestedMipmapLevel();
+						return new ValueTask<Int32>(0);
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.Cubemap.GetHashCode", (_context, _buffer, _) =>
+		{
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _GetInstanceID = new("UnityEngine.Cubemap.GetInstanceID", (_context, _buffer, _) =>
+		{
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						var returnValue = _this.m_Instance.GetInstanceID();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _IncrementUpdateCount = new("UnityEngine.Cubemap.IncrementUpdateCount", (_context, _buffer, _) =>
+		{
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						_this.m_Instance.IncrementUpdateCount();
+						return new ValueTask<Int32>(0);
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _IsRequestedMipmapLevelLoaded = new("UnityEngine.Cubemap.IsRequestedMipmapLevelLoaded", (_context, _buffer, _) =>
+		{
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						var returnValue = _this.m_Instance.IsRequestedMipmapLevelLoaded();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _SmoothEdges = new("UnityEngine.Cubemap.SmoothEdges", (_context, _buffer, _) =>
+		{
+			System.Int32 smoothRegionWidthInPixels;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						_this.m_Instance.SmoothEdges();
+						return new ValueTask<Int32>(0);
+				}
+				case 1:
+				{
+					if (arg1.TryRead<System.Int32>(out smoothRegionWidthInPixels))
+					{
+						_this.m_Instance.SmoothEdges(smoothRegionWidthInPixels);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
+			}
+		});
+
+		private static readonly LuaFunction _ToString = new("UnityEngine.Cubemap.ToString", (_context, _buffer, _) =>
+		{
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
+			var _this = arg0.Read<Lua_UnityEngine_Cubemap>();
+
+			switch (argCount)
+			{
+				case 0:
+				{
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -195,12 +200,10 @@ namespace CodeSmile.Luny.DefaultContext
 				case "ClearRequestedMipmapLevel": return _ClearRequestedMipmapLevel;
 				case "GetHashCode": return _GetHashCode;
 				case "GetInstanceID": return _GetInstanceID;
-				case "GetNativeTexturePtr": return _GetNativeTexturePtr;
 				case "IncrementUpdateCount": return _IncrementUpdateCount;
 				case "IsRequestedMipmapLevelLoaded": return _IsRequestedMipmapLevelLoaded;
 				case "SmoothEdges": return _SmoothEdges;
 				case "ToString": return _ToString;
-				case "UpdateExternalTexture": return _UpdateExternalTexture;
 				default: throw new LunyBindingException(instance, key, context, BindingType.Getter);
 			}
 		}
@@ -213,14 +216,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Cubemap>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Cubemap>(0);
 			var key = context.GetArgument<String>(1);
@@ -240,6 +243,7 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_Cubemap(UnityEngine.Cubemap instance) { m_Instance = instance; }
 		private UnityEngine.Cubemap m_Instance;
 		public UnityEngine.Cubemap Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_Cubemap_static : ILuaUserData
 	{
@@ -261,14 +265,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Cubemap_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_Cubemap_static>(0);
 			var key = context.GetArgument<String>(1);

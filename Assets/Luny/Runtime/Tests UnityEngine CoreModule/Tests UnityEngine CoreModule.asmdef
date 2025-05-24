@@ -1,0 +1,24 @@
+{
+    "name": "TestsUnityEngineCoreModule",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9b55f4f68dfe468baa19ce3e5cf6155c",
+        "GUID:f00f631deda9e5d4a8d5f7c1b3abfd75",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Lua.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

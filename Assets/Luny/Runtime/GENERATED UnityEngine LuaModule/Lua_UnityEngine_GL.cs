@@ -16,37 +16,39 @@ namespace CodeSmile.Luny.DefaultContext
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "GL" };
 
-		private static readonly LuaFunction _GetHashCode = new("UnityEngine.GL.GetHashCode", (context, buffer, ct) =>
+		private static readonly LuaFunction _GetHashCode = new("UnityEngine.GL.GetHashCode", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_GL>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.GetHashCode();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.GetHashCode();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _ToString = new("UnityEngine.GL.ToString", (context, buffer, ct) =>
+		private static readonly LuaFunction _ToString = new("UnityEngine.GL.ToString", (_context, _buffer, _) =>
 		{
-			var arg0 = context.GetArgument(0);
+			var argCount = _context.ArgumentCount;
+			var arg0 = _context.GetArgument(0);
 			var _this = arg0.Read<Lua_UnityEngine_GL>();
-			var argCount = context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					var returnValue = _this.m_Instance.ToString();
-					buffer.Span[0] = new LuaValue(returnValue);
-					return new ValueTask<Int32>(1);
+						var returnValue = _this.m_Instance.ToString();
+						_buffer.Span[0] = new LuaValue(returnValue);
+						return new ValueTask<Int32>(1);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -68,14 +70,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_GL>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_GL>(0);
 			var key = context.GetArgument<String>(1);
@@ -95,268 +97,327 @@ namespace CodeSmile.Luny.DefaultContext
 		public Lua_UnityEngine_GL(UnityEngine.GL instance) { m_Instance = instance; }
 		private UnityEngine.GL m_Instance;
 		public UnityEngine.GL Instance { get => m_Instance; set => m_Instance = value; }
+		public override String ToString() => m_Instance.ToString();
 	}
 	public sealed class Lua_UnityEngine_GL_static : ILuaUserData
 	{
 		public static readonly string[] TypeFullName = { "UnityEngine", "GL" };
 
-		private static readonly LuaFunction _Begin = new("UnityEngine.GL.Begin", (context, buffer, ct) =>
+		private static readonly LuaFunction _Begin = new("UnityEngine.GL.Begin", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Int32 mode;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 1:
 				{
-					var arg0 = context.GetArgument(0);
-					var mode = arg0.Read<System.Int32>();
-					UnityEngine.GL.Begin(mode);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.Int32>(out mode))
+					{
+						UnityEngine.GL.Begin(mode);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _End = new("UnityEngine.GL.End", (context, buffer, ct) =>
+		private static readonly LuaFunction _End = new("UnityEngine.GL.End", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.End();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.End();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _Flush = new("UnityEngine.GL.Flush", (context, buffer, ct) =>
+		private static readonly LuaFunction _Flush = new("UnityEngine.GL.Flush", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.Flush();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.Flush();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _InvalidateState = new("UnityEngine.GL.InvalidateState", (context, buffer, ct) =>
+		private static readonly LuaFunction _InvalidateState = new("UnityEngine.GL.InvalidateState", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.InvalidateState();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.InvalidateState();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _IssuePluginEvent = new("UnityEngine.GL.IssuePluginEvent", (context, buffer, ct) =>
+		private static readonly LuaFunction _LoadIdentity = new("UnityEngine.GL.LoadIdentity", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
-			switch (argCount)
-			{
-				case 2:
-				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var callback = arg0.Read<System.IntPtr>();
-					var eventID = arg1.Read<System.Int32>();
-					UnityEngine.GL.IssuePluginEvent(callback, eventID);
-					return new ValueTask<Int32>(0);
-				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
-			}
-		});
+			var argCount = _context.ArgumentCount;
 
-		private static readonly LuaFunction _LoadIdentity = new("UnityEngine.GL.LoadIdentity", (context, buffer, ct) =>
-		{
-			var argCount = context.ArgumentCount;
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.LoadIdentity();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.LoadIdentity();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _LoadOrtho = new("UnityEngine.GL.LoadOrtho", (context, buffer, ct) =>
+		private static readonly LuaFunction _LoadOrtho = new("UnityEngine.GL.LoadOrtho", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.LoadOrtho();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.LoadOrtho();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _LoadPixelMatrix = new("UnityEngine.GL.LoadPixelMatrix", (context, buffer, ct) =>
+		private static readonly LuaFunction _LoadPixelMatrix = new("UnityEngine.GL.LoadPixelMatrix", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single left;
+			System.Single right;
+			System.Single bottom;
+			System.Single top;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+			var arg3 = argCount > 3 ? _context.GetArgument(3) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.LoadPixelMatrix();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.LoadPixelMatrix();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				case 4:
+				{
+					if (arg0.TryRead<System.Single>(out left) &&
+					    arg1.TryRead<System.Single>(out right) &&
+					    arg2.TryRead<System.Single>(out bottom) &&
+					    arg3.TryRead<System.Single>(out top))
+					{
+						UnityEngine.GL.LoadPixelMatrix(left, right, bottom, top);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
+				}
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _MultiTexCoord2 = new("UnityEngine.GL.MultiTexCoord2", (context, buffer, ct) =>
+		private static readonly LuaFunction _MultiTexCoord2 = new("UnityEngine.GL.MultiTexCoord2", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Int32 unit;
+			System.Single x;
+			System.Single y;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 3:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var unit = arg0.Read<System.Int32>();
-					var x = arg1.Read<System.Single>();
-					var y = arg2.Read<System.Single>();
-					UnityEngine.GL.MultiTexCoord2(unit, x, y);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.Int32>(out unit) &&
+					    arg1.TryRead<System.Single>(out x) &&
+					    arg2.TryRead<System.Single>(out y))
+					{
+						UnityEngine.GL.MultiTexCoord2(unit, x, y);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _MultiTexCoord3 = new("UnityEngine.GL.MultiTexCoord3", (context, buffer, ct) =>
+		private static readonly LuaFunction _MultiTexCoord3 = new("UnityEngine.GL.MultiTexCoord3", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Int32 unit;
+			System.Single x;
+			System.Single y;
+			System.Single z;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+			var arg3 = argCount > 3 ? _context.GetArgument(3) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 4:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var arg3 = context.GetArgument(3);
-					var unit = arg0.Read<System.Int32>();
-					var x = arg1.Read<System.Single>();
-					var y = arg2.Read<System.Single>();
-					var z = arg3.Read<System.Single>();
-					UnityEngine.GL.MultiTexCoord3(unit, x, y, z);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.Int32>(out unit) &&
+					    arg1.TryRead<System.Single>(out x) &&
+					    arg2.TryRead<System.Single>(out y) &&
+					    arg3.TryRead<System.Single>(out z))
+					{
+						UnityEngine.GL.MultiTexCoord3(unit, x, y, z);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _PopMatrix = new("UnityEngine.GL.PopMatrix", (context, buffer, ct) =>
+		private static readonly LuaFunction _PopMatrix = new("UnityEngine.GL.PopMatrix", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.PopMatrix();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.PopMatrix();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _PushMatrix = new("UnityEngine.GL.PushMatrix", (context, buffer, ct) =>
+		private static readonly LuaFunction _PushMatrix = new("UnityEngine.GL.PushMatrix", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.PushMatrix();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.PushMatrix();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _RenderTargetBarrier = new("UnityEngine.GL.RenderTargetBarrier", (context, buffer, ct) =>
+		private static readonly LuaFunction _RenderTargetBarrier = new("UnityEngine.GL.RenderTargetBarrier", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			var argCount = _context.ArgumentCount;
+
 			switch (argCount)
 			{
 				case 0:
 				{
-					UnityEngine.GL.RenderTargetBarrier();
-					return new ValueTask<Int32>(0);
+						UnityEngine.GL.RenderTargetBarrier();
+						return new ValueTask<Int32>(0);
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _TexCoord2 = new("UnityEngine.GL.TexCoord2", (context, buffer, ct) =>
+		private static readonly LuaFunction _TexCoord2 = new("UnityEngine.GL.TexCoord2", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single x;
+			System.Single y;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 2:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var x = arg0.Read<System.Single>();
-					var y = arg1.Read<System.Single>();
-					UnityEngine.GL.TexCoord2(x, y);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.Single>(out x) &&
+					    arg1.TryRead<System.Single>(out y))
+					{
+						UnityEngine.GL.TexCoord2(x, y);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _TexCoord3 = new("UnityEngine.GL.TexCoord3", (context, buffer, ct) =>
+		private static readonly LuaFunction _TexCoord3 = new("UnityEngine.GL.TexCoord3", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single x;
+			System.Single y;
+			System.Single z;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 3:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var x = arg0.Read<System.Single>();
-					var y = arg1.Read<System.Single>();
-					var z = arg2.Read<System.Single>();
-					UnityEngine.GL.TexCoord3(x, y, z);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.Single>(out x) &&
+					    arg1.TryRead<System.Single>(out y) &&
+					    arg2.TryRead<System.Single>(out z))
+					{
+						UnityEngine.GL.TexCoord3(x, y, z);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
-		private static readonly LuaFunction _Vertex3 = new("UnityEngine.GL.Vertex3", (context, buffer, ct) =>
+		private static readonly LuaFunction _Vertex3 = new("UnityEngine.GL.Vertex3", (_context, _buffer, _) =>
 		{
-			var argCount = context.ArgumentCount;
+			System.Single x;
+			System.Single y;
+			System.Single z;
+
+			var argCount = _context.ArgumentCount;
+			var arg0 = argCount > 0 ? _context.GetArgument(0) : LuaValue.Nil;
+			var arg1 = argCount > 1 ? _context.GetArgument(1) : LuaValue.Nil;
+			var arg2 = argCount > 2 ? _context.GetArgument(2) : LuaValue.Nil;
+
 			switch (argCount)
 			{
 				case 3:
 				{
-					var arg0 = context.GetArgument(0);
-					var arg1 = context.GetArgument(1);
-					var arg2 = context.GetArgument(2);
-					var x = arg0.Read<System.Single>();
-					var y = arg1.Read<System.Single>();
-					var z = arg2.Read<System.Single>();
-					UnityEngine.GL.Vertex3(x, y, z);
-					return new ValueTask<Int32>(0);
+					if (arg0.TryRead<System.Single>(out x) &&
+					    arg1.TryRead<System.Single>(out y) &&
+					    arg2.TryRead<System.Single>(out z))
+					{
+						UnityEngine.GL.Vertex3(x, y, z);
+						return new ValueTask<Int32>(0);
+					}
+					throw new LuaRuntimeException(_context.State.GetTraceback(), "parameter type mismatch");
 				}
-				default: throw new LuaRuntimeException(context.State.GetTraceback(), "argument count mismatch");
+				default: throw new LuaRuntimeException(_context.State.GetTraceback(), $"argument count mismatch, got {_context.ArgumentCount} args");
 			}
 		});
 
@@ -368,7 +429,6 @@ namespace CodeSmile.Luny.DefaultContext
 				case "End": return _End;
 				case "Flush": return _Flush;
 				case "InvalidateState": return _InvalidateState;
-				case "IssuePluginEvent": return _IssuePluginEvent;
 				case "LoadIdentity": return _LoadIdentity;
 				case "LoadOrtho": return _LoadOrtho;
 				case "LoadPixelMatrix": return _LoadPixelMatrix;
@@ -392,14 +452,14 @@ namespace CodeSmile.Luny.DefaultContext
 			}
 		}
 
-		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, ct) =>
+		private static readonly LuaFunction __index = new(Metamethods.Index, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_GL_static>(0);
 			var key = context.GetArgument<String>(1);
 			buffer.Span[0] = TryGetValue(instance, key, context);
 			return new ValueTask<Int32>(1);
 		});
-		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, ct) =>
+		private static readonly LuaFunction __newindex = new(Metamethods.NewIndex, (context, buffer, _) =>
 		{
 			var instance = context.GetArgument<Lua_UnityEngine_GL_static>(0);
 			var key = context.GetArgument<String>(1);

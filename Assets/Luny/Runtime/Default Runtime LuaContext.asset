@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4ea79b7d3f44948c11e4b70a148e66, type: 3}
   m_Name: Default Runtime LuaContext
   m_EditorClassIdentifier: 
+  m_IsDefaultContext: 1
+  m_IsEditorContext: 0
   m_SearchPaths:
   - '%PersistentDataPath%'
   - '%StreamingAssets%'
   - Assets
   m_Modules:
   - {fileID: 11400000, guid: a492de0c0144f224b8d7e893da18d253, type: 2}
-  m_AutoGenerateBindingsOnFocus: 1
+  m_AutoGenerateBindingsOnFocus: 0
   m_ClickToDeleteBindings: 0
   m_ClickToGenerateBindings: 0

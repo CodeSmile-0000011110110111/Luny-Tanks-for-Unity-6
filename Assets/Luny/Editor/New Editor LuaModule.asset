@@ -16,7 +16,9 @@ MonoBehaviour:
   m_Namespace: System
   m_ModuleLoader:
     rid: -2
-  m_BindTypeNames: []
+  m_BindAll: 0
+  m_BindThisTypeOnly: 
+  m_BindByTypeNames: []
   m_BoundTypes: []
   m_NamespaceStaticClasses:
   - AppContext
@@ -307,7 +309,7 @@ MonoBehaviour:
   - UnauthorizedAccessException
   - UriFormatException
   m_HasModuleLoader: 0
-  m_ModuleLoaderTypeFullName: CodeSmileEditor.Luny.DefaultContext.New_Editor_LuaModuleLoader
+  m_ModuleLoaderTypeFullName: CodeSmileEditor.Luny.DefaultContext._New_Editor_LuaModule_Loader
   m_GeneratedScriptsPathGuid: 6ac90aa8421240e40964477c65eb7235
   references:
     version: 2
