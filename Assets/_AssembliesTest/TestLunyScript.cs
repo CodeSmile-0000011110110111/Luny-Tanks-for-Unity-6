@@ -13,6 +13,7 @@ public sealed class TestLunyScript : LunyScript
 
 		var script = "print('System',System)\nprint('System.IO',System.IO)\nprint('System.IO.File',System.IO.File)\n" +
 		             "print(System.IO.File.ReadAllText('U:/error.lua'))";
+		script = "print('hello lua')";
 		await Luny.MainLua.DoStringAsync(script, nameof(TestLunyScript));
 	}
 

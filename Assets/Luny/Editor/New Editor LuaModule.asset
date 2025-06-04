@@ -15,7 +15,7 @@ MonoBehaviour:
   m_ModuleName: New_Editor_LuaModule
   m_Namespace: System
   m_ModuleLoader:
-    rid: -2
+    rid: 5308812241187110912
   m_BindAll: 0
   m_BindThisTypeOnly: 
   m_BindByTypeNames: []
@@ -308,11 +308,13 @@ MonoBehaviour:
   - TypeUnloadedException
   - UnauthorizedAccessException
   - UriFormatException
-  m_HasModuleLoader: 0
+  m_HasModuleLoader: 1
   m_ModuleLoaderTypeFullName: CodeSmileEditor.Luny.DefaultContext._New_Editor_LuaModule_Loader
   m_GeneratedScriptsPathGuid: 6ac90aa8421240e40964477c65eb7235
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 5308812241187110912
+      type: {class: _New_Editor_LuaModule_Loader, ns: CodeSmileEditor.Luny.DefaultContext,
+        asm: CodeSmileEditor.Luny.DefaultContext}
+      data: 

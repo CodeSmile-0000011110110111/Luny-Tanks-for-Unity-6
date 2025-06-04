@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LunyScriptSettings:
-    ScriptAsset: {fileID: -6979533126094156877, guid: e1408a9af1833364bb4ecfc4466903ca,
+    ScriptAsset: {fileID: -6979533126094156877, guid: a542a05586245d84f86c6ee16029f497,
       type: 3}
     DebugLogScriptExecution: 0
 --- !u!4 &635251271
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b221aacb13e14ed2b2493464749d17f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LuaAssetRegistry: {fileID: 11400000, guid: 4c4579470a65ce54dadf7a3c12fce9f9, type: 2}
+  m_LuaAssetRegistry: {fileID: 11400000, guid: 64511072b93489342854925a6a9b8f30, type: 2}
   m_LuaContexts:
   - {fileID: 11400000, guid: e23a15a81417a8246a65e34b46cf4016, type: 2}
   m_StartupScripts:
